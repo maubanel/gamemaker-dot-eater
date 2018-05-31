@@ -12,5 +12,7 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		PreviousMode = GhostMode.EYESRETURN;
 		oGameManager.Mode = GhostMode.GHOSTEATEN;
 		oGhostParent.Mode = GhostMode.GHOSTEATEN;
+		x = GetCenterGridPos(GridX);
+		y = GetCenterGridPos(GridY);
 	}
 }

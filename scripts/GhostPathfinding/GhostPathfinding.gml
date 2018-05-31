@@ -35,7 +35,10 @@ else
 	//Make ghost move slower in tunnel
 	if (GridY == 17 and (GridX <= 5 || GridX > 32))
 	{
-		speed = oGameManager.GhostTunnelSpeed;	
+		if (Mode != GhostMode.EYESRETURN)
+		{
+			speed = oGameManager.GhostTunnelSpeed;	
+		}
 	}
 	
 	//Red zone for ghosts to not go up in center lanes

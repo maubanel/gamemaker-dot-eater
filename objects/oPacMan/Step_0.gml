@@ -57,16 +57,15 @@ switch(oGameManager.Mode)
 			
 		}
 	break;
+	
+	case GhostMode.GHOSTEATEN:
+	
+		image_alpha = 0;
+		speed = 0;
+		
+		break;
 }
 
 
-/*else
-{
-	speed = 0;	
-
-
-		
-	}
-}*/
 
 					

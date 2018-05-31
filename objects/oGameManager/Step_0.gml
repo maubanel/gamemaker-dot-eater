@@ -22,7 +22,15 @@ switch (Mode)
 		if (!alarm[0])
 		alarm[0] = 60;	
 		break;
-	
+		
+	case GhostMode.GHOSTEATEN:
+		
+		if (!alarm[3])
+		{
+			alarm[3] = 45;	
+		}
+		break;
+		
 	default:
 		ChaseTimer = 0;	
 		break;

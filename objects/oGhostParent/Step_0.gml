@@ -4,6 +4,8 @@ if (Mode != oGameManager.Mode && Mode != GhostMode.FRIGHT
 	Mode = oGameManager.Mode;	
 }
 
+show_debug_message(Mode);
+
 switch(Mode)
 {
 	case GhostMode.PLAYERREADY:
@@ -61,12 +63,20 @@ switch(Mode)
 		
 		break;
 		
+	case GhostMode.GHOSTEATEN:
+		speed = 0;
+		show_debug_message("Ghost Eaten");
+		if (PreviousMode == GhostMode.EYESRETURN)
+		{
+			image_alpha = 0;	
+		}
+		break;
+		
 	
 	default:
 		speed = 0;
-		
 		break;
-		
+	
 }
 
 

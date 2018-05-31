@@ -11,5 +11,6 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		sprite_index = sGhostEyes;
 		PreviousMode = GhostMode.EYESRETURN;
 		oGameManager.Mode = GhostMode.GHOSTEATEN;
+		oGhostParent.Mode = GhostMode.GHOSTEATEN;
 	}
 }

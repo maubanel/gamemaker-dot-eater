@@ -50,7 +50,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
+            "enumb": 0,
             "eventtype": 8,
             "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
         },
@@ -61,6 +61,16 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 2,
+            "eventtype": 2,
+            "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
+        },
+        {
+            "id": "ed1e6178-cf19-4043-a945-40203b5a0ea7",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 3,
             "eventtype": 2,
             "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
         }
@@ -374,6 +384,20 @@
             "resourceFilter": 1023,
             "value": ".79",
             "varName": "PacFrightDotSpeed",
+            "varType": 0
+        },
+        {
+            "id": "3f259eb9-b6b5-4478-a5de-8104f40cc42c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "200",
+            "varName": "GhostScore",
             "varType": 0
         }
     ],

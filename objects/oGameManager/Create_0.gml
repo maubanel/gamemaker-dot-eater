@@ -1,7 +1,7 @@
 /// @description Initialize Pac Man Variables
 
 instance_create_depth(14 * oGameManager.GridSize, 
-					  20 * oGameManager.GridSize 
+					  26 * oGameManager.GridSize 
 					+ oGameManager.Offset, -1, oPacMan);
 					
 instance_create_depth(14 * oGameManager.GridSize, 

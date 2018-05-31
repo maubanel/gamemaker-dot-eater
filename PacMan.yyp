@@ -343,6 +343,25 @@
             }
         },
         {
+            "Key": "3e23b30b-c35c-43fd-9d59-ed8c331d0765",
+            "Value": {
+                "id": "e6543055-02b9-46ad-8aad-cef617bc0d52",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "fonts\/fGhostEatenScore\/fGhostEatenScore.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "3e445a32-fb2d-4293-a211-0e70c967fe2e",
             "Value": {
                 "id": "3e0e7f68-083e-4eb9-bd15-46c95971909e",

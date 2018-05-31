@@ -15,7 +15,6 @@ if (direction != NextDirection )
 	
 	direction = NextDirection;
 	speed = 0;
-	show_debug_message("Get New Direction");
 }
 
 else
@@ -54,7 +53,6 @@ else
 			and ds_list_find_value(WhichDirection, i) == 0) 
 		{
 			NextDirection = 90;	
-			//show_debug_message(NextDirection);
 			break;
 		}
 		
@@ -62,7 +60,7 @@ else
 			and ds_list_find_value(WhichDirection, i) == 1) 
 		{
 			NextDirection = 270;
-				//	show_debug_message(NextDirection);
+				
 			break;
 		}
 		
@@ -70,7 +68,7 @@ else
 			and ds_list_find_value(WhichDirection, i) == 2) 
 		{
 			NextDirection = 180;
-					//show_debug_message(NextDirection);
+					
 			break;
 		}
 		
@@ -78,13 +76,10 @@ else
 			and ds_list_find_value(WhichDirection, i) == 3)
 		{
 			NextDirection = 0;
-			//		show_debug_message(NextDirection);
 			break;
 		}
 		
 	}
-	
-	show_debug_message(NextDirection);
 	
 }
 

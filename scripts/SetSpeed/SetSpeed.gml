@@ -6,15 +6,15 @@
 
 	else if ((GridType == 1 or GridType == 2) && oGameManager.Mode !=GhostMode.FRIGHT)
 	{
-		CurrentSpeed = oGameManager.PacNormalDotSpeed
+		CurrentSpeed = oGameManager.PacNormalDotSpeed;
 	}
 	
 	else if (GridType == 3 && oGameManager.Mode ==GhostMode.FRIGHT) // Empty space
 	{
-		CurrentSpeed = oGameManager.Pac
+		CurrentSpeed = oGameManager.PacNormalSpeed;
 	}
 
-	else if ((GridType == 1 or GridType == 2) && oGameManager.Mode !=GhostMode.FRIGHT)
+	else if ((GridType == 1 or GridType == 2) && oGameManager.Mode ==GhostMode.FRIGHT)
 	{
-		CurrentSpeed = oGameManager.PacNormalDotSpeed
+		CurrentSpeed = oGameManager.PacNormalDotSpeed;
 	}

@@ -48,6 +48,7 @@ else
 		NextDirectionUp = false; 
 	}
 	
+	
 	//If multiple options pick the one with the shortest length
 	CheckFourDirections(TarX, TarY);
 

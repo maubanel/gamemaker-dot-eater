@@ -37,25 +37,35 @@ if (Mode == GhostMode.EYESRETURN)
 		TargetX = GetCenterGridPos(13);
 		TargetY = GetCenterGridPos(17);
 		
-		
-		if (Horizontal and abs(x - GetCenterGridPos(GridX)) <= speed)
+		//check to see if ghost is close to safe zone
+		if (abs(point_distance(x, y, 14 * oGameManager.GridSize, 14 * oGameManager.GridSize + oGameManager.Offset) <= speed)
+			and GridY == 14)
 		{
-			GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 4);
-			LastGridX = GridX;
-			LastGridY = GridY;
-			show_debug_message("Moving Horizonatlly");
+			x = 14 * oGameManager.GridSize;
+			speed = 0;
+			Mode = GhostMode.RETURNTOSAFEZONE;
 		}
-	
-		else if (Vertical and abs(y - GetCenterGridPos(GridY)) <= speed)
+		
+		else 
 		{
-			GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 4);
-			LastGridX = GridX;
-			LastGridY = GridY;
+			if (Horizontal and abs(x - GetCenterGridPos(GridX)) <= speed)
+			{
+				GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 2);
+				LastGridX = GridX;
+				LastGridY = GridY;
+			}
+	
+			else if (Vertical and abs(y - GetCenterGridPos(GridY)) <= speed)
+			{
+				GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 2);
+				LastGridX = GridX;
+				LastGridY = GridY;
+			}
 		}
 	}
 
 	else if (speed == 0) //means ghost is in turn and needs to keep moving
 	{	
-		GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 4);
+		GhostPathfinding(TargetX, TargetY, oGameManager.GhostNormSpeed * 2);
 	}
 }

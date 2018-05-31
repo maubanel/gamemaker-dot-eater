@@ -40,7 +40,8 @@ switch(Mode)
 		break;
 		
 	case GhostMode.FRIGHT:
-			move_wrap(true, false, oGameManager.GridSize);
+		
+		move_wrap(true, false, oGameManager.GridSize);
 
 		GridX = (GetGridNum(x));
 		GridY = (GetGridNum(y));
@@ -48,8 +49,15 @@ switch(Mode)
 		GridX = clamp(GridX, 0, 27);
 		GridY = clamp(GridY,0, 35);
 		
+		CheckForPlayerKill();
+		
+		//Pick ran
+		GhostRandomTurnMovement();
+		
 		//Get direction
 		GhostUpdateHorVer();
+		
+
 		
 		break;
 		

@@ -2,5 +2,13 @@
 
 if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 {
-	oGameManager.Mode = GhostMode.PLAYERDEAD;
+	if (Mode == GhostMode.CHASE or Mode == GhostMode.SCATTER)
+	{
+		oGameManager.Mode = GhostMode.PLAYERDEAD;
+	}
+	
+	else if (Mode == GhostMode.FRIGHT)
+	{
+		sprite_index = sGhostEyes;	
+	}
 }

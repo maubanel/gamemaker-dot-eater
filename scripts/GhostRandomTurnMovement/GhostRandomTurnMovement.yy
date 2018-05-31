@@ -1,8 +1,8 @@
 {
-    "id": "d77d9ab7-16e0-41c7-9774-381470e0ac29",
+    "id": "1f9eed51-d452-48f4-855d-4dc17c73ea5c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "GhostFrightMovement",
+    "name": "GhostRandomTurnMovement",
     "IsCompatibility": false,
     "IsDnD": false
 }

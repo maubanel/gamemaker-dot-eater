@@ -347,6 +347,34 @@
             "value": "81",
             "varName": "ChaseMode3Length",
             "varType": 0
+        },
+        {
+            "id": "f168e77e-88e0-4cdb-a531-6f7a7a8d8758",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": ".9",
+            "varName": "PacFrightSpeed",
+            "varType": 0
+        },
+        {
+            "id": "6d7db160-8aed-4b2d-bc94-bfa7f9cf8f94",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": ".79",
+            "varName": "PacFrightDotSpeed",
+            "varType": 0
         }
     ],
     "solid": false,

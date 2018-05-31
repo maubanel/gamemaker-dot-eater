@@ -4,3 +4,7 @@
 UpdateGridPosition();
 
 image_alpha = 0;
+
+//This is for ghosts in FRIGHT mode for random change
+WhichDirection = ds_list_create();
+ds_list_add(WhichDirection,0, 1, 2, 3);

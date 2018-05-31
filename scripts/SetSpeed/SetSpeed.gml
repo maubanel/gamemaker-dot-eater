@@ -1,10 +1,20 @@
 
-	if (GridType == 3) // Empty space
+	if (GridType == 3 && oGameManager.Mode !=GhostMode.FRIGHT) // Empty space
 	{
 		CurrentSpeed = oGameManager.PacNormalSpeed
 	}
 
-	else if (GridType == 1 or GridType == 2)
+	else if ((GridType == 1 or GridType == 2) && oGameManager.Mode !=GhostMode.FRIGHT)
+	{
+		CurrentSpeed = oGameManager.PacNormalDotSpeed
+	}
+	
+	else if (GridType == 3 && oGameManager.Mode ==GhostMode.FRIGHT) // Empty space
+	{
+		CurrentSpeed = oGameManager.Pac
+	}
+
+	else if ((GridType == 1 or GridType == 2) && oGameManager.Mode !=GhostMode.FRIGHT)
 	{
 		CurrentSpeed = oGameManager.PacNormalDotSpeed
 	}

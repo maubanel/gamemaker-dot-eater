@@ -35,6 +35,7 @@ if (LastGridX != GridX or LastGridY != GridY)
 			if (Mode != GhostMode.EYESRETURN)
 			{
 				Mode = GhostMode.FRIGHT;
+				FrightModeInitialize();
 				ReverseDirection();
 			}
 		}

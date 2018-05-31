@@ -28,7 +28,7 @@ switch(oGameManager.Mode)
 	
 	SetSpeed();
 	
-		UpdateHorVer();
+	UpdateHorVer();
 
 	//Eat dots if run over
 	PacEatDots();

@@ -1,6 +1,4 @@
-var TarX = argument0;
-var TarY = argument1;
-var Speed = argument2;
+var Speed = argument0;
 
 
 //Set speed to the argument passed
@@ -9,16 +7,18 @@ speed = Speed;
 //If direction and next direction are different
 //center the tile and 0 out the speed, set direction
 //to new directoin and skip rest
-if (direction != NextDirection)
+
+if (direction != NextDirection )
 {
 	x = GetCenterGridPos(GridX);
 	y = GetCenterGridPos(GridY);
 	
 	direction = NextDirection;
 	speed = 0;
+	show_debug_message("Get New Direction");
 }
 
-else 
+else
 {
 	//Look at next tile ahead in 4 directions
 	NextDirectionUp = CanMoveToGridFrom(vk_up, direction);
@@ -45,18 +45,46 @@ else
 		NextDirectionUp = false; 
 	}
 	
+
+	ds_list_shuffle(WhichDirection);
 	
+	for (i = 0; i <4; ++i)
+	{
+		if 	(NextDirectionUp == true
+			and ds_list_find_value(WhichDirection, i) == 0) 
+		{
+			NextDirection = 90;	
+			//show_debug_message(NextDirection);
+			break;
+		}
+		
+		if 	(NextDirectionDown == true
+			and ds_list_find_value(WhichDirection, i) == 1) 
+		{
+			NextDirection = 270;
+				//	show_debug_message(NextDirection);
+			break;
+		}
+		
+		if 	(NextDirectionLeft == true
+			and ds_list_find_value(WhichDirection, i) == 2) 
+		{
+			NextDirection = 180;
+					//show_debug_message(NextDirection);
+			break;
+		}
+		
+		if (NextDirectionRight == true
+			and ds_list_find_value(WhichDirection, i) == 3)
+		{
+			NextDirection = 0;
+			//		show_debug_message(NextDirection);
+			break;
+		}
+		
+	}
 	
-	//Randomly choose a valid direction that is left
-	/*var NumberOfTrues = 0;
-	if (NextDirectionUp) ++NumberOfTrues;
-	if (NextDirectionDown) ++NumberOfTrues;
-	if (NextDirectionLeft) ++NumberOfTrues;
-	if (NextDirectionRight) ++NumberOfTrues;
+	show_debug_message(NextDirection);
 	
-	DirectionOfTurn = round(random(NumberOfTrues));
-	
-	if */
-	NextDirection = SetNextDirection();
 }
 

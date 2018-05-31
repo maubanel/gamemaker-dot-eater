@@ -20,8 +20,6 @@ switch(Mode)
 	case GhostMode.SCATTER:
 	case GhostMode.CHASE:
 	
-		CheckForPlayerKill();
-	
 		move_wrap(true, false, oGameManager.GridSize);
 
 		GridX = (GetGridNum(x));
@@ -29,6 +27,8 @@ switch(Mode)
 
 		GridX = clamp(GridX, 0, 27);
 		GridY = clamp(GridY,0, 35);
+		
+		CheckForPlayerKill();
 
 		//Get direction
 		GhostUpdateHorVer();

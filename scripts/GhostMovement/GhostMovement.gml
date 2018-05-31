@@ -3,6 +3,7 @@
 // and ghost is one step from center:
 if (oGameManager.Mode != GhostMode.PLAYERDEAD)
 {
+	//If the grid has changed update pathfinding
 	if (GridX != LastGridX or GridY != LastGridY)
 	{
 		if (Horizontal and abs(x - GetCenterGridPos(GridX)) <= speed)

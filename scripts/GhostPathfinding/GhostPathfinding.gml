@@ -45,16 +45,9 @@ else
 		NextDirectionUp = false; 
 	}
 	
-	//Randomly choose a valid direction that is left
-	/*var NumberOfTrues = 0;
-	if (NextDirectionUp) ++NumberOfTrues;
-	if (NextDirectionDown) ++NumberOfTrues;
-	if (NextDirectionLeft) ++NumberOfTrues;
-	if (NextDirectionRight) ++NumberOfTrues;
-	
-	DirectionOfTurn = round(random(NumberOfTrues));
-	
-	if */
+	//If multiple options pick the one with the shortest length
+	CheckFourDirections(TarX, TarY);
+
 	
 	NextDirection = SetNextDirection();
 }

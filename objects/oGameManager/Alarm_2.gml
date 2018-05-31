@@ -9,3 +9,8 @@ oPacMan.speed = PacNormalSpeed;
 oGhostParent.image_speed = 1;
 
 with (oBlinky) ResetGhosts();
+
+with (oGhostParent)
+{
+	Mode = StartingGameMode;
+}

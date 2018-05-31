@@ -307,6 +307,20 @@
             "value": "0",
             "varName": "PreviousMode",
             "varType": 0
+        },
+        {
+            "id": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "StartingGameMode",
+            "varType": 0
         }
     ],
     "solid": false,

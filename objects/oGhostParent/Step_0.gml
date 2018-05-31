@@ -1,5 +1,6 @@
 if (Mode != oGameManager.Mode && Mode != GhostMode.FRIGHT
-	&& Mode != GhostMode.EYESRETURN && Mode != GhostMode.RETURNTOSAFEZONE)
+	&& Mode != GhostMode.EYESRETURN && Mode != GhostMode.RETURNTOSAFEZONE
+	and Mode != GhostMode.SAFEZONE and Mode != GhostMode.LEAVINGSAFEZONE)
 {
 	Mode = oGameManager.Mode;	
 }
@@ -73,6 +74,10 @@ switch(Mode)
 		
 	case GhostMode.RETURNTOSAFEZONE:
 		mp_linear_step(14 * oGameManager.GridSize, 17 * oGameManager.GridSize + oGameManager.Offset, oGameManager.GhostNormSpeed * 2, false);
+		break;
+		
+		case GhostMode.SAFEZONE:
+			image_alpha =1;
 		break;
 		
 	

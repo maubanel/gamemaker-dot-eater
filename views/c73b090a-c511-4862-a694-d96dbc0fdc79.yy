@@ -12,7 +12,8 @@
         "73da7aa0-e70d-430c-a3ca-f21b5bf72340",
         "89556f93-4431-4a6d-a5e8-4131aad7f661",
         "0c262fb5-43eb-4823-932c-fc4ec016176a",
-        "ccbd7732-1fe3-4ba7-9363-5b16ef0bafea"
+        "ccbd7732-1fe3-4ba7-9363-5b16ef0bafea",
+        "a1070d6c-2ffc-4015-bafe-e9caca6c95f8"
     ],
     "filterType": "GMScript",
     "folderName": "Ghosts",

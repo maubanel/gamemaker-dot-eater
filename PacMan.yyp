@@ -913,6 +913,25 @@
             }
         },
         {
+            "Key": "a1070d6c-2ffc-4015-bafe-e9caca6c95f8",
+            "Value": {
+                "id": "dce0c444-690f-4881-9577-3eee587d4336",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/SafeZoneShuffle\/SafeZoneShuffle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "e7a2c225-3ac2-4ef1-b539-668251208faf",
@@ -1607,6 +1626,7 @@
         "89556f93-4431-4a6d-a5e8-4131aad7f661",
         "0c262fb5-43eb-4823-932c-fc4ec016176a",
         "ccbd7732-1fe3-4ba7-9363-5b16ef0bafea",
+        "a1070d6c-2ffc-4015-bafe-e9caca6c95f8",
         "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "7ba76191-4f41-4418-8b2b-ad60877dd913"
     ],

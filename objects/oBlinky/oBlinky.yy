@@ -58,6 +58,14 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "6efbd3fa-c623-42eb-a1c0-d5500224edf8",
             "value": "14 * oGameManager.GridSize + oGameManager.Offset "
+        },
+        {
+            "id": "26657df3-64fc-47c5-972b-1e812390cc96",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
+            "value": "GhostMode.SCATTER"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

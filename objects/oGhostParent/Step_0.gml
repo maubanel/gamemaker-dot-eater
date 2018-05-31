@@ -4,7 +4,6 @@ if (Mode != oGameManager.Mode && Mode != GhostMode.FRIGHT
 	Mode = oGameManager.Mode;	
 }
 
-show_debug_message(Mode);
 
 switch(Mode)
 {
@@ -21,6 +20,7 @@ switch(Mode)
 		
 	case GhostMode.SCATTER:
 	case GhostMode.CHASE:
+	case GhostMode.EYESRETURN:
 	
 		move_wrap(true, false, oGameManager.GridSize);
 
@@ -65,7 +65,6 @@ switch(Mode)
 		
 	case GhostMode.GHOSTEATEN:
 		speed = 0;
-		show_debug_message("Ghost Eaten");
 		if (PreviousMode == GhostMode.EYESRETURN)
 		{
 			image_alpha = 0;	

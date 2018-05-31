@@ -13,7 +13,7 @@ if (LastGridX != GridX or LastGridY != GridY)
 			instance_destroy(inst);
 		}
 	}
-	
+	//Pac-Man eats large pill, changes to FRIGHT mode
 	if (oGameManager.CollisionArray[GridX, GridY] == 2)
 	{
 		//set position to empty

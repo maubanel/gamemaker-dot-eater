@@ -5,7 +5,7 @@ with (oGhostParent)
 	{
 		if (sprite_index != sGhostFright)
 		{
-			sprite_index = sGhostFright;	
+			sprite_index = sGhostFright;
 		}
 	}
 }

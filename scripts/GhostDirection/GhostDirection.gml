@@ -3,7 +3,7 @@
 
 var UpSprite, DownSprite, LeftSprite, RightSprite
 
-if (Mode != GhostMode.EYESRETURN and Mode != GhostMode.RETURNTOSAFEZONE)
+if (!IsFrightened)
 {
 	//Select one of the four ghosts
 	switch (object_index)

@@ -54,8 +54,7 @@ MakeCollisionArray (
 //Put dots in level
 ResetDots();
 
-enum GameMode {CHASE, SCATTER, PLAYERDEAD, GAMESTART, PLAYERREADY, 
-	FRIGHT, GHOSTEATEN}
+enum GameMode {GAMESTART, CHASE, SCATTER, PLAYERDEAD, PREGAME, PLAYERREADY, FRIGHT, GHOSTEATEN}
 
 x = 0;
 y = 0;

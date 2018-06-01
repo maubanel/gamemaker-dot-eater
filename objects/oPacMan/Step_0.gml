@@ -6,7 +6,7 @@ switch(oGameManager.Mode)
 	image_alpha = 0;
 	break;
 	
-	case GameMode.GAMESTART:
+	case GameMode.PREGAME:
 	image_alpha = 1;
 	image_speed = 0;
 	image_index = 1;
@@ -17,6 +17,8 @@ switch(oGameManager.Mode)
 	
 	case GameMode.SCATTER:
 	case GameMode.CHASE:
+	case GameMode.FRIGHT:
+	
 	
 	move_wrap(true, false, oGameManager.GridSize);
 	

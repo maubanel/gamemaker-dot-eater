@@ -12,6 +12,11 @@ if (LastGridX != GridX or LastGridY != GridY)
 		{
 			instance_destroy(inst);
 		}
+		
+		if (not audio_is_playing(aChomp))
+		{
+			audio_play_sound(aChomp, 1, false);	
+		}
 	}
 	//Pac-Man eats large pill, changes to FRIGHT mode
 	if (oGameManager.CollisionArray[GridX, GridY] == 2)

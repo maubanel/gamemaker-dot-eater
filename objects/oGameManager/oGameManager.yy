@@ -266,7 +266,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "GameMode.PLAYERREADY",
+            "value": "GameMode.GAMESTART",
             "varName": "Mode",
             "varType": 0
         },

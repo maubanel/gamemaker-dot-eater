@@ -1,14 +1,39 @@
 /// @description Insert description here
 
-IsInGame = Mode == GameMode.CHASE || Mode == GameMode.FRIGHT || Mode == GameMode.SCATTER;
+IsInGame = Mode == GameMode.CHASE || Mode == GameMode.SCATTER;
 
+
+if (IsInGame)
+{
+	if (not audio_is_playing(aSiren1))
+	{
+		audio_play_sound(aSiren1, 1, true);	
+	}
+}
+else
+{
+	if (audio_is_playing(aSiren1))
+	{
+		audio_stop_sound(aSiren1);	
+	}
+}
 switch (Mode)
 {
+	case GameMode.GAMESTART:
+	if (not audio_is_playing(aIntro))
+	{
+		audio_play_sound(aIntro,1, false);	
+	}
+	Mode = GameMode.PLAYERREADY;
+	break;
+	
 	case GameMode.PLAYERREADY:
 		if (!alarm[1])
 		{
-			alarm[1] = 60;
+			alarm[1] = 80;
 		}
+		
+
 		break;
 	
 	case GameMode.SCATTER:
@@ -24,6 +49,7 @@ switch (Mode)
 		if (!alarm[0])
 		alarm[0] = 60;	
 		break;
+		
 		
 	case GameMode.GHOSTEATEN:
 		

@@ -723,6 +723,25 @@
             }
         },
         {
+            "Key": "7904615e-4c9b-4f95-a3c0-00409a0ba5b0",
+            "Value": {
+                "id": "18f4fe88-cc35-4456-9be9-918ab218798c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/aIntro\/aIntro.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "7ba76191-4f41-4418-8b2b-ad60877dd913",
             "Value": {
                 "id": "05c914a0-4136-444b-9f80-9d4fce4114b6",
@@ -891,6 +910,25 @@
                 ],
                 "resourcePath": "scripts\/GhostFrightRandomTurn\/GhostFrightRandomTurn.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8d559986-848d-48aa-9f3c-d3a0a6ffa14b",
+            "Value": {
+                "id": "d2d91763-dfdb-480d-99f6-a604c59a67af",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/aSiren1\/aSiren1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1103,6 +1141,25 @@
             }
         },
         {
+            "Key": "ab6af3e5-46f9-406a-a721-59920c5e1678",
+            "Value": {
+                "id": "7c313bd9-2506-4b66-8edb-a7c840831c97",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/aChomp\/aChomp.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b52bf5f6-cd70-4355-ae5c-4929e1296ec6",
             "Value": {
                 "id": "8f430336-a0b9-44a9-ab4e-1e0c4b8b2f8a",
@@ -1176,6 +1233,25 @@
                 ],
                 "resourcePath": "scripts\/UpdateHorVer\/UpdateHorVer.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b9e6ba0e-e889-4142-812e-5b8318184fb7",
+            "Value": {
+                "id": "6749692a-c979-41ef-a54b-f838aaeb105d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/aDeath\/aDeath.yy",
+                "resourceType": "GMSound"
             }
         },
         {

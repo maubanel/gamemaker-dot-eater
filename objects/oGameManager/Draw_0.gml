@@ -40,7 +40,7 @@ switch(Mode)
 			draw_line_width(x, y, TargetX, TargetY, 5);
 		}
 	}
-	//enum GameMode {CHASE, SCATTER, PLAYERDEAD, GAMESTART, PLAYERREADY, 
+	//enum GameMode {CHASE, SCATTER, PLAYERDEAD, PREGAME, PLAYERREADY, 
 	//FRIGHT, EYESRETURN, GHOSTEATEN, RETURNTOSAFEZONE, SAFEZONE,
 //	LEAVINGSAFEZONE}
 	if (DrawDebug)
@@ -61,7 +61,7 @@ switch(Mode)
 			GameModeText = "Player Dead";
 			break;
 			
-			case GameMode.GAMESTART:
+			case GameMode.PREGAME:
 			GameModeText = "Game Start";
 			break;
 			
@@ -71,6 +71,10 @@ switch(Mode)
 			
 			case GameMode.GHOSTEATEN:
 			GameModeText = "Ghost Eaten";
+			break;	
+			
+			case GameMode.FRIGHT:
+			GameModeText = "Fright";
 			break;	
 			
 		}
@@ -92,7 +96,7 @@ switch(Mode)
 			BlinkyModeText = "Player Dead";
 			break;
 			
-			case GhostMode.GAMESTART:
+			case GhostMode.PREGAME:
 			BlinkyModeText = "Game Start";
 			break;
 			
@@ -145,7 +149,7 @@ switch(Mode)
 			PinkyModeText = "Player Dead";
 			break;
 			
-			case GhostMode.GAMESTART:
+			case GhostMode.PREGAME:
 			PinkyModeText = "Game Start";
 			break;
 			

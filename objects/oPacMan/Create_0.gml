@@ -10,3 +10,5 @@ direction = 180;
 
 //Sets pacman back to start position
 ResetPacManToStart();
+
+image_alpha = 0;

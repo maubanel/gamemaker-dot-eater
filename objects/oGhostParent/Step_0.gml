@@ -23,10 +23,10 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	
 	if (oGameManager.LastGameMode == GameMode.PLAYERREADY)
 	{
-		Mode = GhostMode.GAMESTART
+		Mode = GhostMode.PREGAME
 	}
 	
-	if (oGameManager.LastGameMode == GameMode.GAMESTART)
+	if (oGameManager.LastGameMode == GameMode.PREGAME)
 	{
 		if (object_index == oBlinky)
 		{
@@ -56,16 +56,20 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	
 	if (oGameManager.Mode == GhostMode.FRIGHT)
 	{
+		
 		if (IsInGame)
 		{
 			Mode = GhostMode.FRIGHT;	
+			ReverseDirection();
+			sprite_index = sGhostFright;
 		}
 		else
 		{
-			if (IsFrightened)
-			{
-				sprite_index = sGhostFright;	
-			}
+			//if (IsFrightened)
+			//{
+				sprite_index = sGhostFright;
+				show_debug_message("Switch to Blue");
+			//}
 		}
 	}
 	
@@ -77,7 +81,7 @@ switch (Mode)
 		image_alpha = 0;
 	break;
 		
-	case GhostMode.GAMESTART:
+	case GhostMode.PREGAME:
 		image_alpha = 1;
 		image_speed = 0;
 		x = StartingX;

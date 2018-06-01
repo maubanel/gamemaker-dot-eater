@@ -29,14 +29,14 @@ if (LastGridX != GridX or LastGridY != GridY)
 			instance_destroy(inst);	
 		}
 		
+		oGameManager.Mode = GameMode.FRIGHT;
+		
 		//Switch to FRIGHT mode // Make ghosts reverse direction
 		with (oGhostParent)
 		{
 			if (Mode != GhostMode.EYESRETURN)
 			{
-				Mode = GhostMode.FRIGHT;
-				FrightModeInitialize();
-				ReverseDirection();
+				IsFrightened = true;
 			}
 		}
 	}

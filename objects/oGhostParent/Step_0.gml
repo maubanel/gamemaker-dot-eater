@@ -7,7 +7,7 @@
 
 //Every ghost shares first target for first turn
 IsInGame = Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE 
-				|| Mode == GhostMode.FIRSTTURN || Mode == GhostMode.FRIGHT;
+				|| Mode == GhostMode.FIRSTTURN;
 
 IsEdible = Mode == GhostMode.FRIGHT;
 
@@ -28,9 +28,20 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	
 	if (oGameManager.LastGameMode == GameMode.GAMESTART)
 	{
-		Mode = GhostMode.FIRSTTURN;
-		NextDirection = 180;
-		direction = 180;
+		if (object_index == oBlinky)
+		{
+			Mode = GhostMode.FIRSTTURN;
+			NextDirection = 180;
+			direction = 180;
+
+		}
+		else 
+		{
+			Mode = GhostMode.SAFEZONE;
+			speed = 0;
+			vspeed = oGameManager.GhostTunnelSpeed;
+		}
+		
 	}
 	
 	if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
@@ -47,10 +58,16 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	{
 		if (IsInGame)
 		{
-			Mode = FRIGHT;	
+			Mode = GhostMode.FRIGHT;	
+		}
+		else
+		{
+			if (IsFrightened)
+			{
+				sprite_index = sGhostFright;	
+			}
 		}
 	}
-	
 	
 }
 
@@ -110,7 +127,7 @@ switch (Mode)
 		GridX = clamp(GridX, 0, 27);
 		GridY = clamp(GridY,0, 35);
 		
-		CheckForPlayerKill();
+
 		
 		//Pick ran
 		GhostRandomTurnMovement();
@@ -133,7 +150,11 @@ switch (Mode)
 		break;
 		
 		case GhostMode.SAFEZONE:
-			image_alpha =1;
+		if (image_alpha != 1)image_alpha =1;
+		SafeZoneShuffle();	
+		GhostDirection();
+			
+
 		break;
 		
 	

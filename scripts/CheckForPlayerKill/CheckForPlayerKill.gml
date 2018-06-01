@@ -4,6 +4,7 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 	if (Mode == GameMode.CHASE or Mode == GameMode.SCATTER)
 	{
 		oGameManager.Mode = GameMode.PLAYERDEAD;
+		Mode = GhostMode.PLAYERDEAD;
 	}
 	
 	else if (Mode == GameMode.FRIGHT)

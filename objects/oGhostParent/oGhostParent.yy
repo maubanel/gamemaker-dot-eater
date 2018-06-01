@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "69150333-efaa-41ef-97a2-223042347ae5"
+        },
+        {
+            "id": "b9af66f4-8f36-4de2-85e9-c5d48be579df",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "69150333-efaa-41ef-97a2-223042347ae5"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -362,6 +372,20 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "IsEdible",
+            "varType": 3
+        },
+        {
+            "id": "236a55a6-51e7-4718-b952-3298ac0fd960",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "IsFrightened",
             "varType": 3
         }
     ],

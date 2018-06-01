@@ -13,16 +13,6 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "8f261970-1bf7-4602-a0a9-cffa8d2e20b9"
-        },
-        {
-            "id": "aa5cdba1-6438-47b0-a02c-eaedb4351d66",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "8f261970-1bf7-4602-a0a9-cffa8d2e20b9"
         }
     ],
     "maskSpriteId": "deaf36c6-6b44-4733-8a07-41b06be35b76",
@@ -65,7 +55,15 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
-            "value": "GameMode.SCATTER"
+            "value": "GhostMode.SCATTER"
+        },
+        {
+            "id": "a941d37b-fdb6-40b4-aea6-76fb5e6b9f62",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
+            "value": "GhostMode.SCATTER"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

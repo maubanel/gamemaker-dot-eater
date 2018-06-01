@@ -423,6 +423,34 @@
             "value": "GameMode.PLAYERDEAD",
             "varName": "LastGameMode",
             "varType": 0
+        },
+        {
+            "id": "d3c9d58e-fa91-4312-8586-b384c1a24f18",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "DrawDebug",
+            "varType": 3
+        },
+        {
+            "id": "cecda0e5-13fd-43c6-80d4-43b0ab2b2535",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "IsInGame",
+            "varType": 0
         }
     ],
     "solid": false,

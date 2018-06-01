@@ -286,6 +286,25 @@
             }
         },
         {
+            "Key": "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
+            "Value": {
+                "id": "b0cf252e-3ca8-4a9a-b56e-2f1cd6fb6d9f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/GetGhostTarget\/GetGhostTarget.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "33cb583a-1a83-48e0-99ab-e357fedccb9b",
             "Value": {
                 "id": "fe78a370-cd9c-4b55-84dd-3aaf1cebe6c6",
@@ -549,6 +568,25 @@
                 ],
                 "resourcePath": "objects\/oGhostParent\/oGhostParent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6b380d38-4b99-4f43-862e-6e4507937f6b",
+            "Value": {
+                "id": "2aa59283-e295-4f92-8d9a-3da4083d557d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/GhostMovementFirstTurn\/GhostMovementFirstTurn.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -891,6 +929,25 @@
                 ],
                 "resourcePath": "objects\/oGameManager\/oGameManager.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9fd510e8-b301-40a8-a135-1e0e968c87e5",
+            "Value": {
+                "id": "9de34d10-950f-4ced-b604-8bd8d8451c49",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/UpdateGridGhost\/UpdateGridGhost.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1274,6 +1331,25 @@
             }
         },
         {
+            "Key": "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
+            "Value": {
+                "id": "6da7c45c-f9a4-4ba4-a61c-17b060789c3b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/SetGameMode\/SetGameMode.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dc88fc49-7b31-4026-bde0-614a74fea050",
             "Value": {
                 "id": "ee4bf247-6d9a-436a-a346-f003a5d4c817",
@@ -1599,7 +1675,6 @@
     ],
     "script_order": [
         "e0eef1c1-888a-4735-9e26-66df335d062f",
-        "bf9db800-91cd-47f0-bf23-ea0948887f63",
         "5810a140-03c6-4c00-b2f7-b1486362bc30",
         "f4064235-4e8b-4e23-a6df-95a858db9af1",
         "b6e23735-54b3-443e-bb19-428a6b81d4e0",
@@ -1616,9 +1691,11 @@
         "c395756a-e3e4-4161-a766-079b27786b59",
         "6ebde123-23a1-4f56-bf3e-5d348ad24817",
         "49747d1a-0dc0-4f7d-b51f-d2581bdc25e2",
+        "bf9db800-91cd-47f0-bf23-ea0948887f63",
         "ea84abb0-bf8f-458e-8895-e50b2269bb24",
         "a105f383-16b3-4351-ba39-43c193d78607",
         "d7962610-aa37-46cb-8c03-b3e7e72e0bc6",
+        "6b380d38-4b99-4f43-862e-6e4507937f6b",
         "1f9eed51-d452-48f4-855d-4dc17c73ea5c",
         "5274d055-a98b-4f12-8680-cdb1b5ec35b6",
         "33cb583a-1a83-48e0-99ab-e357fedccb9b",
@@ -1627,6 +1704,9 @@
         "0c262fb5-43eb-4823-932c-fc4ec016176a",
         "ccbd7732-1fe3-4ba7-9363-5b16ef0bafea",
         "a1070d6c-2ffc-4015-bafe-e9caca6c95f8",
+        "9fd510e8-b301-40a8-a135-1e0e968c87e5",
+        "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
+        "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
         "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "7ba76191-4f41-4418-8b2b-ad60877dd913"
     ],

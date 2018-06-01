@@ -29,7 +29,7 @@ if (Mode == GameMode.CHASE or oGameManager.Mode == GameMode.SCATTER)
 	}
 }
 
-if (Mode == GameMode.EYESRETURN)
+if (Mode == GhostMode.EYESRETURN)
 {
 	//If the grid has changed update pathfinding
 	if (GridX != LastGridX or GridY != LastGridY)
@@ -43,7 +43,7 @@ if (Mode == GameMode.EYESRETURN)
 		{
 			x = 14 * oGameManager.GridSize;
 			speed = 0;
-			Mode = GameMode.RETURNTOSAFEZONE;
+			Mode = GhostMode.RETURNTOSAFEZONE;
 		}
 		
 		else 

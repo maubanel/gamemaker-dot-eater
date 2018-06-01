@@ -9,7 +9,7 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 	else if (Mode == GameMode.FRIGHT)
 	{
 		sprite_index = sGhostEyes;
-		PreviousMode = GameMode.EYESRETURN;
+		PreviousMode = GhostMode.EYESRETURN;
 		oGameManager.Mode = GameMode.GHOSTEATEN;
 		oGhostParent.Mode = GameMode.GHOSTEATEN;
 		x = GetCenterGridPos(GridX);

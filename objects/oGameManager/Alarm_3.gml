@@ -10,16 +10,15 @@ with (oPacMan)
 
 with (oGhostParent)
 {
-	if (PreviousMode != GameMode.EYESRETURN)
+	if (PreviousMode != GhostMode.EYESRETURN)
 	{
 		Mode = GameMode.FRIGHT;	
 	}
 	else
 	{
-		Mode = GameMode.EYESRETURN;
+		Mode = GhostMode.EYESRETURN;
 		image_alpha = 1;
 		sprite_index = sGhostEyes;
 		PreviousMode = 0;
-		show_debug_message("Ghost Eyes");
 	}
 }

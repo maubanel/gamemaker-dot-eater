@@ -7,3 +7,5 @@ oPacMan.image_speed = 1;
 oPacMan.speed = PacNormalSpeed;
 
 oGhostParent.image_speed = 1;
+
+

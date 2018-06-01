@@ -32,9 +32,9 @@ if (LastGridX != GridX or LastGridY != GridY)
 		//Switch to FRIGHT mode // Make ghosts reverse direction
 		with (oGhostParent)
 		{
-			if (Mode != GameMode.EYESRETURN)
+			if (Mode != GhostMode.EYESRETURN)
 			{
-				Mode = GameMode.FRIGHT;
+				Mode = GhostMode.FRIGHT;
 				FrightModeInitialize();
 				ReverseDirection();
 			}

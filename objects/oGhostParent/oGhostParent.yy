@@ -321,6 +321,48 @@
             "value": "0",
             "varName": "StartingGameMode",
             "varType": 0
+        },
+        {
+            "id": "3b44c21c-0ed0-4c03-b806-65bee3c739bb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "oGameManager.GhostNormSpeed",
+            "varName": "GhostSpeed",
+            "varType": 0
+        },
+        {
+            "id": "b19c2f04-31e4-4fa2-846d-c50101a4a400",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "IsInGame",
+            "varType": 3
+        },
+        {
+            "id": "b4503589-7099-4f69-8349-4a79f878fb11",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "IsEdible",
+            "varType": 3
         }
     ],
     "solid": false,

@@ -1,5 +1,7 @@
 /// @description Insert description here
 
+IsInGame = Mode == GameMode.CHASE || Mode == GameMode.FRIGHT || Mode == GameMode.SCATTER;
+
 switch (Mode)
 {
 	case GameMode.PLAYERREADY:

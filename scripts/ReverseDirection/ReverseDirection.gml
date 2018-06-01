@@ -1,9 +1,9 @@
 
 with (oGhostParent)
 {
-	if (Mode == GhostMode.CHASE || 
-		Mode == GhostMode.SCATTER ||
-		Mode == GhostMode.FRIGHT)
+	if (Mode == GameMode.CHASE || 
+		Mode == GameMode.SCATTER ||
+		Mode == GameMode.FRIGHT)
 	{
 		direction -= 180;
 		NextDirection = direction;

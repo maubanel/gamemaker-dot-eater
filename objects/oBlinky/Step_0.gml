@@ -3,12 +3,12 @@
 //Get Blinky's target:
 switch(Mode)
 {
-	case GhostMode.CHASE:
+	case GameMode.CHASE:
 		TargetX = oPacMan.x;
 		TargetY = oPacMan.y;
 		break;
 	
-	case GhostMode.SCATTER:
+	case GameMode.SCATTER:
 		TargetX = ScatterTargetX;
 		TargetY = ScatterTargetY;
 		break;

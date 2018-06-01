@@ -5,7 +5,7 @@ switch(object_index)
 		//ghost starts moving to the left
 		direction = 180;
 
-		Mode = GhostMode.SCATTER;
+		Mode = GameMode.SCATTER;
 
 		//look ahead for ghost
 		speed = oGameManager.GhostNormSpeed;

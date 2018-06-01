@@ -3,7 +3,7 @@
 switch(Mode)
 {
 	
-	case GhostMode.PLAYERREADY:
+	case GameMode.PLAYERREADY:
 	
 	lblue = make_colour_rgb(116, 166, 247);
 	
@@ -21,7 +21,7 @@ switch(Mode)
 
 	break;
 	
-	case GhostMode.GHOSTEATEN:
+	case GameMode.GHOSTEATEN:
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
 	draw_text(oPacMan.x - 16, oPacMan.y - 16, GhostScore);

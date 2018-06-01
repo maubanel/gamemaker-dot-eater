@@ -8,9 +8,9 @@ instance_create_depth(14 * oGameManager.GridSize,
 					  14 * oGameManager.GridSize 
 					+ oGameManager.Offset, -5, oBlinky);
 					
-instance_create_depth(14 * oGameManager.GridSize, 
-					17 * oGameManager.GridSize + oGameManager.Offset,
-						-5, oPinky);
+//instance_create_depth(14 * oGameManager.GridSize, 
+//					17 * oGameManager.GridSize + oGameManager.Offset,
+//						-5, oPinky);
 
 MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -54,7 +54,7 @@ MakeCollisionArray (
 //Put dots in level
 ResetDots();
 
-enum GhostMode {CHASE, SCATTER, PLAYERDEAD, GAMESTART, PLAYERREADY, 
+enum GameMode {CHASE, SCATTER, PLAYERDEAD, GAMESTART, PLAYERREADY, 
 	FRIGHT, EYESRETURN, GHOSTEATEN, RETURNTOSAFEZONE, SAFEZONE,
 	LEAVINGSAFEZONE}
 

@@ -1,17 +1,17 @@
 //Check to see if ghost kills player
 if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 {
-	if (Mode == GhostMode.CHASE or Mode == GhostMode.SCATTER)
+	if (Mode == GameMode.CHASE or Mode == GameMode.SCATTER)
 	{
-		oGameManager.Mode = GhostMode.PLAYERDEAD;
+		oGameManager.Mode = GameMode.PLAYERDEAD;
 	}
 	
-	else if (Mode == GhostMode.FRIGHT)
+	else if (Mode == GameMode.FRIGHT)
 	{
 		sprite_index = sGhostEyes;
-		PreviousMode = GhostMode.EYESRETURN;
-		oGameManager.Mode = GhostMode.GHOSTEATEN;
-		oGhostParent.Mode = GhostMode.GHOSTEATEN;
+		PreviousMode = GameMode.EYESRETURN;
+		oGameManager.Mode = GameMode.GHOSTEATEN;
+		oGhostParent.Mode = GameMode.GHOSTEATEN;
 		x = GetCenterGridPos(GridX);
 		y = GetCenterGridPos(GridY);
 	}

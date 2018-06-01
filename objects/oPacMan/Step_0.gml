@@ -2,11 +2,11 @@
 
 switch(oGameManager.Mode)
 {
-	case GhostMode.PLAYERREADY:
+	case GameMode.PLAYERREADY:
 	image_alpha = 0;
 	break;
 	
-	case GhostMode.GAMESTART:
+	case GameMode.GAMESTART:
 	image_alpha = 1;
 	image_speed = 0;
 	image_index = 1;
@@ -15,8 +15,8 @@ switch(oGameManager.Mode)
 	
 	break;
 	
-	case GhostMode.SCATTER:
-	case GhostMode.CHASE:
+	case GameMode.SCATTER:
+	case GameMode.CHASE:
 	
 	move_wrap(true, false, oGameManager.GridSize);
 	
@@ -46,19 +46,19 @@ switch(oGameManager.Mode)
 	
 	break;
 	
-	case GhostMode.PLAYERDEAD:
+	case GameMode.PLAYERDEAD:
 		speed = 0;
 		
 		//Trigger sprite change
 		if (sprite_index == sPacManDeath and image_index + image_speed > image_number )
 		{
-			oGameManager.Mode = GhostMode.PLAYERREADY;
+			oGameManager.Mode = GameMode.PLAYERREADY;
 			ResetPacManToStart();
 			
 		}
 	break;
 	
-	case GhostMode.GHOSTEATEN:
+	case GameMode.GHOSTEATEN:
 	
 		image_alpha = 0;
 		speed = 0;

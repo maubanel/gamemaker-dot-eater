@@ -2,15 +2,15 @@
 
 switch (Mode)
 {
-	case GhostMode.PLAYERREADY:
+	case GameMode.PLAYERREADY:
 		if (!alarm[1])
 		{
 			alarm[1] = 60;
 		}
 		break;
 	
-	case GhostMode.SCATTER:
-	case GhostMode.CHASE:
+	case GameMode.SCATTER:
+	case GameMode.CHASE:
 		//Updaet timer and switch to seconds
 		ChaseTimer += delta_time/1000000;
 
@@ -18,12 +18,12 @@ switch (Mode)
 	
 		break;
 	
-	case GhostMode.PLAYERDEAD:
+	case GameMode.PLAYERDEAD:
 		if (!alarm[0])
 		alarm[0] = 60;	
 		break;
 		
-	case GhostMode.GHOSTEATEN:
+	case GameMode.GHOSTEATEN:
 		
 		if (!alarm[3])
 		{

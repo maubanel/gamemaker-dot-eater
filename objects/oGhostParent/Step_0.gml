@@ -1,14 +1,27 @@
-if (Mode != oGameManager.Mode && Mode != GhostMode.FRIGHT
-	&& Mode != GhostMode.EYESRETURN && Mode != GhostMode.RETURNTOSAFEZONE
-	and Mode != GhostMode.SAFEZONE and Mode != GhostMode.LEAVINGSAFEZONE)
+/*if (Mode != oGameManager.Mode && Mode != GameMode.FRIGHT
+	&& Mode != GameMode.EYESRETURN && Mode != GameMode.RETURNTOSAFEZONE
+	and Mode != GameMode.SAFEZONE and Mode != GameMode.LEAVINGSAFEZONE)
 {
 	Mode = oGameManager.Mode;	
+}*/
+
+if (oGameManager.LastGameMode != oGameManager.Mode)
+{
+	if (oGameManager.LastGameMode == GameMode.PLAYERDEAD)
+	{
+		Mode = GhostMode.PLAYERREADY;
+	}
+	
+	if (oGameManager.LastGameMode == GameMode.PLAYERREADY)
+	{
+		Mode = GhostMode.GAMESTART
+	}
+	
 }
 
-
-switch(Mode)
+switch (Mode)
 {
-	case GhostMode.PLAYERREADY:
+		case GhostMode.PLAYERREADY:
 		image_alpha = 0;
 		break;
 		
@@ -17,11 +30,26 @@ switch(Mode)
 		image_speed = 0;
 		x = StartingX;
 		y = StartingY;
+		break;	
+}
+
+/*
+switch(Mode)
+{
+	case GameMode.PLAYERREADY:
+		image_alpha = 0;
 		break;
 		
-	case GhostMode.SCATTER:
-	case GhostMode.CHASE:
-	case GhostMode.EYESRETURN:
+	case GameMode.GAMESTART:
+		image_alpha = 1;
+		image_speed = 0;
+		x = StartingX;
+		y = StartingY;
+		break;
+		
+	case GameMode.SCATTER:
+	case GameMode.CHASE:
+	case GameMode.EYESRETURN:
 	
 		move_wrap(true, false, oGameManager.GridSize);
 
@@ -42,7 +70,7 @@ switch(Mode)
 	
 		break;
 		
-	case GhostMode.FRIGHT:
+	case GameMode.FRIGHT:
 		
 		move_wrap(true, false, oGameManager.GridSize);
 
@@ -64,19 +92,19 @@ switch(Mode)
 		
 		break;
 		
-	case GhostMode.GHOSTEATEN:
+	case GameMode.GHOSTEATEN:
 		speed = 0;
-		if (PreviousMode == GhostMode.EYESRETURN)
+		if (PreviousMode == GameMode.EYESRETURN)
 		{
 			image_alpha = 0;	
 		}
 		break;
 		
-	case GhostMode.RETURNTOSAFEZONE:
+	case GameMode.RETURNTOSAFEZONE:
 		mp_linear_step(14 * oGameManager.GridSize, 17 * oGameManager.GridSize + oGameManager.Offset, oGameManager.GhostNormSpeed * 2, false);
 		break;
 		
-		case GhostMode.SAFEZONE:
+		case GameMode.SAFEZONE:
 			image_alpha =1;
 		break;
 		
@@ -86,7 +114,7 @@ switch(Mode)
 		break;
 	
 }
-
+*/
 
 
 

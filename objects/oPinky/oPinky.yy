@@ -63,7 +63,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
-            "value": "GhostMode.SAFEZONE"
+            "value": "GameMode.SAFEZONE"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

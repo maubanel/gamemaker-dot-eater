@@ -1,7 +1,7 @@
 
 //Update path for ghost when tile changes
 // and ghost is one step from center:
-if (Mode == GhostMode.CHASE or oGameManager.Mode == GhostMode.SCATTER)
+if (Mode == GameMode.CHASE or oGameManager.Mode == GameMode.SCATTER)
 {
 	//If the grid has changed update pathfinding
 	if (GridX != LastGridX or GridY != LastGridY)
@@ -29,7 +29,7 @@ if (Mode == GhostMode.CHASE or oGameManager.Mode == GhostMode.SCATTER)
 	}
 }
 
-if (Mode == GhostMode.EYESRETURN)
+if (Mode == GameMode.EYESRETURN)
 {
 	//If the grid has changed update pathfinding
 	if (GridX != LastGridX or GridY != LastGridY)
@@ -43,7 +43,7 @@ if (Mode == GhostMode.EYESRETURN)
 		{
 			x = 14 * oGameManager.GridSize;
 			speed = 0;
-			Mode = GhostMode.RETURNTOSAFEZONE;
+			Mode = GameMode.RETURNTOSAFEZONE;
 		}
 		
 		else 

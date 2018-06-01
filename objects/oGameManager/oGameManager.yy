@@ -73,6 +73,16 @@
             "enumb": 3,
             "eventtype": 2,
             "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
+        },
+        {
+            "id": "e5cdf0d5-fcd2-4a5c-9488-3444eb2fcda4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -256,7 +266,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "GhostMode.PLAYERREADY",
+            "value": "GameMode.PLAYERREADY",
             "varName": "Mode",
             "varType": 0
         },
@@ -398,6 +408,20 @@
             "resourceFilter": 1023,
             "value": "200",
             "varName": "GhostScore",
+            "varType": 0
+        },
+        {
+            "id": "c819bb6a-3ea3-4605-99f1-c5181d2cd8a1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "GameMode.PLAYERDEAD",
+            "varName": "LastGameMode",
             "varType": 0
         }
     ],

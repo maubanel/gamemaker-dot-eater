@@ -1,5 +1,5 @@
 /// @description Going from GHOSTEATEN back to FRIGHT
-Mode = GhostMode.SCATTER;
+Mode = GameMode.SCATTER;
 ModeTimer();
 oPacMan.image_alpha = 1;
 with (oPacMan)
@@ -10,13 +10,13 @@ with (oPacMan)
 
 with (oGhostParent)
 {
-	if (PreviousMode != GhostMode.EYESRETURN)
+	if (PreviousMode != GameMode.EYESRETURN)
 	{
-		Mode = GhostMode.FRIGHT;	
+		Mode = GameMode.FRIGHT;	
 	}
 	else
 	{
-		Mode = GhostMode.EYESRETURN;
+		Mode = GameMode.EYESRETURN;
 		image_alpha = 1;
 		sprite_index = sGhostEyes;
 		PreviousMode = 0;

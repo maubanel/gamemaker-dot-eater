@@ -528,7 +528,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/PacManMoveLaterally\/PacManMoveLaterally.yy",
+                "resourcePath": "scripts\/PacManMovement\/PacManMovement.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -701,6 +701,25 @@
                 ],
                 "resourcePath": "rooms\/rMaze\/rMaze.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "77113fba-2650-489a-bb59-1a99a6e8738d",
+            "Value": {
+                "id": "030bb858-24d9-4539-9ce2-ec0a99a3ea0b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/MovePac\/MovePac.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1649,7 +1668,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/WIthinStepOfCenter\/WIthinStepOfCenter.yy",
+                "resourcePath": "scripts\/WithinStepOfCenter\/WithinStepOfCenter.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1946,18 +1965,20 @@
         "b6e23735-54b3-443e-bb19-428a6b81d4e0",
         "3563cd49-2026-4a74-adf5-7262c61eeab9",
         "c37444f0-f97a-4a7a-bc44-238a9e9c27c9",
+        "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "f19cbc7d-578b-4bfe-8e5e-a79e7a145132",
         "1bf402f6-2d27-443d-867d-c2c39a13a60b",
         "8478134b-af34-47a7-b4d3-71b113f837ee",
+        "bf9db800-91cd-47f0-bf23-ea0948887f63",
         "b7471335-92a3-4332-89e5-eb5f273befcc",
         "522baed6-29a5-47e2-8dfd-70737a3ecb2a",
+        "77113fba-2650-489a-bb59-1a99a6e8738d",
         "ea8484b0-9d7f-4ea3-81d2-98b8840c29a1",
         "8d8bf9ef-56a7-4dd2-a8a4-b8bc2c9572c6",
         "3e445a32-fb2d-4293-a211-0e70c967fe2e",
         "c395756a-e3e4-4161-a766-079b27786b59",
         "6ebde123-23a1-4f56-bf3e-5d348ad24817",
         "49747d1a-0dc0-4f7d-b51f-d2581bdc25e2",
-        "bf9db800-91cd-47f0-bf23-ea0948887f63",
         "ea84abb0-bf8f-458e-8895-e50b2269bb24",
         "a105f383-16b3-4351-ba39-43c193d78607",
         "d7962610-aa37-46cb-8c03-b3e7e72e0bc6",
@@ -1973,7 +1994,6 @@
         "9fd510e8-b301-40a8-a135-1e0e968c87e5",
         "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
         "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
-        "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "7ba76191-4f41-4418-8b2b-ad60877dd913"
     ],
     "tutorial": ""

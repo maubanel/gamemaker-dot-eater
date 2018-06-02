@@ -56,6 +56,15 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	
 	if (oGameManager.Mode == GhostMode.FRIGHT)
 	{
+		//PUT SOMEWHERE WAS IN PAC MAN
+				//Switch to FRIGHT mode // Make ghosts reverse direction
+		with (oGhostParent)
+		{
+			if (Mode != GhostMode.EYESRETURN)
+			{
+				IsFrightened = true;
+			}
+		}
 		
 		if (IsInGame)
 		{

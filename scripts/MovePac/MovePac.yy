@@ -1,8 +1,8 @@
 {
-    "id": "522baed6-29a5-47e2-8dfd-70737a3ecb2a",
+    "id": "77113fba-2650-489a-bb59-1a99a6e8738d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "PacManMoveLaterally",
+    "name": "MovePac",
     "IsCompatibility": false,
     "IsDnD": false
 }

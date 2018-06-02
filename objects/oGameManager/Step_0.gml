@@ -64,6 +64,3 @@ switch (Mode)
 		break;
 	
 }
-
-
-

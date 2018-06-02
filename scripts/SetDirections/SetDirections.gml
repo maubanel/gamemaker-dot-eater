@@ -1,3 +1,7 @@
+/*  Function resets movement direction for PacMan.
+//  Argument - Uses keyboard constants for up, left, right and down 
+*/
+
 var NewDirection = argument0;
 
 IsMoveLeft = false;

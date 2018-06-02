@@ -6,7 +6,7 @@ switch(Mode)
 	case GameMode.PLAYERREADY:
 	
 	lblue = make_colour_rgb(116, 166, 247);
-	
+
 	draw_set_font(fPlayerReady);
 	
 	draw_set_color(lblue);
@@ -78,7 +78,7 @@ switch(Mode)
 			break;	
 			
 		}
-		draw_text(30, 30, "Game Mode: " + GameModeText);
+
 		
 		var BlinkyModeText = "";
 		
@@ -185,7 +185,8 @@ switch(Mode)
 			PinkyModeText = "Fright";
 			break;
 		}
-		draw_text(30, 30, "Game Mode: " + GameModeText);
+		draw_text(30, 15, "Game Mode: " + GameModeText);
+		draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
 		draw_text(500, 15, "Blinky Mode: " + BlinkyModeText);
 		draw_text(500, 40, "Pinky Mode: " + PinkyModeText);
 		

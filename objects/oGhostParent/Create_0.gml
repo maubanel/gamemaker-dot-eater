@@ -1,7 +1,7 @@
 /// @description Shared Ghost Creates
 
 //Updates ghosts current position on grid
-UpdateGridPosition();
+UpdateGridGhost();
 
 image_alpha = 0;
 

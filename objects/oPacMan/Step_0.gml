@@ -9,7 +9,7 @@ switch(oGameManager.Mode)
 	case GameMode.PREGAME:
 	image_alpha = 1;
 	image_speed = 0;
-	image_index = 1;
+	image_index = 2;
 	ResetPacManToStart();
 	
 	
@@ -19,32 +19,28 @@ switch(oGameManager.Mode)
 	case GameMode.CHASE:
 	case GameMode.FRIGHT:
 	
-	
+	//For tunnel in maze
 	move_wrap(true, false, oGameManager.GridSize);
 	
-	//Update Pac-Man's Grid Position
+	/* Update Pac-Man's last and current Grid Position, if grid is
+	// different then get center grid type and xy */
 	UpdateGridPosition();
 	
-		//Find out what grid type under player
-	GridType = oGameManager.CollisionArray[GridX, GridY];
-	
+	/* Sets speed based on whether it is in fright or non fright mode */
 	SetSpeed();
 	
-	UpdateHorVer();
-
-	//Eat dots if run over
+	//Eat dots if run over, go into FRIGHT mode if it is a large dot,
+	//updates grid to indicate that dot has been eaten
 	PacEatDots();
 
 	//CHeck to see if Pac-Man is turning
-	PacManMoveTurn();
-	
-	if (IsTurning == false)
-	{
-		PacManMoveLaterally();
-	}
+	PacManMovement();
 
 	//Check To See if Player Can Move in This direction:
 	IsSpaceFreeToMove();
+	
+	
+	UpdateHorVer();
 	
 	break;
 	

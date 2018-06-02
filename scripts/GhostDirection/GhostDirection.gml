@@ -3,7 +3,7 @@
 
 var UpSprite, DownSprite, LeftSprite, RightSprite
 
-if (IsInGame)
+if (IsInGame || (IsSafeZone && !IsFrightened))
 {
 	//Select one of the four ghosts
 	switch (object_index)

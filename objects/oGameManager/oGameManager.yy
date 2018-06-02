@@ -248,7 +248,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "Speed * .75",
+            "value": "Speed  *  .75",
             "varName": "GhostNormSpeed",
             "varType": 0
         },
@@ -262,7 +262,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "Speed * .5",
+            "value": "Speed  *  .5",
             "varName": "GhostFrightSpeed",
             "varType": 0
         },
@@ -276,7 +276,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "Speed * .4",
+            "value": "Speed  *  .4",
             "varName": "GhostTunnelSpeed",
             "varType": 0
         },

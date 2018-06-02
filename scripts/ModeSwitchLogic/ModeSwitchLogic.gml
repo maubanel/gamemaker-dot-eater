@@ -46,10 +46,14 @@ else if (oGameManager.Mode == GameMode.FRIGHT)
 	{
 		IsFrightened = true;
 		sprite_index = sGhostFright;
-		if (IsInGame || IsFrightened)
+		if (IsInGame || IsEdible)
 		{
 			Mode = GhostMode.FRIGHT;
 			ReverseDirection(); // - BUGGY
+		}
+		if (IsSafeZone)
+		{
+			sprite_index = sGhostFright;
 		}
 	}
 }
@@ -62,8 +66,10 @@ else if (oGameManager.Mode == GameMode.FRIGHTFLASH)
 	//switch IsFrightened switch to true for ghosts in safe zone
 	if (IsFrightened)
 	{
-		sprite_index = sGhostFrightFlash;
-		Mode = GhostMode.FRIGHTFLASH;
+		//Don'e switched if in eyball mode
+		if (!IsEyeballs) sprite_index = sGhostFrightFlash;
+		//If not in safezone then switch modes otherwise leave alone
+		if (!IsSafeZone) Mode = GhostMode.FRIGHTFLASH;
 	}
 }
 
@@ -81,9 +87,12 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 {
 	if (!IsEyeballs)
 	{
-		if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
-		else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
-		else Mode = GhostMode.CHASE;
+		if (IsInGame)
+		{
+			if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
+			else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
+			else Mode = GhostMode.CHASE;
+		}
 		sprite_index = OriginalSprite;
 	}
 }
@@ -92,11 +101,17 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 	
 else if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
 {
-	Mode = GhostMode.CHASE;	
+	if (!IsSafeZone)
+	{
+		Mode = GhostMode.CHASE;	
+	}
 }
 	
 else if (Mode == GhostMode.CHASE && oGameManager.Mode == GameMode.SCATTER)
 {
-	Mode = GhostMode.SCATTER;	
+	if (!IsSafeZone)
+	{
+		Mode = GhostMode.SCATTER;
+	}
 }
 	

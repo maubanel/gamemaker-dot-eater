@@ -1,7 +1,7 @@
 //If the grid has changed update pathfinding
 if (GridX != LastGridX or GridY != LastGridY)
 {
-	TargetX = GetCenterGridPos(13);
+	TargetX = GetGridPos(14);
 	TargetY = GetCenterGridPos(17);
 		
 	//check to see if ghost is close to safe zone
@@ -9,7 +9,7 @@ if (GridX != LastGridX or GridY != LastGridY)
 		|| (GridY == 14 && GridX >= 14 && GridX <= 18 && direction == 180) )
 	{
 		speed = 0;
-		//Mode = GhostMode.RETURNTOSAFEZONE;
+		Mode = GhostMode.EYESRETURNABOVEHOME;
 	}
 		
 	else 

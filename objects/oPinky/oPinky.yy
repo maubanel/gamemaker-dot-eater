@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
-            "value": "GhostMode.SAFEZONE"
+            "value": "GhostMode.PLAYERREADY"
         },
         {
             "id": "3fa3227d-40f6-443e-ac55-52cb089bd7c5",

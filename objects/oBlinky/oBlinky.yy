@@ -54,7 +54,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
-            "value": "GhostMode.SCATTER"
+            "value": "GhostMode.PLAYERREADY"
         },
         {
             "id": "c55e89bb-c53d-456d-937f-87d23d93357b",
@@ -63,6 +63,14 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
             "value": "sBlinkyR"
+        },
+        {
+            "id": "57afd0d0-65a5-4269-bdef-f7a4382ed852",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "a943bc99-389e-498e-bf02-c2110bf9d5fd",
+            "value": "False"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

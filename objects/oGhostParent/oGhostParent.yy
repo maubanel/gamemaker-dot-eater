@@ -403,6 +403,20 @@
             "varType": 3
         },
         {
+            "id": "a943bc99-389e-498e-bf02-c2110bf9d5fd",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "IsSafeZone",
+            "varType": 3
+        },
+        {
             "id": "d146326b-3946-4d08-844b-54d015c74282",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

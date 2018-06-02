@@ -8,9 +8,9 @@ instance_create_depth(14 * oGameManager.GridSize,
 					  14 * oGameManager.GridSize 
 					+ oGameManager.Offset, -5, oBlinky);
 					
-//instance_create_depth(14 * oGameManager.GridSize, 
-//					17 * oGameManager.GridSize + oGameManager.Offset,
-//						-5, oPinky);
+instance_create_depth(14 * oGameManager.GridSize, 
+					17 * oGameManager.GridSize + oGameManager.Offset,
+						-5, oPinky);
 
 MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -56,7 +56,8 @@ ResetDots();
 //GAMEPAUSEFREEZE
 //GAMEPAUSEANIMATE
 //GAMEPAUSNOSPRITE
-enum GameMode {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, PLAYERDEAD, FRIGHT, FRIGHTFLASH, GHOSTEATEN, PLAYERDEATHANIM}
+enum GameMode {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, 
+				PLAYERDEAD, FRIGHT, FRIGHTFLASH, GHOSTEATEN, PLAYERDEATHANIM}
 
 x = 0;
 y = 0;

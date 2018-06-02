@@ -89,8 +89,12 @@ else
 				Text = "Leaving Safe Zone";
 				break;
 			
-				case GhostMode.RETURNTOSAFEZONE:
-				Text = "Return to Safe Zone";
+				case GhostMode.EYESRETURNABOVEHOME:
+				Text = "Eyes to Above home";
+				break;
+				
+				case GhostMode.EYESRETURNINTOHOME:
+				Text = "Eyes Into home";
 				break;
 			
 				case GhostMode.SAFEZONE:

@@ -11,7 +11,10 @@ IsInGame = Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE
 
 IsEdible = Mode == GhostMode.FRIGHT || Mode == GhostMode.FRIGHTFLASH;
 
-IsEyeballs = Mode == GhostMode.EYESRETURN; //MISSING MODE(S) WILL CAUSE BUGS
+IsEyeballs = Mode == GhostMode.EYESRETURN || Mode ==GhostMode.EYESRETURNABOVEHOME
+			 || Mode == GhostMode.EYESRETURNINTOHOME;
+
+IsSafeZone = Mode == GhostMode.SAFEZONE || Mode == GhostMode.LEAVINGSAFEZONE;
 
 GetGhostTarget();
 
@@ -20,8 +23,15 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 {
 	
 	ModeSwitchLogic();
-	//Don't allow ghost to turn back to blue 
-	IsFrightened = false;
+	
+	if (object_index == oPinky) 
+	{ 
+		show_debug_message("Pinky's state is: " + string(oPinky.Mode));
+	}
+	if (object_index == oBlinky) 
+	{ 
+		show_debug_message("Blinky's state is: " + string(oBlinky.Mode));
+	}
 }
 
 switch (Mode)
@@ -105,20 +115,31 @@ switch (Mode)
 		speed = 0;
 		if (PreviousMode == GhostMode.EYESRETURN)
 		{
-			image_alpha = 0;	
+			image_alpha = 1;	
 		}
 		break;
 		
-		case GhostMode.RETURNTOSAFEZONE:
-		mp_linear_step(14 * oGameManager.GridSize, 17 * oGameManager.GridSize + oGameManager.Offset, oGameManager.GhostNormSpeed * 2, false);
+		case GhostMode.EYESRETURNABOVEHOME:
+		mp_linear_step( GetGridPos(14), GetCenterGridPos(14), oGameManager.GhostNormSpeed * 4, false);
+		if (x == GetGridPos(14) && y = GetCenterGridPos(14)) Mode = GhostMode.EYESRETURNINTOHOME;
+		break;
+		
+		
+		case GhostMode.EYESRETURNINTOHOME:
+		mp_linear_step(GetGridPos(14), GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		//Switch back to normal
+		if (x == GetGridPos(14) && y = GetCenterGridPos(17))
+		{
+			Mode = GhostMode.SAFEZONE;
+			speed = 0;
+			vspeed = oGameManager.GhostTunnelSpeed;
+		}
 		break;
 		
 		case GhostMode.SAFEZONE:
 		if (image_alpha != 1)image_alpha =1;
 		SafeZoneShuffle();	
 		GhostDirection();
-			
-
 		break;
 		
 	

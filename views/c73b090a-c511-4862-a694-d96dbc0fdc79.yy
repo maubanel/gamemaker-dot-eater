@@ -4,6 +4,8 @@
     "mvc": "1.1",
     "name": "c73b090a-c511-4862-a694-d96dbc0fdc79",
     "children": [
+        "b6e23735-54b3-443e-bb19-428a6b81d4e0",
+        "26704d0b-e44c-4bfc-849d-d006c5a3b9a1",
         "a105f383-16b3-4351-ba39-43c193d78607",
         "d7962610-aa37-46cb-8c03-b3e7e72e0bc6",
         "6b380d38-4b99-4f43-862e-6e4507937f6b",
@@ -17,7 +19,9 @@
         "a1070d6c-2ffc-4015-bafe-e9caca6c95f8",
         "9fd510e8-b301-40a8-a135-1e0e968c87e5",
         "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
-        "2f140e51-ad47-42b2-9e7d-9fc50c8f2496"
+        "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
+        "52156833-8e4f-44e3-a3da-bdcec2fb27fc",
+        "1f2fcdb2-5b20-4820-8a33-f904942ab830"
     ],
     "filterType": "GMScript",
     "folderName": "Ghosts",

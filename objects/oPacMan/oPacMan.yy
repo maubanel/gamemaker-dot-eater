@@ -199,7 +199,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "12",
-            "varName": "TurnRightUpSpaces",
+            "varName": "TurnRightUp3Spaces",
             "varType": 0
         },
         {
@@ -213,7 +213,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "16",
-            "varName": "TurnLeftDownSpaces",
+            "varName": "TurnLeftDown4Spaces",
             "varType": 0
         },
         {

@@ -24,5 +24,6 @@ else if (GridType == 2)
 	if (inst != noone) instance_destroy(inst);	
 		
 	oGameManager.Mode = GameMode.FRIGHT;
+
 }	
 

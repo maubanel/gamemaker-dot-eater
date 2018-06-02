@@ -45,148 +45,22 @@ switch(Mode)
 //	LEAVINGSAFEZONE}
 	if (DrawDebug)
 	{
+		draw_set_color(c_green);
+		draw_set_font(fGhostEatenScore);
 		draw_set_font(fDebug);
-		var GameModeText = "";
-		switch (Mode)
-		{
-			case GameMode.CHASE:
-			GameModeText = "Chase";
-			break;
-			
-			case GameMode.SCATTER:
-			GameModeText = "Scatter";
-			break;
-			
-			case GameMode.PLAYERDEAD:
-			GameModeText = "Player Dead";
-			break;
-			
-			case GameMode.PREGAME:
-			GameModeText = "Game Start";
-			break;
-			
-			case GameMode.PLAYERREADY:
-			GameModeText = "Player Ready";
-			break;	
-			
-			case GameMode.GHOSTEATEN:
-			GameModeText = "Ghost Eaten";
-			break;	
-			
-			case GameMode.FRIGHT:
-			GameModeText = "Fright";
-			break;	
-			
-		}
+		GameModeText = "";
+		GameModeText = DebugText(true, "GameModeText", Mode);
 
+		var BlinkyModeText = "Not in game";
+		if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.Mode);
+
+		var PinkyModeText = "Not in game";
+		if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.Mode);
 		
-		var BlinkyModeText = "";
-		
-		switch (oBlinky.Mode)
-		{
-			case GhostMode.CHASE:
-			BlinkyModeText = "Chase";
-			break;
-			
-			case GhostMode.SCATTER:
-			BlinkyModeText = "Scatter";
-			break;
-			
-			case GhostMode.PLAYERDEAD:
-			BlinkyModeText = "Player Dead";
-			break;
-			
-			case GhostMode.PREGAME:
-			BlinkyModeText = "Game Start";
-			break;
-			
-			case GhostMode.PLAYERREADY:
-			BlinkyModeText = "Player Ready";
-			break;	
-			
-			case GhostMode.EYESRETURN:
-			BlinkyModeText = "Eyes Return";
-			break;
-			
-			case GhostMode.FIRSTTURN:
-			BlinkyModeText = "First Turn";
-			break;
-			
-			case GhostMode.GHOSTEATEN:
-			BlinkyModeText = "Ghost Eaten";
-			break;
-			
-			case GhostMode.LEAVINGSAFEZONE:
-			BlinkyModeText = "Leaving Safe Zone";
-			break;
-			
-			case GhostMode.RETURNTOSAFEZONE:
-			BlinkyModeText = "Return to Safe Zone";
-			break;
-			
-			case GhostMode.SAFEZONE:
-			BlinkyModeText = "Safe Zone";
-			break;
-			
-			case GhostMode.FRIGHT:
-			BlinkyModeText = "Fright";
-			break;
-		}
-		
-		var PinkyModeText = "";
-				
-		switch (oPinky.Mode)
-		{
-			case GhostMode.CHASE:
-			PinkyModeText = "Chase";
-			break;
-			
-			case GhostMode.SCATTER:
-			PinkyModeText = "Scatter";
-			break;
-			
-			case GhostMode.PLAYERDEAD:
-			PinkyModeText = "Player Dead";
-			break;
-			
-			case GhostMode.PREGAME:
-			PinkyModeText = "Game Start";
-			break;
-			
-			case GhostMode.PLAYERREADY:
-			PinkyModeText = "Player Ready";
-			break;	
-			
-			case GhostMode.EYESRETURN:
-			PinkyModeText = "Eyes Return";
-			break;
-			
-			case GhostMode.FIRSTTURN:
-			PinkyModeText = "First Turn";
-			break;
-			
-			case GhostMode.GHOSTEATEN:
-			PinkyModeText = "Ghost Eaten";
-			break;
-			
-			case GhostMode.LEAVINGSAFEZONE:
-			PinkyModeText = "Leaving Safe Zone";
-			break;
-			
-			case GhostMode.RETURNTOSAFEZONE:
-			PinkyModeText = "Return to Safe Zone";
-			break;
-			
-			case GhostMode.SAFEZONE:
-			PinkyModeText = "Safe Zone";
-			break;
-			
-			case GhostMode.FRIGHT:
-			PinkyModeText = "Fright";
-			break;
-		}
 		draw_text(30, 15, "Game Mode: " + GameModeText);
 		draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
+		draw_text(30, 65, "Chase Timer: " + string(oGameManager.ChaseTimer));
+		draw_text(30, 90, "Fright Timer: " + string(oGameManager.FrightTimer));
 		draw_text(500, 15, "Blinky Mode: " + BlinkyModeText);
 		draw_text(500, 40, "Pinky Mode: " + PinkyModeText);
 		

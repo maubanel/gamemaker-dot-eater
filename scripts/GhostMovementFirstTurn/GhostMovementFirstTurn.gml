@@ -26,7 +26,6 @@ if (speed == 0) //means ghost is in turn and needs to keep moving
 if (GetGridNum(x) == GetGridNum(TargetX) && GetGridNum(y) == GetGridNum(TargetY))
 {
 	SetGameMode();	
-	show_debug_message("Switch out of first turn");
 }
 
 

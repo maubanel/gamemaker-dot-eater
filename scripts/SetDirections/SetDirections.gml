@@ -1,5 +1,5 @@
 /*  Function resets movement direction for PacMan.
-//  Argument - Uses keyboard constants for up, left, right and down 
+//  Argument - Direction
 */
 
 var NewDirection = argument0;
@@ -9,7 +9,7 @@ IsMoveRight = false;
 IsMoveUp = false;
 IsMoveDown = false;
 
-if (NewDirection = vk_left) IsMoveLeft = true;
-if (NewDirection = vk_right) IsMoveRight = true;
-if (NewDirection = vk_up) IsMoveUp = true;
-if (NewDirection = vk_down) IsMoveDown = true;
+if (NewDirection = 180) IsMoveLeft = true;
+if (NewDirection = 0) IsMoveRight = true;
+if (NewDirection = 90) IsMoveUp = true;
+if (NewDirection = 270) IsMoveDown = true;

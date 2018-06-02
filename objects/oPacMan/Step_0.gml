@@ -7,10 +7,11 @@ switch(oGameManager.Mode)
 	break;
 	
 	case GameMode.PREGAME:
+	ResetPacManToStart();
 	image_alpha = 1;
 	image_speed = 0;
 	image_index = 2;
-	ResetPacManToStart();
+
 	
 	
 	break;
@@ -18,6 +19,7 @@ switch(oGameManager.Mode)
 	case GameMode.SCATTER:
 	case GameMode.CHASE:
 	case GameMode.FRIGHT:
+	case GameMode.FRIGHTFLASH:
 	
 	//For tunnel in maze
 	move_wrap(true, false, oGameManager.GridSize);
@@ -36,24 +38,35 @@ switch(oGameManager.Mode)
 	//CHeck to see if Pac-Man is turning
 	PacManMovement();
 
-	//Check To See if Player Can Move in This direction:
-	IsSpaceFreeToMove();
-	
-	
-	UpdateHorVer();
+	//Check To See if Player Can Move in This direction if no 
+	//button is pressed:
+	if (!IsTurning)
+	{
+		IsSpaceFreeToMove();
+	}
+//	if (!IsTurning)
+//	{
+		UpdateHorVer();
+//	}
 	
 	break;
 	
 	case GameMode.PLAYERDEAD:
 		speed = 0;
 		
+	break;
+	
+	case GameMode.PLAYERDEATHANIM:
+	audio_play_sound(aDeath,1, false);	
+	
+	if (sprite_index != sPacManDeath) sprite_index = sPacManDeath;
 		//Trigger sprite change
-		if (sprite_index == sPacManDeath and image_index + image_speed > image_number )
-		{
-			oGameManager.Mode = GameMode.PLAYERREADY;
-			ResetPacManToStart();
+	if (image_index + image_speed > image_number )
+	{
+		oGameManager.Mode = GameMode.PLAYERREADY;
+		ResetPacManToStart();
 			
-		}
+	}
 	break;
 	
 	case GameMode.GHOSTEATEN:

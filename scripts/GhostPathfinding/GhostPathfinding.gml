@@ -35,9 +35,9 @@ else
 	//Make ghost move slower in tunnel
 	if (GridY == 17 and (GridX <= 5 || GridX > 32))
 	{
-		if (Mode != GhostMode.EYESRETURN)
+		if (!IsEyeballs)
 		{
-			speed = oGameManager.GhostTunnelSpeed;	
+			GhostSpeed = oGameManager.GhostTunnelSpeed;	
 		}
 	}
 	

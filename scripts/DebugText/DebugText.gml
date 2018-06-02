@@ -1,0 +1,109 @@
+var IsGame = argument0;
+var Text = argument1;
+var Ghost = argument2;
+
+if (IsGame)
+{
+	switch (Mode)
+		{
+			case GameMode.CHASE:
+			Text = "Chase";
+			break;
+			
+			case GameMode.SCATTER:
+			Text = "Scatter";
+			break;
+			
+			case GameMode.PLAYERDEAD:
+			Text = "Player Dead";
+			break;
+			
+			case GameMode.PREGAME:
+			Text = "Game Start";
+			break;
+			
+			case GameMode.PLAYERREADY:
+			Text = "Player Ready";
+			break;	
+			
+			case GameMode.GHOSTEATEN:
+			Text = "Ghost Eaten";
+			break;	
+			
+			case GameMode.FRIGHT:
+			Text = "Fright";
+			break;	
+			
+			case GameMode.FRIGHTFLASH:
+			Text = "Fright Flash";
+			break;	
+			
+			case GameMode.PLAYERDEATHANIM:
+			Text = "Player Death Animation";
+			break;	
+		}
+		return Text;
+}
+
+else
+{
+	switch (Ghost)
+			{
+				case GhostMode.CHASE:
+				Text = "Chase";
+				break;
+			
+				case GhostMode.SCATTER:
+				Text = "Scatter";
+				break;
+			
+				case GhostMode.PLAYERDEAD:
+				Text = "Player Dead";
+				break;
+			
+				case GhostMode.PLAYERDEATHANIM:
+				Text = "Player Death Animation";
+				break;	
+			
+				case GhostMode.PREGAME:
+				Text = "Game Start";
+				break;
+			
+				case GhostMode.PLAYERREADY:
+				Text = "Player Ready";
+				break;	
+			
+				case GhostMode.EYESRETURN:
+				Text = "Eyes Return";
+				break;
+			
+				case GhostMode.FIRSTTURN:
+				Text = "First Turn";
+				break;
+			
+				case GhostMode.GHOSTEATEN:
+				Text = "Ghost Eaten";
+				break;
+			
+				case GhostMode.LEAVINGSAFEZONE:
+				Text = "Leaving Safe Zone";
+				break;
+			
+				case GhostMode.RETURNTOSAFEZONE:
+				Text = "Return to Safe Zone";
+				break;
+			
+				case GhostMode.SAFEZONE:
+				Text = "Safe Zone";
+				break;
+			
+				case GhostMode.FRIGHT:
+				Text = "Fright";
+				break;
+			
+				case GhostMode.FRIGHTFLASH:
+				Text = "Fright Flash";
+				break;
+			}
+	return Text;
+}

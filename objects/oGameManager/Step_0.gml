@@ -44,6 +44,22 @@ switch (Mode)
 		ModeTimer();
 	
 		break;
+		
+	case GameMode.FRIGHT:
+		//Updaet timer and switch to seconds
+		FrightTimer += delta_time/1000000;
+		
+		if (FrightTimer > FrightLength)
+		{
+			Mode = GameMode.FRIGHTFLASH;
+			//Reset timer
+			FrightTimer = 0;
+			//15 is the image speed of the ghosts Fright flash animation
+			alarm[4] = GhostFlashNumber * 15;
+			
+		}
+		
+	break;
 	
 	case GameMode.PLAYERDEAD:
 		if (!alarm[0])
@@ -60,7 +76,7 @@ switch (Mode)
 		break;
 		
 	default:
-		ChaseTimer = 0;	
+	//Nothing
 		break;
 	
 }

@@ -9,84 +9,25 @@
 IsInGame = Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE 
 				|| Mode == GhostMode.FIRSTTURN;
 
-IsEdible = Mode == GhostMode.FRIGHT;
+IsEdible = Mode == GhostMode.FRIGHT || Mode == GhostMode.FRIGHTFLASH;
+
+IsEyeballs = Mode == GhostMode.EYESRETURN; //MISSING MODE(S) WILL CAUSE BUGS
 
 GetGhostTarget();
 
 
 if (oGameManager.LastGameMode != oGameManager.Mode)
 {
-	if (oGameManager.LastGameMode == GameMode.PLAYERDEAD)
-	{
-		Mode = GhostMode.PLAYERREADY;
-	}
 	
-	if (oGameManager.LastGameMode == GameMode.PLAYERREADY)
-	{
-		Mode = GhostMode.PREGAME
-	}
-	
-	if (oGameManager.LastGameMode == GameMode.PREGAME)
-	{
-		if (object_index == oBlinky)
-		{
-			Mode = GhostMode.FIRSTTURN;
-			NextDirection = 180;
-			direction = 180;
-
-		}
-		else 
-		{
-			Mode = GhostMode.SAFEZONE;
-			speed = 0;
-			vspeed = oGameManager.GhostTunnelSpeed;
-		}
-		
-	}
-	
-	if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
-	{
-		Mode = GhostMode.CHASE;	
-	}
-	
-	if (Mode == GhostMode.CHASE && oGameManager.Mode == GameMode.SCATTER)
-	{
-		Mode = GhostMode.SCATTER;	
-	}
-	
-	if (oGameManager.Mode == GhostMode.FRIGHT)
-	{
-		//PUT SOMEWHERE WAS IN PAC MAN
-				//Switch to FRIGHT mode // Make ghosts reverse direction
-		with (oGhostParent)
-		{
-			if (Mode != GhostMode.EYESRETURN)
-			{
-				IsFrightened = true;
-			}
-		}
-		
-		if (IsInGame)
-		{
-			Mode = GhostMode.FRIGHT;	
-			ReverseDirection();
-			sprite_index = sGhostFright;
-		}
-		else
-		{
-			//if (IsFrightened)
-			//{
-				sprite_index = sGhostFright;
-				show_debug_message("Switch to Blue");
-			//}
-		}
-	}
-	
+	ModeSwitchLogic();
+	//Don't allow ghost to turn back to blue 
+	IsFrightened = false;
 }
 
 switch (Mode)
 {
 	case GhostMode.PLAYERREADY:
+	case GhostMode.PLAYERDEATHANIM:
 		image_alpha = 0;
 	break;
 		
@@ -109,28 +50,40 @@ switch (Mode)
 	
 	case GhostMode.SCATTER:
 	case GhostMode.CHASE:
+	
+	move_wrap(true, false, oGameManager.GridSize);
+
+	UpdateGridGhost();
+	
+	GetGhostTarget();
+	
+	GhostMovement();
+	
+	GhostDirection();
+	
+	//Get direction
+	GhostUpdateHorVer();
+	
+	break;
+		
 	case GhostMode.EYESRETURN:
 	
-		move_wrap(true, false, oGameManager.GridSize);
-
-			GridX = (GetGridNum(x));
-			GridY = (GetGridNum(y));
-
-			GridX = clamp(GridX, 0, 27);
-			GridY = clamp(GridY,0, 35);
+	UpdateGridGhost();
+	
+	GetGhostTarget();
+	
+	GhostMovementEyesReturn();
+	
+	GhostDirection();
+	
+	GhostUpdateHorVer();
 		
-			CheckForPlayerKill();
-
-			//Get direction
-			GhostUpdateHorVer();
-	
-			GhostMovement();
-	
-			GhostDirection();
-	
-		break;
+	break;
+		
+		
 		
 		case GhostMode.FRIGHT:
+		case GhostMode.FRIGHTFLASH:
 		
 		move_wrap(true, false, oGameManager.GridSize);
 
@@ -139,8 +92,6 @@ switch (Mode)
 
 		GridX = clamp(GridX, 0, 27);
 		GridY = clamp(GridY,0, 35);
-		
-
 		
 		//Pick ran
 		GhostRandomTurnMovement();

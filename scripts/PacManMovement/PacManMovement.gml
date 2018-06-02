@@ -3,11 +3,15 @@
 
 //If moving laterally or turning when Pac is perfectly center 
 //then change direction
+UP = keyboard_check(vk_up) && keyboard_lastkey == vk_up;
+DOWN =  keyboard_check(vk_down) && keyboard_lastkey == vk_down;
+LEFT = keyboard_check(vk_left) && keyboard_lastkey == vk_left;
+RIGHT = keyboard_check(vk_right) && keyboard_lastkey == vk_right;
 
-var SpaceLeft = CenterXWorld - TurnRightUpSpaces;
-var SpaceRight = CenterXWorld + TurnLeftDownSpaces;
-var SpaceUp = CenterYWorld - TurnRightUpSpaces;
-var SpaceDown = CenterYWorld + TurnRightUpSpaces;
+var SpaceLeft = CenterXWorld - TurnRightUp3Spaces;
+var SpaceRight = CenterXWorld + TurnLeftDown4Spaces;
+var SpaceUp = CenterYWorld - TurnRightUp3Spaces;
+var SpaceDown = CenterYWorld + TurnLeftDown4Spaces;
 
 
 
@@ -22,7 +26,7 @@ if (Horizontal && !IsTurning)
 	}
 
 	//Lateral Right
-	if (RIGHT)
+	else if (RIGHT)
 	{
 		MovePac(0);
 		IsSpaceFreeToMove();
@@ -30,7 +34,7 @@ if (Horizontal && !IsTurning)
 	}
 		
 	//Diagonal Up
-	if (UP && x == CenterXWorld && y == CenterYWorld) 
+	else if (UP && x == CenterXWorld && y == CenterYWorld && CanMoveToGrid(vk_up)) 
 	{
 		MovePac(90);
 		IsSpaceFreeToMove();
@@ -38,7 +42,7 @@ if (Horizontal && !IsTurning)
 	}
 		
 	//Diagonal Down
-	if (DOWN && x == CenterXWorld && y == CenterYWorld) 
+	else if (DOWN && x == CenterXWorld && y == CenterYWorld && CanMoveToGrid(vk_down)) 
 	{
 		MovePac(270);
 		IsSpaceFreeToMove();
@@ -55,7 +59,7 @@ if (Horizontal && !IsTurning)
 	}
 	
 	//Check if up turn possible
-	if (UP && x >= SpaceLeft && x <= SpaceRight && CanMoveToGrid(vk_up))
+	else if (UP && x >= SpaceLeft && x <= SpaceRight && CanMoveToGrid(vk_up))
 	{
 		MovePac(90);
 		speed = 0;
@@ -75,7 +79,7 @@ else if (Vertical && !IsTurning)
 	}
 
 	//Pac Man Move Right
-	if (DOWN) 
+	else if (DOWN) 
 	{
 		MovePac(270);
 		IsSpaceFreeToMove();
@@ -83,7 +87,7 @@ else if (Vertical && !IsTurning)
 	}
 	
 	//Diagonal Left
-	if (LEFT && x == CenterXWorld && y == CenterYWorld) 
+	else if (LEFT && x == CenterXWorld && y == CenterYWorld && CanMoveToGrid(vk_left)) 
 	{
 		MovePac(180);
 		IsSpaceFreeToMove();
@@ -91,7 +95,7 @@ else if (Vertical && !IsTurning)
 	}
 	
 	//Diagonal Right
-	if (RIGHT && x == CenterXWorld && y == CenterYWorld) 
+	else if (RIGHT && x == CenterXWorld && y == CenterYWorld && CanMoveToGrid(vk_right)) 
 	{
 		MovePac(0);
 		IsSpaceFreeToMove();
@@ -99,7 +103,7 @@ else if (Vertical && !IsTurning)
 	}
 	
 	//Turning left
-	if (LEFT && y <= SpaceDown && y >= SpaceUp && CanMoveToGrid(vk_left))
+	else if (LEFT && y <= SpaceDown && y >= SpaceUp && CanMoveToGrid(vk_left))
 	{
 		MovePac(180);
 		speed = 0;
@@ -107,7 +111,7 @@ else if (Vertical && !IsTurning)
 	}
 
 	//Turning right
-	if (RIGHT && y <= SpaceDown && y >= SpaceUp && CanMoveToGrid(vk_right))
+	else if (RIGHT && y <= SpaceDown && y >= SpaceUp && CanMoveToGrid(vk_right))
 	{
 		MovePac(0);
 		speed = 0;
@@ -119,33 +123,21 @@ else if (IsTurning == 1) //Is Turning is false and now in phase 2
 {
 	if (Vertical)
 	{
-		if (x < GetCenterGridPos(GridX)	)
-		{
-			x -= (x - GetCenterGridPos(GridX)) / 2;
-		}
-		else
-		{
-			x += (x - GetCenterGridPos(GridX)) / 2;	
-		}
+		x -= (x - CenterXWorld) / 2;
+
 		if (IsMoveUp)
 		{
 			y -= CurrentSpeed;	
 		}
 		else y += CurrentSpeed;
+	
 		
 		++ IsTurning;
 	}
 	
 	else if (Horizontal)
 	{
-		if (y < GetCenterGridPos(GridY)	)
-		{
-			y -= (y - GetCenterGridPos(GridY)) / 2;
-		}
-		else
-		{
-			y += (y - GetCenterGridPos(GridY)) / 2;	
-		}
+		y -= (y - GetCenterGridPos(GridY)) / 2;
 		
 		if (IsMoveRight)
 		{

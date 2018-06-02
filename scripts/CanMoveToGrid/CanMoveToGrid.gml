@@ -1,9 +1,4 @@
 //CanMoveToGrid
-/*
-
-https://justpaste.it/72lui
-
-*/
 
 var Hor = GridX;
 var Ver = GridY;
@@ -16,10 +11,8 @@ if (argument0 == vk_down) Ver = GridY + 1;
  
 
 //clamp from going off the grid
-Hor = clamp(Hor, 0, 27);
-Ver = clamp (Ver, 0, 35);
- 
-
+Hor = clamp(Hor, 0, oGameManager.GridXNumColumns - 1);
+Ver = clamp (Ver, 0, oGameManager.GridYNumRows - 1);
  
 
 //Return if you can move

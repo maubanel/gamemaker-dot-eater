@@ -20,3 +20,5 @@ IsMoveLeft = true;
 IsMoveRight = false;
 
 IsMoveUp = false;
+
+image_alpha = 0;

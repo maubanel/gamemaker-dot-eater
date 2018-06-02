@@ -1,8 +1,4 @@
 /// @description Initialize Pac Man Variables
-#macro UP keyboard_check_direct(vk_up) && keyboard_lastkey == vk_up
-#macro DOWN keyboard_check_direct(vk_down) && keyboard_lastkey == vk_down
-#macro LEFT keyboard_check_direct(vk_left) && keyboard_lastkey == vk_left
-#macro RIGHT keyboard_check_direct(vk_right) && keyboard_lastkey == vk_right
 
 instance_create_depth(14 * oGameManager.GridSize, 
 					  26 * oGameManager.GridSize 
@@ -12,9 +8,9 @@ instance_create_depth(14 * oGameManager.GridSize,
 					  14 * oGameManager.GridSize 
 					+ oGameManager.Offset, -5, oBlinky);
 					
-instance_create_depth(14 * oGameManager.GridSize, 
-					17 * oGameManager.GridSize + oGameManager.Offset,
-						-5, oPinky);
+//instance_create_depth(14 * oGameManager.GridSize, 
+//					17 * oGameManager.GridSize + oGameManager.Offset,
+//						-5, oPinky);
 
 MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -60,7 +56,7 @@ ResetDots();
 //GAMEPAUSEFREEZE
 //GAMEPAUSEANIMATE
 //GAMEPAUSNOSPRITE
-enum GameMode {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, PLAYERDEAD, FRIGHT, GHOSTEATEN}
+enum GameMode {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, PLAYERDEAD, FRIGHT, FRIGHTFLASH, GHOSTEATEN, PLAYERDEATHANIM}
 
 x = 0;
 y = 0;

@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "oBlinky",
     "eventList": [
-        {
-            "id": "0055e3e9-d0f8-43a6-aeb7-e760a8ac8243",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "8f261970-1bf7-4602-a0a9-cffa8d2e20b9"
-        }
+        
     ],
     "maskSpriteId": "deaf36c6-6b44-4733-8a07-41b06be35b76",
     "overriddenProperties": [
@@ -64,6 +55,14 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
             "value": "GhostMode.SCATTER"
+        },
+        {
+            "id": "c55e89bb-c53d-456d-937f-87d23d93357b",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
+            "value": "sBlinkyR"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

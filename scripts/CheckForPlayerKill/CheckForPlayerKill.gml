@@ -1,18 +1,21 @@
-//Check to see if ghost kills player
+//Check to see if ghost and player occupy same square
 if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 {
-	if (Mode == GameMode.CHASE or Mode == GameMode.SCATTER)
+	//If in non chase mode then
+	if (IsInGame)
 	{
 		oGameManager.Mode = GameMode.PLAYERDEAD;
-		Mode = GhostMode.PLAYERDEAD;
+		//not happen on this ghost.  We must force it:
+		oGhostParent.Mode = GhostMode.PLAYERDEAD;
 	}
 	
-	else if (Mode == GameMode.FRIGHT)
+	else if (IsEdible)
 	{
 		sprite_index = sGhostEyes;
 		PreviousMode = GhostMode.EYESRETURN;
+		//Since this happens in ghost the switch of going to PlayerDead does 
+
 		oGameManager.Mode = GameMode.GHOSTEATEN;
-		oGhostParent.Mode = GameMode.GHOSTEATEN;
 		x = GetCenterGridPos(GridX);
 		y = GetCenterGridPos(GridY);
 	}

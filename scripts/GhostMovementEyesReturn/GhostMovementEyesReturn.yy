@@ -1,8 +1,8 @@
 {
-    "id": "7ba76191-4f41-4418-8b2b-ad60877dd913",
+    "id": "1f2fcdb2-5b20-4820-8a33-f904942ab830",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "FrightModeInitialize",
+    "name": "GhostMovementEyesReturn",
     "IsCompatibility": false,
     "IsDnD": false
 }

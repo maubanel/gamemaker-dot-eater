@@ -3,7 +3,7 @@
 
 var UpSprite, DownSprite, LeftSprite, RightSprite
 
-if (!IsFrightened)
+if (IsInGame)
 {
 	//Select one of the four ghosts
 	switch (object_index)
@@ -22,8 +22,6 @@ if (!IsFrightened)
 			RightSprite = sPinkyR;
 			break;				
 	}
-
-
 
 	//Assing the correct sprite based on direction of movement
 	switch (direction)

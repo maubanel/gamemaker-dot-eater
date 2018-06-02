@@ -55,6 +55,14 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
             "value": "GhostMode.SAFEZONE"
+        },
+        {
+            "id": "def3885c-81a1-46da-a34b-8257e5c7b84a",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
+            "value": "sPinkyR"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

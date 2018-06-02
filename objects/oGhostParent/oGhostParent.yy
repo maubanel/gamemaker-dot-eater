@@ -387,6 +387,34 @@
             "value": "0",
             "varName": "IsFrightened",
             "varType": 3
+        },
+        {
+            "id": "e73e3178-86a4-43cd-b75e-c63fc680d1ba",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "IsEyeballs",
+            "varType": 3
+        },
+        {
+            "id": "d146326b-3946-4d08-844b-54d015c74282",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "OriginalSprite",
+            "varType": 0
         }
     ],
     "solid": false,

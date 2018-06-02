@@ -153,25 +153,6 @@
             }
         },
         {
-            "Key": "13b9a9b6-d6d9-4591-829e-2a26b7775c79",
-            "Value": {
-                "id": "4d726fff-6de3-4cb3-85e8-035ac5824392",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "sprites\/sprite16\/sprite16.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "1bf402f6-2d27-443d-867d-c2c39a13a60b",
             "Value": {
                 "id": "3d7631bf-46a2-4971-ae7f-e913e3187794",
@@ -210,6 +191,25 @@
             }
         },
         {
+            "Key": "1f2fcdb2-5b20-4820-8a33-f904942ab830",
+            "Value": {
+                "id": "6a61f149-d87e-46f7-a260-817b55df2a31",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/GhostMovementEyesReturn\/GhostMovementEyesReturn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f9eed51-d452-48f4-855d-4dc17c73ea5c",
             "Value": {
                 "id": "7dd2e484-8b4f-4de2-9969-9f776084d114",
@@ -245,6 +245,25 @@
                 ],
                 "resourcePath": "objects\/oGrid\/oGrid.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "26704d0b-e44c-4bfc-849d-d006c5a3b9a1",
+            "Value": {
+                "id": "72c266e6-dd94-4661-a255-0d097c612315",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/ModeSwitchLogic\/ModeSwitchLogic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -514,6 +533,25 @@
             }
         },
         {
+            "Key": "52156833-8e4f-44e3-a3da-bdcec2fb27fc",
+            "Value": {
+                "id": "7e524e1d-6b70-4956-90dc-ef6829b0d622",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/SetGhostSpeed\/SetGhostSpeed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "522baed6-29a5-47e2-8dfd-70737a3ecb2a",
             "Value": {
                 "id": "9fe3e0d2-f488-4fa0-9f8c-d327609fe6f1",
@@ -761,25 +799,6 @@
             }
         },
         {
-            "Key": "7ba76191-4f41-4418-8b2b-ad60877dd913",
-            "Value": {
-                "id": "05c914a0-4136-444b-9f80-9d4fce4114b6",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\/FrightModeInitialize\/FrightModeInitialize.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "7bb17299-d04f-4b06-8143-bb4bcaa973d8",
             "Value": {
                 "id": "0bccbe51-9e8f-4ead-a4ae-473099a5726b",
@@ -929,6 +948,25 @@
                 ],
                 "resourcePath": "scripts\/GhostFrightRandomTurn\/GhostFrightRandomTurn.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8cd51ae5-6c47-4c45-bc81-3686ae49feb3",
+            "Value": {
+                "id": "310effe2-bc90-48ec-81ed-d9429368f681",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/8cd51ae5-6c47-4c45-bc81-3686ae49feb3.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1423,6 +1461,44 @@
                 ],
                 "resourcePath": "tilesets\/tBackground\/tBackground.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "c81334e5-91ec-45e1-8375-7a983df0af9b",
+            "Value": {
+                "id": "6a1abea6-1287-4a1f-9138-9293b6bd55b5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/DebugText\/DebugText.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c875b641-4080-4f93-a915-cf5c456ef351",
+            "Value": {
+                "id": "092da69e-0e4f-49f9-a671-77810f89c40d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/GetGridPos\/GetGridPos.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1959,13 +2035,8 @@
         }
     ],
     "script_order": [
-        "e0eef1c1-888a-4735-9e26-66df335d062f",
         "5810a140-03c6-4c00-b2f7-b1486362bc30",
-        "f4064235-4e8b-4e23-a6df-95a858db9af1",
-        "b6e23735-54b3-443e-bb19-428a6b81d4e0",
         "3563cd49-2026-4a74-adf5-7262c61eeab9",
-        "c37444f0-f97a-4a7a-bc44-238a9e9c27c9",
-        "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "f19cbc7d-578b-4bfe-8e5e-a79e7a145132",
         "1bf402f6-2d27-443d-867d-c2c39a13a60b",
         "8478134b-af34-47a7-b4d3-71b113f837ee",
@@ -1980,6 +2051,10 @@
         "6ebde123-23a1-4f56-bf3e-5d348ad24817",
         "49747d1a-0dc0-4f7d-b51f-d2581bdc25e2",
         "ea84abb0-bf8f-458e-8895-e50b2269bb24",
+        "c37444f0-f97a-4a7a-bc44-238a9e9c27c9",
+        "c81334e5-91ec-45e1-8375-7a983df0af9b",
+        "b6e23735-54b3-443e-bb19-428a6b81d4e0",
+        "26704d0b-e44c-4bfc-849d-d006c5a3b9a1",
         "a105f383-16b3-4351-ba39-43c193d78607",
         "d7962610-aa37-46cb-8c03-b3e7e72e0bc6",
         "6b380d38-4b99-4f43-862e-6e4507937f6b",
@@ -1994,7 +2069,12 @@
         "9fd510e8-b301-40a8-a135-1e0e968c87e5",
         "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
         "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
-        "7ba76191-4f41-4418-8b2b-ad60877dd913"
+        "52156833-8e4f-44e3-a3da-bdcec2fb27fc",
+        "1f2fcdb2-5b20-4820-8a33-f904942ab830",
+        "e0eef1c1-888a-4735-9e26-66df335d062f",
+        "f4064235-4e8b-4e23-a6df-95a858db9af1",
+        "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
+        "c875b641-4080-4f93-a915-cf5c456ef351"
     ],
     "tutorial": ""
 }

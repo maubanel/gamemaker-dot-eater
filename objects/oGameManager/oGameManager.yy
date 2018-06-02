@@ -83,6 +83,16 @@
             "enumb": 2,
             "eventtype": 3,
             "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
+        },
+        {
+            "id": "341828b7-3886-4cb3-b468-a937c2835c52",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 4,
+            "eventtype": 2,
+            "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -450,6 +460,48 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "IsInGame",
+            "varType": 0
+        },
+        {
+            "id": "6eb76602-bd06-4f4f-befc-71ecba41a293",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "6",
+            "varName": "FrightLength",
+            "varType": 0
+        },
+        {
+            "id": "7e126b50-e768-470e-8645-aba4c8249b00",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "FrightTimer",
+            "varType": 0
+        },
+        {
+            "id": "ed65cfa1-a124-444f-89da-92779968c344",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "GhostFlashNumber",
             "varType": 0
         }
     ],

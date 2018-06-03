@@ -6,14 +6,14 @@ if (GridX != LastGridX or GridY != LastGridY)
 {
 	if (Horizontal and abs(x - GetCenterGridPos(GridX)) <= speed)
 	{
-		GhostFrightRandomTurn(oGameManager.GhostFrightSpeed);
+		GhostFrightRandomTurn(GhostSpeed);
 		LastGridX = GridX;
 		LastGridY = GridY;
 	}
 	
 	if (Vertical and abs(y - GetCenterGridPos(GridY)) <= speed)
 	{
-		GhostFrightRandomTurn(oGameManager.GhostFrightSpeed);
+		GhostFrightRandomTurn(GhostSpeed);
 		LastGridX = GridX;
 		LastGridY = GridY;
 	}
@@ -21,5 +21,5 @@ if (GridX != LastGridX or GridY != LastGridY)
 
 else if (speed == 0) //means ghost is in turn and needs to keep moving
 {	
-	GhostFrightRandomTurn(oGameManager.GhostFrightSpeed);
+	GhostFrightRandomTurn(GhostSpeed);
 }

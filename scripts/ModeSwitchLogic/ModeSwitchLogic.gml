@@ -29,8 +29,6 @@ else if (oGameManager.LastGameMode == GameMode.PREGAME)
 	else 
 	{
 		Mode = GhostMode.SAFEZONE;
-		//speed = 0;
-		//GhostSpeed = 0;
 		vspeed = -oGameManager.GhostTunnelSpeed;
 	}
 		

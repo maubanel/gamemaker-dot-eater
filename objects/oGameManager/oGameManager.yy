@@ -531,6 +531,20 @@
             "value": "False",
             "varName": "IsGlobalDotCounting",
             "varType": 3
+        },
+        {
+            "id": "bf80eb30-9d68-4eff-bd25-30fa404b2935",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "Speed * 3",
+            "varName": "GhostEyeReturnSpeed",
+            "varType": 0
         }
     ],
     "solid": false,

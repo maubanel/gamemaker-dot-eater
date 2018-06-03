@@ -47,7 +47,10 @@ switch (Mode)
 		//Get direction
 		GhostUpdateHorVer();
 		
+		SetGhostSpeed();
+		
 		GhostMovementFirstTurn();
+		
 		
 	break;
 	
@@ -59,6 +62,8 @@ switch (Mode)
 	UpdateGridGhost();
 	
 	GetGhostTarget();
+	
+	SetGhostSpeed();
 	
 	GhostMovement();
 	
@@ -90,12 +95,9 @@ switch (Mode)
 		
 		move_wrap(true, false, oGameManager.GridSize);
 
-		GridX = (GetGridNum(x));
-		GridY = (GetGridNum(y));
-
-		GridX = clamp(GridX, 0, 27);
-		GridY = clamp(GridY,0, 35);
+		UpdateGridGhost();
 		
+		SetGhostSpeed();
 		//Pick ran
 		GhostRandomTurnMovement();
 		
@@ -113,12 +115,12 @@ switch (Mode)
 		break;
 		
 		case GhostMode.EYESRETURNABOVEHOME:
-		mp_linear_step( GetGridPos(14), GetCenterGridPos(14), oGameManager.GhostNormSpeed * 4, false);
+		mp_linear_step( GetGridPos(14), GetCenterGridPos(14), oGameManager.GhostEyeReturnSpeed, false);
 		if (x == GetGridPos(14) && y = GetCenterGridPos(14)) Mode = GhostMode.EYESRETURNINTOHOME;
 		break;
 		
 		case GhostMode.EYESRETURNINTOHOME:
-		mp_linear_step(GetGridPos(14), GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		mp_linear_step(GetGridPos(14), GetCenterGridPos(17), oGameManager.GhostEyeReturnSpeed, false);
 		//Switch back to normal
 		if (x == GetGridPos(14) && y = GetCenterGridPos(17))
 		{
@@ -129,7 +131,8 @@ switch (Mode)
 		break;
 		
 		case GhostMode.GOTOHOMEYCENTER:
-		mp_linear_step(x, GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		SetGhostSpeed();
+		mp_linear_step(x, GetCenterGridPos(17), GhostSpeed, false);
 		if (y == GetCenterGridPos(17))
 		{
 			Mode = GhostMode.GOTOHOMECENTER;	
@@ -137,7 +140,8 @@ switch (Mode)
 		break;
 		
 		case GhostMode.GOTOHOMECENTER:
-		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		SetGhostSpeed();
+		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(17), GhostSpeed, false);
 		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(17))
 		{
 			Mode = GhostMode.LEAVEHOME;	
@@ -145,7 +149,8 @@ switch (Mode)
 		break;
 		
 		case GhostMode.LEAVEHOME:
-		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(14), oGameManager.GhostNormSpeed * 2, false);
+		SetGhostSpeed();
+		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(14), GhostSpeed, false);
 		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(14))
 		{
 			Mode = GhostMode.FIRSTTURN;

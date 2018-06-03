@@ -318,7 +318,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "70",
+            "value": "7",
             "varName": "ScatterMode1Length",
             "varType": 0
         },

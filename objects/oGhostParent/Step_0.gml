@@ -76,6 +76,8 @@ switch (Mode)
 		
 	case GhostMode.EYESRETURN:
 	
+	move_wrap(true, false, oGameManager.GridSize);
+	
 	UpdateGridGhost();
 	
 	GetGhostTarget();

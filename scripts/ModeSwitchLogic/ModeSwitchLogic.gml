@@ -45,7 +45,7 @@ else if (oGameManager.Mode == GameMode.FRIGHT)
 	{
 		IsFrightened = true;
 		sprite_index = sGhostFright;
-		if (IsInGame || IsEdible)
+		if ((IsInGame || IsEdible) && !IsSafeZone)
 		{
 			Mode = GhostMode.FRIGHT;
 			ReverseDirection(); // - BUGGY
@@ -103,7 +103,7 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 	
 else if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
 {
-	if (!IsSafeZone)
+	if (!IsSafeZone && !IsEyeballs)
 	{
 		Mode = GhostMode.CHASE;	
 		ReverseDirection();
@@ -112,7 +112,7 @@ else if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
 	
 else if (Mode == GhostMode.CHASE && oGameManager.Mode == GameMode.SCATTER)
 {
-	if (!IsSafeZone)
+	if (!IsSafeZone && !IsEyeballs)
 	{
 		Mode = GhostMode.SCATTER;
 		ReverseDirection();

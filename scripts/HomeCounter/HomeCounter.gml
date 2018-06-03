@@ -1,4 +1,8 @@
-if (!oGameManager.IsGlobalDotCounting)
+//Blinky always leaves right away
+
+if (object_index == oBlinky) Mode = GhostMode.GOTOHOMEYCENTER;
+
+else if (!oGameManager.IsGlobalDotCounting)
 {
 	if (LocalDotCounter>=NumLocalDots && IsDotCounting)	
 	{

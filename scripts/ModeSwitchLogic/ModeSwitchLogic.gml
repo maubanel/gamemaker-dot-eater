@@ -86,7 +86,6 @@ else if (oGameManager.Mode == GameMode.GHOSTEATEN)
 
 else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 {
-	show_debug_message("After flash");
 	if (!IsEyeballs)
 	{
 		if (!IsSafeZone)
@@ -94,7 +93,6 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 			if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
 			else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
 			else Mode = GhostMode.CHASE;
-			show_debug_message("After flash SCATTER CHASE");
 		}
 	}
 	//All sprites go back to normal

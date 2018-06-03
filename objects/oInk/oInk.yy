@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "7f8c4230-5250-46d8-ad3a-2d1e349cd8c4",
-            "value": "27"
+            "value": "GetCenterGridPos(27)"
         },
         {
             "id": "b19a5aa7-2cfd-47d1-84f9-6f9c0050c8d7",
@@ -22,7 +22,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "7eab9deb-7f37-48ae-8848-c6b39d1c5e34",
-            "value": "35"
+            "value": "GetCenterGridPos(35)"
         },
         {
             "id": "bcac828e-4f56-4e1d-a5e6-5affa4828210",

@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "7eab9deb-7f37-48ae-8848-c6b39d1c5e34",
-            "value": "oGameManager.GridYNumRows - 1"
+            "value": "GetCenterGridPos(35)"
         },
         {
             "id": "5d9b93a9-833e-4ae1-b23b-93342dd3e01b",

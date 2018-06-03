@@ -1,2 +1,2 @@
-if (IsInGame) GhostSpeed = GhostNormSpeed;
-else if (IsFrightened) GhostFrightSpeed = GhostFrightSpeed;
+if (IsInGame) GhostSpeed = oGameManager.GhostNormSpeed;
+else if (IsFrightened) GhostFrightSpeed = oGameManager.GhostFrightSpeed;

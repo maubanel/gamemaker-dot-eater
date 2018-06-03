@@ -153,8 +153,17 @@ switch (Mode)
 		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(14), GhostSpeed, false);
 		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(14))
 		{
-			Mode = GhostMode.FIRSTTURN;
-			ResetGhosts();
+			if (!IsFrightened)
+			{
+				Mode = GhostMode.FIRSTTURN;
+				ResetGhosts();
+			}
+			else 
+			{
+				if (oGameManager.Mode == GameMode.FRIGHT) Mode = GhostMode.FRIGHT;
+				else if (oGameManager.Mode == GameMode.FRIGHTFLASH) Mode = GhostMode.FRIGHTFLASH;
+			}
+			
 		}
 		break;
 		

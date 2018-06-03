@@ -79,6 +79,14 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "3b44c21c-0ed0-4c03-b806-65bee3c739bb",
             "value": "oGameManager.GhostNormSpeed"
+        },
+        {
+            "id": "5535eb45-1218-4bca-a8da-2274f1018d4e",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "3a7ba1a8-ede5-4fd1-b71b-8d92dca719a1",
+            "value": "7"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

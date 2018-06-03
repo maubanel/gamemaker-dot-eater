@@ -76,18 +76,23 @@ if (DrawDebug)
 	if (instance_exists(oPinky)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.Mode);
 	
 	var LocalDot="No Timers";
-	if (IsDotCounting) LocalDot = string(LocalDotCounter);
-	
+	if (oPinky.IsDotCounting) LocalDot = string(oPinky.LocalDotCounter);
+	if (oInk.IsDotCounting) LocalDot = string(oInk.LocalDotCounter);
+	if (oClyde.IsDotCounting) LocalDot = string(oClyde.LocalDotCounter);
 	draw_text(30, 15, "Game Mode: " + GameModeText);
 	draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
-	draw_text(30, 65, "Chase Timer: " + string(oGameManager.ChaseTimer));
-	draw_text(250, 15, "Fright Timer: " + string(oGameManager.FrightTimer));
-	draw_text(250, 40, "Local Dot Timer: " +  LocalDot);
-	draw_text(250, 65, "Total Dots: " + string(GlobalDotCounter));
-	draw_text(680, 15, "Blinky Mode: " + BlinkyModeText);
-	draw_text(680, 40, "Pinky Mode: " + PinkyModeText);
-	draw_text(680, 65, "Pinky Mode: " + InkyModeText);
-	draw_text(420, 15, "Clyde Mode: " + PinkyModeText);
+	draw_text(30, 65, "Total Dots: " + string(GlobalDotCounter));
+	draw_text(250, 15, "Chase Timer: " + string(oGameManager.ChaseTimer));
+	draw_text(250, 40, "Fright Timer: " + string(oGameManager.FrightTimer));
+	draw_text(250, 65, "Local Dot Timer: " +  LocalDot);
+
+	draw_text(420, 15, "Glob Dot Counter: " + string(oGameManager.GlobalDotCounter));
+	draw_text(420, 40, "Clyde Mode: " + PinkyModeText);	
+	draw_text(420, 65, "Pinky Mode: " + InkyModeText);
+	draw_text(680, 40, "Blinky Mode: " + BlinkyModeText);
+	draw_text(680, 65, "Pinky Mode: " + PinkyModeText);
+
+
 		
 }
 	

@@ -2,7 +2,7 @@
 	//updates grid to indicate that dot has been eaten
 if (GridType == 1)
 	{
-		oGameManager.CollisionArray[LastGridX, LastGridY] = 3;
+		oGameManager.CollisionArray[GridX, GridY] = 3;
 		
 		var inst = instance_position(CenterXWorld,CenterYWorld, oDot);
 									
@@ -22,6 +22,11 @@ if (GridType == 1)
 					LocalDotCounter++;
 				}
 			}
+		}
+		
+		if (oGameManager.IsGlobalDotCounting)
+		{
+			oGameManager.GlobalDotCounter++;	
 		}
 	}
 	
@@ -51,6 +56,13 @@ else if (GridType == 2)
 				LocalDotCounter++;
 			}
 		}
+				
+
+	}
+	
+	if (oGameManager.IsGlobalDotCounting)
+	{
+		oGameManager.GlobalDotCounter++;	
 	}
 
 }	

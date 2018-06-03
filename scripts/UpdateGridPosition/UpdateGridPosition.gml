@@ -12,11 +12,8 @@ GridY = (GetGridNum(y));
 GridX = clamp(GridX, 0, 27);
 GridY = clamp(GridY,0, 35);
 
-//If grid changes check grid type
-if (GridX != LastGridX || GridY != LastGridY)
-{
-	//Find out what grid type under player
-	GridType = oGameManager.CollisionArray[GridX, GridY];
-	CenterXWorld = GetCenterGridPos(GridX);
-	CenterYWorld = GetCenterGridPos(GridY);
-}
+//Find out what grid type under player
+GridType = oGameManager.CollisionArray[GridX, GridY];
+CenterXWorld = GetCenterGridPos(GridX);
+CenterYWorld = GetCenterGridPos(GridY);
+

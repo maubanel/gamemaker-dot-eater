@@ -8,6 +8,8 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		oGameManager.Mode = GameMode.PLAYERDEAD;
 		//not happen on this ghost.  We must force it:
 		oGhostParent.Mode = GhostMode.PLAYERDEAD;
+		//Start timer for global timing for ghosts leaving home
+		oGameManager.IsGlobalDotCounting = true;
 	}
 	
 	else if (IsFrightened)

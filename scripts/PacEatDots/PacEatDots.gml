@@ -12,6 +12,17 @@ if (GridType == 1)
 		if (not audio_is_playing(aChomp)) audio_play_sound(aChomp, 1, false);	
 		
 		score += 10;
+		
+		with (oGhostParent)
+		{
+			if (!oGameManager.IsGlobalDotCounting)
+			{
+				if (IsDotCounting)
+				{
+					LocalDotCounter++;
+				}
+			}
+		}
 	}
 	
 //Pac-Man eats large pill, changes to FRIGHT mode
@@ -28,6 +39,19 @@ else if (GridType == 2)
 	oGameManager.Mode = GameMode.FRIGHT;
 	
 	score += 50;
+	
+	FrightTimer = 0;
+	
+	with (oGhostParent)
+	{
+		if (!oGameManager.IsGlobalDotCounting)
+		{
+			if (IsDotCounting)
+			{
+				LocalDotCounter++;
+			}
+		}
+	}
 
 }	
 

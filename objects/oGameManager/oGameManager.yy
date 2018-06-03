@@ -503,6 +503,34 @@
             "value": "5",
             "varName": "GhostFlashNumber",
             "varType": 0
+        },
+        {
+            "id": "07fccbc7-57f6-48bc-9a2b-2fc5bd6fd36d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "GlobalDotCounter",
+            "varType": 0
+        },
+        {
+            "id": "988bf437-029b-4850-96ae-ce80380dfa1d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "IsGlobalDotCounting",
+            "varType": 3
         }
     ],
     "solid": false,

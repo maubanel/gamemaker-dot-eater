@@ -20,7 +20,21 @@ if (IsInGame || (IsSafeZone && !IsFrightened))
 			DownSprite = sPinkyD;
 			LeftSprite = sPinkyL;
 			RightSprite = sPinkyR;
-			break;				
+			break;		
+			
+		case oInk:
+			UpSprite = sInkyU;
+			DownSprite = sInkyD;
+			LeftSprite = sInkyL;
+			RightSprite = sInkyR;
+			break;
+			
+		case oClyde:
+			UpSprite = sClydeU;
+			DownSprite = sClydeDown;
+			LeftSprite = sClydeL;
+			RightSprite = ssClydeR;	
+			break;
 	}
 
 	//Assing the correct sprite based on direction of movement

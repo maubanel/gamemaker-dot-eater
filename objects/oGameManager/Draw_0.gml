@@ -11,7 +11,6 @@ draw_text (400, 45, score);
 	
 switch(Mode)
 {
-	
 	case GameMode.PLAYERREADY:
 	
 	lblue = make_colour_rgb(116, 166, 247);
@@ -34,50 +33,61 @@ switch(Mode)
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
 	draw_text(oPacMan.x - 16, oPacMan.y - 16, GhostScore);
-	
-	
 		
 	break;
-	
 }
 
 
-	with (oGhostParent)
-	{
-		if (IsInGame && oGameManager.DrawDebug && !IsEdible)
-		{
-			draw_set_color(c_green);
-			draw_line(x, y, TargetX, TargetY);
-			draw_line_width(x, y, TargetX, TargetY, 5);
-		}
-	}
-	//enum GameMode {CHASE, SCATTER, PLAYERDEAD, PREGAME, PLAYERREADY, 
-	//FRIGHT, EYESRETURN, GHOSTEATEN, RETURNTOSAFEZONE, SAFEZONE,
-//	LEAVINGSAFEZONE}
-	if (DrawDebug)
+with (oGhostParent)
+{
+	if (IsInGame && oGameManager.DrawDebug && !IsEdible)
 	{
 		draw_set_color(c_green);
-		draw_set_font(fGhostEatenScore);
-		draw_set_font(fDebug);
-		GameModeText = "";
-		GameModeText = DebugText(true, "GameModeText", Mode);
-
-		var BlinkyModeText = "Not in game";
-		if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.Mode);
-
-		var PinkyModeText = "Not in game";
-		if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.Mode);
-		
-		draw_text(30, 15, "Game Mode: " + GameModeText);
-		draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
-		draw_text(30, 65, "Chase Timer: " + string(oGameManager.ChaseTimer));
-		draw_text(30, 90, "Fright Timer: " + string(oGameManager.FrightTimer));
-		draw_text(700, 15, "Blinky Mode: " + BlinkyModeText);
-		draw_text(700, 40, "Pinky Mode: " + PinkyModeText);
-		
-		
-		
+		draw_line(x, y, TargetX, TargetY);
+		draw_line_width(x, y, TargetX, TargetY, 5);
 	}
+}
+
+//enum GameMode {CHASE, SCATTER, PLAYERDEAD, PREGAME, PLAYERREADY, 
+//FRIGHT, EYESRETURN, GHOSTEATEN, RETURNTOSAFEZONE, SAFEZONE,
+//	LEAVINGSAFEZONE}
+if (DrawDebug)
+{
+	draw_set_alpha(.75);
+	draw_set_color(c_black);
+	draw_rectangle(0, 0, room_width, 90, false);
+	draw_set_alpha(1);
+	draw_set_color(c_green);
+	draw_set_font(fGhostEatenScore);
+	draw_set_font(fDebug);
+	GameModeText = "";
+	GameModeText = DebugText(true, "GameModeText", Mode);
+
+	var BlinkyModeText = "Not in game";
+	if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.Mode);
+
+	var PinkyModeText = "Not in game";
+	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.Mode);
 	
+	var InkyModeText = "Not in game";
+	if (instance_exists(oPinky)) InkyModeText = DebugText(false, "InkyModeText", oInk.Mode);
 	
+	var ClydeModeText = "Not in game";
+	if (instance_exists(oPinky)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.Mode);
+	
+	var LocalDot="No Timers";
+	if (IsDotCounting) LocalDot = string(LocalDotCounter);
+	
+	draw_text(30, 15, "Game Mode: " + GameModeText);
+	draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
+	draw_text(30, 65, "Chase Timer: " + string(oGameManager.ChaseTimer));
+	draw_text(250, 15, "Fright Timer: " + string(oGameManager.FrightTimer));
+	draw_text(250, 40, "Local Dot Timer: " +  LocalDot);
+	draw_text(250, 65, "Total Dots: " + string(GlobalDotCounter));
+	draw_text(680, 15, "Blinky Mode: " + BlinkyModeText);
+	draw_text(680, 40, "Pinky Mode: " + PinkyModeText);
+	draw_text(680, 65, "Pinky Mode: " + InkyModeText);
+	draw_text(420, 15, "Clyde Mode: " + PinkyModeText);
+		
+}
 	

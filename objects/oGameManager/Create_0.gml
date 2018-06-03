@@ -1,16 +1,15 @@
 /// @description Initialize Pac Man Variables
 
-instance_create_depth(14 * oGameManager.GridSize, 
-					  26 * oGameManager.GridSize 
-					+ oGameManager.Offset, -1, oPacMan);
+instance_create_depth(GetGridPos(14),GetCenterGridPos(26), -1, oPacMan);
 					
-instance_create_depth(14 * oGameManager.GridSize, 
-					  14 * oGameManager.GridSize 
-					+ oGameManager.Offset, -5, oBlinky);
+instance_create_depth(GetGridPos(14),GetCenterGridPos(14), -5, oBlinky);
+	
+instance_create_depth(GetGridPos(12),GetCenterGridPos(17), -5, oInk);
+
+instance_create_depth(GetGridPos(14),GetCenterGridPos(17), -5, oPinky);
 					
-//instance_create_depth(14 * oGameManager.GridSize, 
-//					17 * oGameManager.GridSize + oGameManager.Offset,
-//						-5, oPinky);
+instance_create_depth(GetGridPos(16),GetCenterGridPos(17), -5, oClyde);
+
 
 MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

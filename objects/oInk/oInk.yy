@@ -1,79 +1,31 @@
 {
-    "id": "25295313-08a5-4a42-a2c1-a1509c326947",
+    "id": "705d105b-aa2e-464c-b4bf-76da406f5041",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oClyde",
+    "name": "oInk",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "315d8ec5-e01f-4943-b502-23dd01409cf2",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "0ac03d10-083a-4a7d-bc41-b03285f45de2",
-            "value": "0"
-        },
-        {
-            "id": "2ecb8b3c-26e6-40f0-b9b5-83a66aa970c0",
+            "id": "5a92ae0b-fcfc-4cf0-a7dd-0dad9f32eb0f",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "7f8c4230-5250-46d8-ad3a-2d1e349cd8c4",
-            "value": "0"
+            "value": "27"
         },
         {
-            "id": "3e8d64ab-eb00-4ee2-af0a-918b0dd99674",
+            "id": "b19a5aa7-2cfd-47d1-84f9-6f9c0050c8d7",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "7eab9deb-7f37-48ae-8848-c6b39d1c5e34",
-            "value": "oGameManager.GridYNumRows - 1"
+            "value": "35"
         },
         {
-            "id": "5d9b93a9-833e-4ae1-b23b-93342dd3e01b",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "6efbd3fa-c623-42eb-a1c0-d5500224edf8",
-            "value": "GetCenterGridPos(17)"
-        },
-        {
-            "id": "91143b8a-69c9-4cb7-95a1-a173e153fd27",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
-            "value": "ssClydeR"
-        },
-        {
-            "id": "dcc860e5-2771-43cb-b1fb-cbd1b4134fcc",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "941423d2-b0d8-456d-9071-67e58be0a2a5",
-            "value": "60"
-        },
-        {
-            "id": "066a508e-a9e7-4147-bc2b-db8ff6aace93",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "3f4afebf-941e-408e-b0d6-a7af615e81d1",
-            "value": "GhostMode.PLAYERREADY"
-        },
-        {
-            "id": "685d9257-c277-4221-af4d-8d8705163292",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "4d9ce56a-476b-409f-8eb7-d09f7c08d695",
-            "value": "GetGridPos(16)"
-        },
-        {
-            "id": "f0a4d6bc-5240-4ce9-af55-af7f02c7454a",
+            "id": "bcac828e-4f56-4e1d-a5e6-5affa4828210",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
@@ -81,12 +33,52 @@
             "value": "GhostMode.PLAYERREADY"
         },
         {
-            "id": "dd336af7-2ba0-44ff-ab05-a014205f66d9",
+            "id": "47b6ddc5-69b6-4290-b36b-4fa56c2821b9",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "4d9ce56a-476b-409f-8eb7-d09f7c08d695",
+            "value": "GetGridPos(12)"
+        },
+        {
+            "id": "5bc37a5f-dc9b-4a72-a0b1-764b304c3b3c",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "6efbd3fa-c623-42eb-a1c0-d5500224edf8",
+            "value": "GetCenterGridPos(17)"
+        },
+        {
+            "id": "ceb52f27-43ff-4263-9507-a1ae3eafdcd1",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
             "value": "GhostMode.SAFEZONE"
+        },
+        {
+            "id": "b50776cc-1035-41a1-9755-868d8061a22f",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
+            "value": "sInkyR"
+        },
+        {
+            "id": "ea85c6eb-1b2b-45da-bbb8-38a01adf4261",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "0ac03d10-083a-4a7d-bc41-b03285f45de2",
+            "value": "False"
+        },
+        {
+            "id": "69d610e4-7ac4-4b3e-ab2b-c1b487cfcbee",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "941423d2-b0d8-456d-9071-67e58be0a2a5",
+            "value": "30"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",
@@ -105,6 +97,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "e3f5651f-904f-43ca-979f-be57eb0fd050",
+    "spriteId": "f6989ad0-e4d0-46e5-91f4-9cb314e2142a",
     "visible": true
 }

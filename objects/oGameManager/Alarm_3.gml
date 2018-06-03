@@ -1,5 +1,6 @@
 /// @description Going from GHOSTEATEN back to FRIGHT
 
+
 Mode = GameMode.FRIGHT;
 
 with (oPacMan)

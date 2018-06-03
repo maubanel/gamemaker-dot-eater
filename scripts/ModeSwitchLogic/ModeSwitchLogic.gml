@@ -80,19 +80,21 @@ else if (oGameManager.Mode == GameMode.GHOSTEATEN)
 	if (PreviousMode == GhostMode.EYESRETURN)
 	{
 		image_alpha = 0;
-		
 	}
+	Mode = GhostMode.GHOSTEATEN;
 }
 
 else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 {
+	show_debug_message("After flash");
 	if (!IsEyeballs)
 	{
-		if (IsInGame)
+		if (!IsSafeZone)
 		{
 			if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
 			else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
 			else Mode = GhostMode.CHASE;
+			show_debug_message("After flash SCATTER CHASE");
 		}
 	}
 	//All sprites go back to normal
@@ -108,6 +110,7 @@ else if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
 	if (!IsSafeZone)
 	{
 		Mode = GhostMode.CHASE;	
+		ReverseDirection();
 	}
 }
 	
@@ -116,6 +119,15 @@ else if (Mode == GhostMode.CHASE && oGameManager.Mode == GameMode.SCATTER)
 	if (!IsSafeZone)
 	{
 		Mode = GhostMode.SCATTER;
+		ReverseDirection();
 	}
+}
+
+else if (oGameManager.LastGameMode == GameMode.FRIGHT 
+		  && oGameManager.IsInGame)
+{
+	if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
+	else Mode = GhostMode.CHASE;
+			  
 }
 	

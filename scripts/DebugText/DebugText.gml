@@ -85,8 +85,16 @@ else
 				Text = "Ghost Eaten";
 				break;
 			
-				case GhostMode.LEAVINGSAFEZONE:
-				Text = "Leaving Safe Zone";
+				case GhostMode.GOTOHOMEYCENTER:
+				Text = "Leaving Home Center Vertically";
+				break;
+				
+				case GhostMode.GOTOHOMECENTER:
+				Text = "Leaving Home Center";
+				break;
+				
+				case GhostMode.LEAVEHOME:
+				Text = "Leaving Home Box";
 				break;
 			
 				case GhostMode.EYESRETURNABOVEHOME:

@@ -1,28 +1,24 @@
-switch(object_index)
-{
-	
-	case oBlinky:
-		//ghost starts moving to the left
-		direction = 180;
 
-		Mode = GameMode.SCATTER;
+direction = 180;
 
-		//look ahead for ghost
-		speed = oGameManager.GhostNormSpeed;
+Mode = GhostMode.FIRSTTURN;
 
-		NextDirectionLeft = false;
-		NextDirectionUp = false;
-		NextDirectionDown = false;
-		NextDirectionRight = false;
+//look ahead for ghost
+speed = oGameManager.GhostNormSpeed;
 
-		Horizontal = true;
-		Vertical = false;
+NextDirectionLeft = false;
+NextDirectionUp = false;
+NextDirectionDown = false;
+NextDirectionRight = false;
 
-		NextDirection = 180;
+Horizontal = true;
+Vertical = false;
 
-		LastGridX = oBlinky.GridX;
-	LastGridY = oBlinky.GridY;
+NextDirection = 180;
 
-}
+LastGridX = oBlinky.GridX;
+LastGridY = oBlinky.GridY;
+
+
 
 

@@ -14,7 +14,8 @@ IsEdible = Mode == GhostMode.FRIGHT || Mode == GhostMode.FRIGHTFLASH;
 IsEyeballs = Mode == GhostMode.EYESRETURN || Mode ==GhostMode.EYESRETURNABOVEHOME
 			 || Mode == GhostMode.EYESRETURNINTOHOME;
 
-IsSafeZone = Mode == GhostMode.SAFEZONE || Mode == GhostMode.LEAVINGSAFEZONE;
+IsSafeZone = Mode == GhostMode.SAFEZONE || Mode == GhostMode.GOTOHOMEYCENTER  
+		   || Mode == GhostMode.GOTOHOMECENTER || Mode == GhostMode.LEAVEHOME;
 
 GetGhostTarget();
 
@@ -116,7 +117,6 @@ switch (Mode)
 		if (x == GetGridPos(14) && y = GetCenterGridPos(14)) Mode = GhostMode.EYESRETURNINTOHOME;
 		break;
 		
-		
 		case GhostMode.EYESRETURNINTOHOME:
 		mp_linear_step(GetGridPos(14), GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
 		//Switch back to normal
@@ -128,8 +128,34 @@ switch (Mode)
 		}
 		break;
 		
+		case GhostMode.GOTOHOMEYCENTER:
+		mp_linear_step(x, GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		if (y == GetCenterGridPos(17))
+		{
+			Mode = GhostMode.GOTOHOMECENTER;	
+		}
+		break;
+		
+		case GhostMode.GOTOHOMECENTER:
+		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(17), oGameManager.GhostNormSpeed * 2, false);
+		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(17))
+		{
+			Mode = GhostMode.LEAVEHOME;	
+		}
+		break;
+		
+		case GhostMode.LEAVEHOME:
+		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(14), oGameManager.GhostNormSpeed * 2, false);
+		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(14))
+		{
+			Mode = GhostMode.FIRSTTURN;
+			ResetGhosts();
+		}
+		break;
+		
 		case GhostMode.SAFEZONE:
 		if (image_alpha != 1){image_alpha =1;}
+		HomeCounter();
 		SafeZoneShuffle();	
 		GhostDirection();
 		break;

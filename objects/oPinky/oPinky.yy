@@ -63,6 +63,22 @@
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "d146326b-3946-4d08-844b-54d015c74282",
             "value": "sPinkyR"
+        },
+        {
+            "id": "c2454596-3d6a-46f4-a3d0-b25694e69acb",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "0ac03d10-083a-4a7d-bc41-b03285f45de2",
+            "value": "True"
+        },
+        {
+            "id": "efb076ef-b076-4ada-9f93-74daf706b2b8",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
+            "propertyId": "3b44c21c-0ed0-4c03-b806-65bee3c739bb",
+            "value": "oGameManager.GhostNormSpeed"
         }
     ],
     "parentObjectId": "69150333-efaa-41ef-97a2-223042347ae5",

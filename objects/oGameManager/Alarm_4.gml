@@ -1,2 +1,6 @@
 /// @description Mode switch from FLIGHT FLASH
-ModeTimer();
+if (Mode == GameMode.FRIGHTFLASH)
+{
+	ModeTimer();
+	show_debug_message("CheckingModeTimer");
+}

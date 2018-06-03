@@ -248,6 +248,25 @@
             }
         },
         {
+            "Key": "25295313-08a5-4a42-a2c1-a1509c326947",
+            "Value": {
+                "id": "2f009a09-ed50-4808-9b7b-e3fa379139d1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/oClyde\/oClyde.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "26704d0b-e44c-4bfc-849d-d006c5a3b9a1",
             "Value": {
                 "id": "72c266e6-dd94-4661-a255-0d097c612315",
@@ -704,6 +723,25 @@
             }
         },
         {
+            "Key": "705d105b-aa2e-464c-b4bf-76da406f5041",
+            "Value": {
+                "id": "3abdeb8d-6a29-46ea-a97c-be904c4a64e1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/oInk\/oInk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "73da7aa0-e70d-430c-a3ca-f21b5bf72340",
             "Value": {
                 "id": "cc6a7ed8-0585-440c-9df3-d25bcf6c1b00",
@@ -1100,6 +1138,25 @@
                 ],
                 "resourcePath": "objects\/oGameManager\/oGameManager.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "99833c4d-4e05-4f8a-8aa2-c819cbd1f154",
+            "Value": {
+                "id": "b2410a9e-f9ef-4bf0-9580-22a90dc666f2",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/HomeCounter\/HomeCounter.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1744,7 +1801,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/sClyDown\/sClyDown.yy",
+                "resourcePath": "sprites\/sClydeDown\/sClydeDown.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1859,25 +1916,6 @@
                     "default"
                 ],
                 "resourcePath": "scripts\/MakeCollisionArray\/MakeCollisionArray.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f19cbc7d-578b-4bfe-8e5e-a79e7a145132",
-            "Value": {
-                "id": "1037dadf-b5fe-4356-8154-b1f8413bcf20",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\/PacManPreGame\/PacManPreGame.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2055,7 +2093,6 @@
     ],
     "script_order": [
         "5810a140-03c6-4c00-b2f7-b1486362bc30",
-        "f19cbc7d-578b-4bfe-8e5e-a79e7a145132",
         "1bf402f6-2d27-443d-867d-c2c39a13a60b",
         "8478134b-af34-47a7-b4d3-71b113f837ee",
         "bf9db800-91cd-47f0-bf23-ea0948887f63",
@@ -2090,6 +2127,7 @@
         "dbf38a5e-bbba-48ae-a1c0-77392c8e4d09",
         "2f140e51-ad47-42b2-9e7d-9fc50c8f2496",
         "52156833-8e4f-44e3-a3da-bdcec2fb27fc",
+        "99833c4d-4e05-4f8a-8aa2-c819cbd1f154",
         "f4064235-4e8b-4e23-a6df-95a858db9af1",
         "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "e0eef1c1-888a-4735-9e26-66df335d062f",

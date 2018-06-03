@@ -13,7 +13,7 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 	}
 	
 	//Kills ghost if it is in frightened state (not global but local IsFrightened variable)
-	else if (IsFrightened)
+	if (IsFrightened)
 	{
 		sprite_index = sGhostEyes;
 		PreviousMode = GhostMode.EYESRETURN;

@@ -32,7 +32,7 @@ else
 	else if (direction == 0) NextDirectionLeft = false;
 	
 	//Make ghost move slower in tunnel
-	if (GridY == 17 and (GridX <= 5 || GridX > 32))
+	if (GridY == 17 and (GridX <= 5 || GridX > 22))
 	{
 		speed = oGameManager.GhostTunnelSpeed;	
 	}

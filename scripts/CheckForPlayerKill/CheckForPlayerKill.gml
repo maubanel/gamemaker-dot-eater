@@ -2,7 +2,7 @@
 if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 {
 	
-	//If in non chase mode then
+	//Kills player if in game state
 	if (IsInGame)
 	{
 		oGameManager.Mode = GameMode.PLAYERDEAD;
@@ -12,6 +12,7 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		oGameManager.IsGlobalDotCounting = true;
 	}
 	
+	//Kills ghost if it is in frightened state (not global but local IsFrightened variable)
 	else if (IsFrightened)
 	{
 		sprite_index = sGhostEyes;
@@ -24,5 +25,12 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		y = GetCenterGridPos(GridY);
 		
 		IsFrightened = false;
+		
+		//Fix bug where eyes get stuck outside of tunnel
+		if (GridY == 17 and (GridX == 0 || GridX == 27))
+		{
+			y = GetCenterGridPos(GridY);
+			x = GetCenterGridPos(GridX);
+		}
 	}
 }

@@ -64,6 +64,22 @@ switch(Mode)
 		TargetX = oBlinky.x + VecX * 2;
 		TargetY = oBlinky.y + VecY * 2;	
 	}
+	
+	//If within a radius of 8 tiles then he goes to scatter target
+	//else chases pacman directly like Blinky
+	else if (object_index == oClyde)
+	{
+			if (point_distance(oPacMan.x, oPacMan.y, x, y) > (8 * oGameManager.GridSize))
+			{
+				TargetX = oPacMan.x;
+				TargetY = oPacMan.y;
+			}
+			else
+			{
+				TargetX = ScatterTargetX;
+				TargetY = ScatterTargetY;	
+			}
+	}
 	break;
 }
 

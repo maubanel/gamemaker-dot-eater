@@ -10,6 +10,8 @@ if (GridType == 1)
 	
 		
 		if (not audio_is_playing(aChomp)) audio_play_sound(aChomp, 1, false);	
+		
+		score += 10;
 	}
 	
 //Pac-Man eats large pill, changes to FRIGHT mode
@@ -24,6 +26,8 @@ else if (GridType == 2)
 	if (inst != noone) instance_destroy(inst);	
 		
 	oGameManager.Mode = GameMode.FRIGHT;
+	
+	score += 50;
 
 }	
 

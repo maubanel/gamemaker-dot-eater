@@ -29,8 +29,9 @@ else if (oGameManager.LastGameMode == GameMode.PREGAME)
 	else 
 	{
 		Mode = GhostMode.SAFEZONE;
-		speed = 0;
-		vspeed = oGameManager.GhostTunnelSpeed;
+		//speed = 0;
+		//GhostSpeed = 0;
+		vspeed = -oGameManager.GhostTunnelSpeed;
 	}
 		
 }
@@ -93,8 +94,11 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 			else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
 			else Mode = GhostMode.CHASE;
 		}
-		sprite_index = OriginalSprite;
 	}
+	//All sprites go back to normal
+	//
+	sprite_index = OriginalSprite;
+	oGhostParent.IsFrightened = false;
 }
 
 

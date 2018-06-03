@@ -1,5 +1,14 @@
 /// @description Player Ready Text
+lblue = make_colour_rgb(116, 166, 247);
 
+draw_set_font(fScore);
+	
+draw_set_color(c_white);
+
+draw_text(400, 5, "Score");
+draw_text (400, 45, score);
+
+	
 switch(Mode)
 {
 	
@@ -25,6 +34,8 @@ switch(Mode)
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
 	draw_text(oPacMan.x - 16, oPacMan.y - 16, GhostScore);
+	
+	
 		
 	break;
 	
@@ -61,8 +72,10 @@ switch(Mode)
 		draw_text(30, 40, "Pac Speed: " + string(oPacMan.speed));
 		draw_text(30, 65, "Chase Timer: " + string(oGameManager.ChaseTimer));
 		draw_text(30, 90, "Fright Timer: " + string(oGameManager.FrightTimer));
-		draw_text(500, 15, "Blinky Mode: " + BlinkyModeText);
-		draw_text(500, 40, "Pinky Mode: " + PinkyModeText);
+		draw_text(700, 15, "Blinky Mode: " + BlinkyModeText);
+		draw_text(700, 40, "Pinky Mode: " + PinkyModeText);
+		
+		
 		
 	}
 	

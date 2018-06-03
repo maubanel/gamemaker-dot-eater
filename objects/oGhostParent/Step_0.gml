@@ -24,14 +24,6 @@ if (oGameManager.LastGameMode != oGameManager.Mode)
 	
 	ModeSwitchLogic();
 	
-	if (object_index == oPinky) 
-	{ 
-		show_debug_message("Pinky's state is: " + string(oPinky.Mode));
-	}
-	if (object_index == oBlinky) 
-	{ 
-		show_debug_message("Blinky's state is: " + string(oBlinky.Mode));
-	}
 }
 
 switch (Mode)
@@ -115,7 +107,7 @@ switch (Mode)
 		speed = 0;
 		if (PreviousMode == GhostMode.EYESRETURN)
 		{
-			image_alpha = 1;	
+			image_alpha = 0;	
 		}
 		break;
 		
@@ -137,7 +129,7 @@ switch (Mode)
 		break;
 		
 		case GhostMode.SAFEZONE:
-		if (image_alpha != 1)image_alpha =1;
+		if (image_alpha != 1){image_alpha =1;}
 		SafeZoneShuffle();	
 		GhostDirection();
 		break;

@@ -32,8 +32,6 @@ switch (Mode)
 		{
 			alarm[1] = 80;
 		}
-		
-
 		break;
 	
 	case GameMode.SCATTER:
@@ -56,6 +54,8 @@ switch (Mode)
 			FrightTimer = 0;
 			//15 is the image speed of the ghosts Fright flash animation
 			alarm[4] = GhostFlashNumber * 15;
+			//Reset GhostScore back to 200
+			GhostScore = 200;
 			
 		}
 		

@@ -8,7 +8,6 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		oGameManager.Mode = GameMode.PLAYERDEAD;
 		//not happen on this ghost.  We must force it:
 		oGhostParent.Mode = GhostMode.PLAYERDEAD;
-		show_debug_message("killed player");
 	}
 	
 	else if (IsFrightened)
@@ -18,10 +17,10 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 		//Since this happens in ghost the switch of going to PlayerDead does 
 
 		oGameManager.Mode = GameMode.GHOSTEATEN;
+		if (!IsEyeballs) Mode = GhostMode.GHOSTEATEN;
 		x = GetCenterGridPos(GridX);
 		y = GetCenterGridPos(GridY);
 		
 		IsFrightened = false;
-		show_debug_message("killed ghost");
 	}
 }

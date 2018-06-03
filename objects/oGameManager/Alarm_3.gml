@@ -1,6 +1,6 @@
 /// @description Going from GHOSTEATEN back to FRIGHT
 
-ModeTimer();
+Mode = GameMode.FRIGHT;
 
 with (oPacMan)
 {
@@ -13,15 +13,14 @@ with (oGhostParent)
 {
 	if (!IsSafeZone)
 	{
-		if (IsFrightened) Mode = GameMode.FRIGHT;	
+		if (IsFrightened) Mode = GhostMode.FRIGHT;	
 		else if (PreviousMode != GhostMode.EYESRETURN)
 		{
 			if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
 			else Mode = GhostMode.CHASE;
 		}
 	}
-	show_debug_message(PreviousMode == GhostMode.EYESRETURN);
-	show_debug_message("Above means that Previous mode is correct");
+	
 	if (PreviousMode == GhostMode.EYESRETURN && !IsSafeZone)
 	{
 		Mode = GhostMode.EYESRETURN;
@@ -30,3 +29,7 @@ with (oGhostParent)
 		PreviousMode = 0;
 	}
 }
+
+//Every time a dot is eaten up the ghost score
+score += GhostScore;
+GhostScore *= 2;

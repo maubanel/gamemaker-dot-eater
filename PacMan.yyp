@@ -1103,6 +1103,25 @@
             }
         },
         {
+            "Key": "9a3c04eb-5ab8-4c15-8ed2-10fcf5b403df",
+            "Value": {
+                "id": "e0052d2e-e9d7-4a0d-bcda-863e55e330cc",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "fonts\/fScore\/fScore.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "9fd510e8-b301-40a8-a135-1e0e968c87e5",
             "Value": {
                 "id": "9de34d10-950f-4ced-b604-8bd8d8451c49",

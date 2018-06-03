@@ -32,7 +32,7 @@ switch(Mode)
 	case GameMode.GHOSTEATEN:
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
-	draw_text(oPacMan.x - 16, oPacMan.y - 16, GhostScore);
+	draw_text(oPacMan.x - 20, oPacMan.y - 16, GhostScore);
 		
 	break;
 }
@@ -70,10 +70,10 @@ if (DrawDebug)
 	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.Mode);
 	
 	var InkyModeText = "Not in game";
-	if (instance_exists(oPinky)) InkyModeText = DebugText(false, "InkyModeText", oInk.Mode);
+	if (instance_exists(oInk)) InkyModeText = DebugText(false, "InkyModeText", oInk.Mode);
 	
 	var ClydeModeText = "Not in game";
-	if (instance_exists(oPinky)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.Mode);
+	if (instance_exists(oClyde)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.Mode);
 	
 	var LocalDot="No Timers";
 	if (oPinky.IsDotCounting) LocalDot = string(oPinky.LocalDotCounter);
@@ -87,10 +87,10 @@ if (DrawDebug)
 	draw_text(250, 65, "Local Dot Timer: " +  LocalDot);
 
 	draw_text(420, 15, "Glob Dot Counter: " + string(oGameManager.GlobalDotCounter));
-	draw_text(420, 40, "Clyde Mode: " + PinkyModeText);	
-	draw_text(420, 65, "Pinky Mode: " + InkyModeText);
+	draw_text(420, 40, "Clyde Mode: " + ClydeModeText);	
+	draw_text(420, 65, "Pinky Mode: " + PinkyModeText);
 	draw_text(680, 40, "Blinky Mode: " + BlinkyModeText);
-	draw_text(680, 65, "Pinky Mode: " + PinkyModeText);
+	draw_text(680, 65, "Inky Mode: " + InkyModeText);
 
 
 		

@@ -1,4 +1,5 @@
 /// @description Player Ready Text
+
 lblue = make_colour_rgb(116, 166, 247);
 
 draw_set_font(fScore);
@@ -35,6 +36,13 @@ switch(Mode)
 
 	draw_text(390, 630, "Ready");
 
+	break;
+	
+	case GameMode.READY:
+	draw_set_font(fPlayerReady);
+	draw_set_halign(fPlayerReady);
+	draw_set_color(c_yellow);
+	draw_text(390, 630, "Ready");
 	break;
 	
 	case GameMode.GHOSTEATEN:

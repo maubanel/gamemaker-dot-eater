@@ -30,12 +30,14 @@ switch (Mode)
 	break;
 	
 	case GameMode.PLAYERREADY:
+	case GameMode.READY:
 		if (!alarm[1])
 		{
 			alarm[1] = 80;
 		}
 		oDotLarge.image_speed = 0;
 		oDotLarge.image_index = 0;
+
 		break;
 	
 	case GameMode.SCATTER:
@@ -84,14 +86,20 @@ switch (Mode)
 		break;
 		
 		case GameMode.NEXTLEVELPAUSE:
-		alarm[5] = 60;
+		if (!alarm[5])
+		{
+			alarm[5] = 60;
+		}
 		break;
 		
 		case GameMode.NEXTLEVELFLASH:
-		alarm[6] = 60;
-		
+		if (!alarm[6])
+		{
+			alarm[6] = 60;
+		}
 		case GameMode.NEXTLEVEL:
 			NextLevel();
+			Mode = GameMode.READY;
 		break;
 	default:
 	//Nothing

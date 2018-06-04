@@ -12,6 +12,12 @@ else if (oGameManager.Mode == GameMode.NEXTLEVELPAUSE)
 	Mode = GhostMode.NEXTLEVELPAUSE;	
 }
 
+else if (oGameManager.Mode == GameMode.READY)
+{
+	Mode = GhostMode.READY;	
+}
+
+
 else if (oGameManager.Mode == GameMode.NEXTLEVELFLASH)
 {
 	Mode = GhostMode.NEXTLEVELFLASH;	

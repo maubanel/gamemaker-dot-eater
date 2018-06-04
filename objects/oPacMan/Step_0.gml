@@ -9,6 +9,7 @@ switch(oGameManager.Mode)
 	case GameMode.PLAYERREADY:
 	case GameMode.NEXTLEVELFLASH:
 	case GameMode.NEXTLEVEL:
+	case GameMode.READY:
 	image_alpha = 0;
 	break;
 	

@@ -41,6 +41,18 @@ if (IsGame)
 			case GameMode.PLAYERDEATHANIM:
 			Text = "Player Death Animation";
 			break;	
+			
+			case GameMode.NEXTLEVELPAUSE:
+			Text = "Next Lev Pause";
+			break;
+			
+			case GameMode.NEXTLEVELFLASH:
+			Text = "Next Lev Flash";
+			break;
+			
+			case GameMode.READY:
+			Text = "READY";
+			break;
 		}
 		return Text;
 }

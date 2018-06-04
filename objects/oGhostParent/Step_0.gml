@@ -38,6 +38,7 @@ switch (Mode)
 	break;
 		
 	case GhostMode.PREGAME:
+	case GhostMode.READY:
 		image_alpha = 1;
 		image_speed = 0;
 		x = StartingX;

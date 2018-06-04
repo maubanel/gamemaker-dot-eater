@@ -11,3 +11,7 @@ It is missing:
 4.  Full audio
 5.  Begining and end screens
 6.  Gamemakers random number for calculating ghost's frightened turns as opposed to original
+7.  Flashing tiles at end of level
+8.  Multiplayer
+9.  Score is simplistic
+10.  No high score

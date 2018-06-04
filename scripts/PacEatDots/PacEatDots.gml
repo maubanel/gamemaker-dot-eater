@@ -43,6 +43,9 @@ else if (GridType == 2)
 	if (inst != noone) instance_destroy(inst);	
 		
 	oGameManager.Mode = GameMode.FRIGHT;
+	//Need to force a state change as it could go from fright to fright
+	//and miss the mode switching in ghost
+	oGameManager.LastGameMode = -1;
 	
 	score += 50;
 	oGameManager.MasterLevelDotCounter++;

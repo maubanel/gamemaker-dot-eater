@@ -56,7 +56,7 @@ switch(Mode)
 
 with (oGhostParent)
 {
-	if (IsInGame && oGameManager.DrawDebug && !IsEdible)
+	if (IsInGame && oGameManager.DrawDebug && !IsFrightened)
 	{
 		draw_set_color(c_green);
 		draw_line(x, y, TargetX, TargetY);

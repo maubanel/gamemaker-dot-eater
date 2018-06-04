@@ -61,7 +61,7 @@ else if (oGameManager.Mode == GameMode.FRIGHT)
 	{
 		IsFrightened = true;
 		sprite_index = sGhostFright;
-		if ((IsInGame || IsEdible) && !IsSafeZone)
+		if ((IsInGame || IsFrightened) && !IsSafeZone)
 		{
 			Mode = GhostMode.FRIGHT;
 			ReverseDirection(); // - BUGGY
@@ -81,12 +81,13 @@ else if (oGameManager.Mode == GameMode.FRIGHTFLASH)
 	//switch IsFrightened switch to true for ghosts in safe zone
 	if (IsFrightened)
 	{
-		//Don'e switched if in eyeball mode
+		//Don't switch if in eyeball mode
 		if (!IsEyeballs) sprite_index = sGhostFrightFlash;
 		//If not in safezone then switch modes otherwise leave alone
 		if (!IsSafeZone) Mode = GhostMode.FRIGHTFLASH;
+		show_debug_message("Should be flashing");
 	}
-	show_debug_message("Should be flashing");
+	
 }
 
 else if (oGameManager.Mode == GameMode.GHOSTEATEN)
@@ -101,8 +102,9 @@ else if (oGameManager.Mode == GameMode.GHOSTEATEN)
 	if (Mode != GhostMode.GHOSTEATEN)
 	{
 		PreviousMode = Mode;
+		Mode = GhostMode.GHOSTEATEN;
 	}
-	Mode = GhostMode.GHOSTEATEN;
+	
 
 }
 

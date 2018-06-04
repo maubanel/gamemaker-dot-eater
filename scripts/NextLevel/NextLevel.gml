@@ -76,7 +76,7 @@ with (oGhostParent)
 	PreviousMode = 0;
 	StartingGameMode = 0;
 	IsInGame = false;
-	IsEdible = false;
+	IsFrightened = false;
 	IsSafeZone = true;
 	if (object_index == oBlinky) IsSafeZone = false;
 	IsEyeballs = false;

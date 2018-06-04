@@ -21,16 +21,16 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 		//Start timer for global timing for ghosts leaving home
 		oGameManager.IsGlobalDotCounting = true;
 	
-	if (oGameManager.DrawDebug)
-	{
-		show_debug_message("Ghost Kills Player.");	
-	}
+		if (oGameManager.DrawDebug)
+		{
+			show_debug_message("Ghost Kills Player.");	
+		}
 	
-	lives--;
-	if (lives <= 0)
-	{
-		oGameManager.Mode = GameMode.YOULOSE;
-	}
+		lives--;
+		if (lives <= 0)
+		{
+			oGameManager.Mode = GameMode.YOULOSE;
+		}
 	
 	}
 	

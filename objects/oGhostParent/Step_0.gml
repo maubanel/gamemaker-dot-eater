@@ -6,17 +6,15 @@
 }*/
 
 //Every ghost shares first target for first turn
-IsInGame = Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE 
-				|| Mode == GhostMode.FIRSTTURN;
+IsInGame = (Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE 
+				|| Mode == GhostMode.FIRSTTURN);
 
-//Is Frightened is the individual indication on the ghost for being edible
-IsEdible = Mode == GhostMode.FRIGHT || Mode == GhostMode.FRIGHTFLASH;
+IsEyeballs = (Mode == GhostMode.EYESRETURN || Mode == GhostMode.EYESRETURNABOVEHOME
+			 || Mode == GhostMode.EYESRETURNINTOHOME);
+			 
 
-IsEyeballs = Mode == GhostMode.EYESRETURN || Mode ==GhostMode.EYESRETURNABOVEHOME
-			 || Mode == GhostMode.EYESRETURNINTOHOME;
-
-IsSafeZone = Mode == GhostMode.SAFEZONE || Mode == GhostMode.GOTOHOMEYCENTER  
-		   || Mode == GhostMode.GOTOHOMECENTER || Mode == GhostMode.LEAVEHOME;
+IsSafeZone = (Mode == GhostMode.SAFEZONE || Mode == GhostMode.GOTOHOMEYCENTER  
+		   || Mode == GhostMode.GOTOHOMECENTER || Mode == GhostMode.LEAVEHOME);
 
 GetGhostTarget();
 
@@ -36,6 +34,11 @@ switch (Mode)
 	case GhostMode.NEXTLEVELFLASH:
 		image_alpha = 0;
 	break;
+	
+	case GhostMode.PLAYERDEAD:
+		image_alpha = 1;
+		speed = 0;
+		break;
 		
 	case GhostMode.PREGAME:
 	case GhostMode.READY:

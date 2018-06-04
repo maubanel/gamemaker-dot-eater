@@ -35,9 +35,11 @@ switch (Mode)
 		{
 			alarm[1] = 80;
 		}
-		oDotLarge.image_speed = 0;
-		oDotLarge.image_index = 0;
-
+		if (instance_exists(oDotLarge))
+		{
+			oDotLarge.image_speed = 0;
+			oDotLarge.image_index = 0;
+		}
 		break;
 	
 	case GameMode.SCATTER:
@@ -62,7 +64,6 @@ switch (Mode)
 			alarm[4] = GhostFlashNumber * 15;
 			//Reset GhostScore back to 200
 			GhostScore = 200;
-			
 		}
 		
 	break;

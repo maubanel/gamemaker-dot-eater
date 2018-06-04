@@ -83,6 +83,16 @@ switch (Mode)
 		alarm[4] = -1;
 		break;
 		
+		case GameMode.NEXTLEVELPAUSE:
+		alarm[5] = 60;
+		break;
+		
+		case GameMode.NEXTLEVELFLASH:
+		alarm[6] = 60;
+		
+		case GameMode.NEXTLEVEL:
+			NextLevel();
+		break;
 	default:
 	//Nothing
 		break;

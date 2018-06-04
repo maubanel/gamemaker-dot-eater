@@ -514,6 +514,25 @@
             }
         },
         {
+            "Key": "4818c674-3f36-46a3-b9fc-e76ee0a63ae6",
+            "Value": {
+                "id": "0b3ba8ca-ded8-4e12-ae03-7c25e9d1d32f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/NextLevel\/NextLevel.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "49747d1a-0dc0-4f7d-b51f-d2581bdc25e2",
             "Value": {
                 "id": "cc58bbe3-691c-4ddc-9980-0b2cf8bbe281",
@@ -2111,7 +2130,6 @@
         }
     ],
     "script_order": [
-        "5810a140-03c6-4c00-b2f7-b1486362bc30",
         "1bf402f6-2d27-443d-867d-c2c39a13a60b",
         "8478134b-af34-47a7-b4d3-71b113f837ee",
         "bf9db800-91cd-47f0-bf23-ea0948887f63",
@@ -2127,6 +2145,8 @@
         "ea84abb0-bf8f-458e-8895-e50b2269bb24",
         "c37444f0-f97a-4a7a-bc44-238a9e9c27c9",
         "c81334e5-91ec-45e1-8375-7a983df0af9b",
+        "4818c674-3f36-46a3-b9fc-e76ee0a63ae6",
+        "5810a140-03c6-4c00-b2f7-b1486362bc30",
         "3563cd49-2026-4a74-adf5-7262c61eeab9",
         "b6e23735-54b3-443e-bb19-428a6b81d4e0",
         "26704d0b-e44c-4bfc-849d-d006c5a3b9a1",

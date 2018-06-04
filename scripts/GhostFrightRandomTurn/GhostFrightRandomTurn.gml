@@ -60,15 +60,13 @@ else
 			and ds_list_find_value(WhichDirection, i) == 1) 
 		{
 			NextDirection = 270;
-				
 			break;
 		}
 		
 		if 	(NextDirectionLeft == true
 			and ds_list_find_value(WhichDirection, i) == 2) 
 		{
-			NextDirection = 180;
-					
+			NextDirection = 180;		
 			break;
 		}
 		

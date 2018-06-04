@@ -30,7 +30,7 @@ if (GridX != LastGridX or GridY != LastGridY)
 	}
 }
 
-else if (speed == 0) //means ghost is in turn and needs to keep moving
+if (speed == 0) //means ghost is in turn and needs to keep moving
 {	
 	GhostPathfinding(TargetX, TargetY, oGameManager.GhostEyeReturnSpeed);
 }

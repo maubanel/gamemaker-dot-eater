@@ -9,6 +9,7 @@
 IsInGame = Mode == GhostMode.SCATTER || Mode == GhostMode.CHASE 
 				|| Mode == GhostMode.FIRSTTURN;
 
+//Is Frightened is the individual indication on the ghost for being edible
 IsEdible = Mode == GhostMode.FRIGHT || Mode == GhostMode.FRIGHTFLASH;
 
 IsEyeballs = Mode == GhostMode.EYESRETURN || Mode ==GhostMode.EYESRETURNABOVEHOME
@@ -19,6 +20,7 @@ IsSafeZone = Mode == GhostMode.SAFEZONE || Mode == GhostMode.GOTOHOMEYCENTER
 
 GetGhostTarget();
 
+UpdateGridGhost();
 
 if (oGameManager.LastGameMode != oGameManager.Mode)
 {
@@ -31,6 +33,7 @@ switch (Mode)
 {
 	case GhostMode.PLAYERREADY:
 	case GhostMode.PLAYERDEATHANIM:
+	case GhostMode.NEXTLEVELFLASH:
 		image_alpha = 0;
 	break;
 		
@@ -42,7 +45,7 @@ switch (Mode)
 	break;	
 		
 	case GhostMode.FIRSTTURN:
-		UpdateGridGhost();
+		//UpdateGridGhost();
 		
 		//Get direction
 		GhostUpdateHorVer();
@@ -59,7 +62,7 @@ switch (Mode)
 	
 	move_wrap(true, false, oGameManager.GridSize);
 
-	UpdateGridGhost();
+	//UpdateGridGhost();
 	
 	GetGhostTarget();
 	
@@ -78,7 +81,7 @@ switch (Mode)
 	
 	move_wrap(true, false, oGameManager.GridSize);
 	
-	UpdateGridGhost();
+	//UpdateGridGhost();
 	
 	GetGhostTarget();
 	
@@ -97,7 +100,7 @@ switch (Mode)
 		
 		move_wrap(true, false, oGameManager.GridSize);
 
-		UpdateGridGhost();
+		//UpdateGridGhost();
 		
 		SetGhostSpeed();
 		//Pick ran
@@ -111,8 +114,9 @@ switch (Mode)
 		case GhostMode.GHOSTEATEN:
 		if (PreviousMode == GhostMode.EYESRETURN)
 		{
-			image_alpha = 1; //CHANGE BACK TO 0	
+			image_alpha = 0; 
 		}
+		speed = 0;
 		break;
 		
 		case GhostMode.EYESRETURNABOVEHOME:
@@ -143,8 +147,8 @@ switch (Mode)
 		
 		case GhostMode.GOTOHOMECENTER:
 		SetGhostSpeed();
-		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(17), GhostSpeed, false);
-		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(17))
+		mp_linear_step(GetGridPos(14), GetCenterGridPos(17), GhostSpeed, false);
+		if (x ==GetGridPos(14) && y == GetCenterGridPos(17))
 		{
 			Mode = GhostMode.LEAVEHOME;	
 		}
@@ -152,8 +156,8 @@ switch (Mode)
 		
 		case GhostMode.LEAVEHOME:
 		SetGhostSpeed();
-		mp_linear_step(GetCenterGridPos(14), GetCenterGridPos(14), GhostSpeed, false);
-		if (x ==GetCenterGridPos(14) && y == GetCenterGridPos(14))
+		mp_linear_step(GetGridPos(14), GetCenterGridPos(14), GhostSpeed, false);
+		if (x ==GetGridPos(14) && y == GetCenterGridPos(14))
 		{
 			if (!IsFrightened)
 			{
@@ -164,6 +168,12 @@ switch (Mode)
 			{
 				if (oGameManager.Mode == GameMode.FRIGHT) Mode = GhostMode.FRIGHT;
 				else if (oGameManager.Mode == GameMode.FRIGHTFLASH) Mode = GhostMode.FRIGHTFLASH;
+				//neutralize vspeed
+				speed = 0;
+				direction = choose (0, 180);
+				NextDirection = direction; // forces to run a space check so ghost does not freeze
+				LastGridX = GridX;
+				LastGridY = GridY;
 			}
 			
 		}
@@ -176,9 +186,12 @@ switch (Mode)
 		GhostDirection();
 		break;
 		
+		case GhostMode.NEXTLEVELPAUSE:
+		image_index = 0;
+		speed = 0;
 	
 	default:
-		speed = 0;
+		//speed = 0;
 		break;
 }
 

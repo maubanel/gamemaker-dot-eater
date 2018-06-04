@@ -1,6 +1,7 @@
 //Reset position
-x = 14 * oGameManager.GridSize;
-y = 26 * oGameManager.GridSize + oGameManager.Offset;
+
+x = GetGridPos(14);
+y = GetCenterGridPos(26);
 
 //Point to left
 image_angle = 180;

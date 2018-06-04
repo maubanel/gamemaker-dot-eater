@@ -1,5 +1,11 @@
 //Check to see if ghost and player occupy same square
-if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
+var PacTempGridX = GetGridNum(oPacMan.x);
+var PacTempGridY =	GetGridNum(oPacMan.y);
+var GhostTempGridX = GetGridNum(x);
+var GhostTempGridY = GetGridNum(y);
+
+
+if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 {
 	if (oGameManager.DrawDebug)
 	{
@@ -18,6 +24,12 @@ if (GridX == oPacMan.GridX and GridY == oPacMan.GridY)
 	if (oGameManager.DrawDebug)
 	{
 		show_debug_message("Ghost Kills Player.");	
+	}
+	
+	lives--;
+	if (lives <= 0)
+	{
+		oGameManager.Mode = GameMode.YOULOSE;
 	}
 	
 	}

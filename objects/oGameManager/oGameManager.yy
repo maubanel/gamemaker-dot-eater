@@ -93,6 +93,26 @@
             "enumb": 4,
             "eventtype": 2,
             "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
+        },
+        {
+            "id": "66777868-c666-4224-8df2-315bb79806c9",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 5,
+            "eventtype": 2,
+            "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
+        },
+        {
+            "id": "c30f4069-0858-4034-a9a3-6a8fbf53a3b6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 6,
+            "eventtype": 2,
+            "m_owner": "972524ad-4884-43c1-b775-fcb023e5b87f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -558,6 +578,34 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "Alarm4Pause",
+            "varType": 0
+        },
+        {
+            "id": "97192881-c5ff-4606-8578-6fda3bf51bb8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "MasterLevelDotCounter",
+            "varType": 0
+        },
+        {
+            "id": "528c9935-f7fb-4dab-9c3a-e5d488d0558a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "Level",
             "varType": 0
         }
     ],

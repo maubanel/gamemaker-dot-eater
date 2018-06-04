@@ -1,8 +1,14 @@
 /// @description Logic for Pac-Man
 
+/* Update Pac-Man's last and current Grid Position, if grid is
+// different then get center grid type and xy */
+UpdateGridPosition();
+	
 switch(oGameManager.Mode)
 {
 	case GameMode.PLAYERREADY:
+	case GameMode.NEXTLEVELFLASH:
+	case GameMode.NEXTLEVEL:
 	image_alpha = 0;
 	break;
 	
@@ -24,9 +30,6 @@ switch(oGameManager.Mode)
 	//For tunnel in maze
 	move_wrap(true, false, oGameManager.GridSize);
 	
-	/* Update Pac-Man's last and current Grid Position, if grid is
-	// different then get center grid type and xy */
-	UpdateGridPosition();
 	
 	/* Sets speed based on whether it is in fright or non fright mode */
 	SetSpeed();
@@ -75,6 +78,14 @@ switch(oGameManager.Mode)
 		speed = 0;
 		
 		break;
+		
+	case GameMode.NEXTLEVELPAUSE:
+	image_index = 0;
+	speed = 0;
+	
+	break;
+
+
 }
 
 

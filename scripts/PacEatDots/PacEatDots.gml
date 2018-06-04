@@ -12,6 +12,7 @@ if (GridType == 1)
 		if (not audio_is_playing(aChomp)) audio_play_sound(aChomp, 1, false);	
 		
 		score += 10;
+		oGameManager.MasterLevelDotCounter++;
 		
 		with (oGhostParent)
 		{
@@ -44,6 +45,7 @@ else if (GridType == 2)
 	oGameManager.Mode = GameMode.FRIGHT;
 	
 	score += 50;
+	oGameManager.MasterLevelDotCounter++;
 	
 	FrightTimer = 0;
 	

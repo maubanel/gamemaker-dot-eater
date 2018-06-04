@@ -4,18 +4,21 @@ if (object_index == oBlinky) Mode = GhostMode.GOTOHOMEYCENTER;
 
 else if (!oGameManager.IsGlobalDotCounting)
 {
-	if (LocalDotCounter>=NumLocalDots && IsDotCounting)	
+	if (LocalDotCounter>=NumLocalDots)	
 	{
 		Mode = GhostMode.GOTOHOMEYCENTER;
-		IsDotCounting = false;
+		if (IsDotCounting)
+		{
 		
-		if (object_index == oPinky)
-		{
-			oInk.IsDotCounting = true;
-		}
-		else if (object_index == oInk)
-		{
-			oClyde.IsDotCounting = true;
+		IsDotCounting = false;	
+			if (object_index == oPinky)
+			{
+				oInk.IsDotCounting = true;
+			}
+			else if (object_index == oInk)
+			{
+				oClyde.IsDotCounting = true;
+			}
 		}
 	}
 }
@@ -33,4 +36,14 @@ else
 	{
 		Mode = GhostMode.GOTOHOMEYCENTER;
 	}
+	
+	if (oClyde.Mode != GhostMode.SCATTER && object_index == oClyde)
+	{
+		oGameManager.GlobalDotCounter = 0;
+		oGameManager.IsGlobalDotCounting = false;
+		oGhostParent.LocalDotCounter = 0;
+		oGhostParent.IsDotCounting = false;
+		oPinky.IsDotCounting = true;
+	}
+	
 }

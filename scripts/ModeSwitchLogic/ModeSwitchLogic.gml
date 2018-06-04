@@ -6,6 +6,16 @@ if (oGameManager.LastGameMode == GameMode.PLAYERDEAD
 {
 	Mode = GhostMode.PLAYERDEATHANIM;
 }
+
+else if (oGameManager.Mode == GameMode.NEXTLEVELPAUSE)
+{
+	Mode = GhostMode.NEXTLEVELPAUSE;	
+}
+
+else if (oGameManager.Mode == GameMode.NEXTLEVELFLASH)
+{
+	Mode = GhostMode.NEXTLEVELFLASH;	
+}
 		
 else if (oGameManager.LastGameMode == GameMode.PLAYERDEATHANIM)
 {
@@ -78,7 +88,7 @@ else if (oGameManager.Mode == GameMode.GHOSTEATEN)
 	image_speed = 0;
 	if (PreviousMode == GhostMode.EYESRETURN)
 	{
-		image_alpha = 1; //CHANGE BACK TO 0
+		image_alpha = 0; 
 		speed = 0;
 	}
 	//Make sure mode that you are saving is before GHOSTEATEN

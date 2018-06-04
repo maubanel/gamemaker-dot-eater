@@ -4,7 +4,7 @@ direction = 180;
 Mode = GhostMode.FIRSTTURN;
 
 //look ahead for ghost
-speed = oGameManager.GhostNormSpeed;
+speed = GhostSpeed;
 
 NextDirectionLeft = false;
 NextDirectionUp = false;
@@ -18,6 +18,8 @@ NextDirection = 180;
 
 LastGridX = oBlinky.GridX;
 LastGridY = oBlinky.GridY;
+
+vspeed = 0;
 
 
 

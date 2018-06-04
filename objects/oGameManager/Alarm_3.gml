@@ -23,6 +23,8 @@ with (oGhostParent)
 	Mode = PreviousMode;
 	
 	PreviousMode = -1;
+	
+	if (Mode == GhostMode.SAFEZONE) vspeed += oGameManager.GhostTunnelSpeed;
 }
 
 //Every time a dot is eaten up the ghost score

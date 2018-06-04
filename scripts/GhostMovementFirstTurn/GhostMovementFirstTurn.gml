@@ -18,13 +18,16 @@ if (GridX != LastGridX or GridY != LastGridY)
 	
 }
 
+//Don't else if for mode switching
 if (speed == 0) //means ghost is in turn and needs to keep moving
 {	
 	GhostPathfinding(TargetX, TargetY, GhostSpeed);
 }
 
-if (GetGridNum(x) == GetGridNum(TargetX) && GetGridNum(y) == GetGridNum(TargetY))
+//If it hits target
+if (GetCenterGridPos(GridX) == TargetX && GetCenterGridPos(GridY) == TargetY)
 {
+	show_debug_message("get out of first turn");
 	SetGameMode();	
 }
 

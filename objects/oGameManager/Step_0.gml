@@ -24,6 +24,8 @@ switch (Mode)
 	{
 		audio_play_sound(aIntro,1, false);	
 	}
+	oDotLarge.image_speed = 0;
+	oDotLarge.image_index = 0;
 	Mode = GameMode.PLAYERREADY;
 	break;
 	
@@ -32,6 +34,8 @@ switch (Mode)
 		{
 			alarm[1] = 80;
 		}
+		oDotLarge.image_speed = 0;
+		oDotLarge.image_index = 0;
 		break;
 	
 	case GameMode.SCATTER:
@@ -73,6 +77,10 @@ switch (Mode)
 		{
 			alarm[3] = 45;	
 		}
+		
+		//Pauses alarm for switching out of flashing
+		Alarm4Pause = alarm[4];
+		alarm[4] = -1;
 		break;
 		
 	default:

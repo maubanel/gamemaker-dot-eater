@@ -545,6 +545,20 @@
             "value": "Speed * 3",
             "varName": "GhostEyeReturnSpeed",
             "varType": 0
+        },
+        {
+            "id": "6b8a97d9-2971-4b51-b06c-9f93e6e2a307",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "Alarm4Pause",
+            "varType": 0
         }
     ],
     "solid": false,

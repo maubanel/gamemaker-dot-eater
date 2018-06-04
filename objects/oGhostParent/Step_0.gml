@@ -109,10 +109,9 @@ switch (Mode)
 		break;
 		
 		case GhostMode.GHOSTEATEN:
-		speed = 0;
 		if (PreviousMode == GhostMode.EYESRETURN)
 		{
-			image_alpha = 0;	
+			image_alpha = 1; //CHANGE BACK TO 0	
 		}
 		break;
 		

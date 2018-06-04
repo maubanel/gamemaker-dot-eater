@@ -5,9 +5,17 @@ draw_set_font(fScore);
 	
 draw_set_color(c_white);
 
+//Score
 draw_text(400, 5, "Score");
 draw_text (400, 45, score);
 
+var XGridOffset = 0;
+//Lives
+repeat (lives)
+{
+draw_sprite(sPacLives,0,GetCenterGridPos(2 + XGridOffset), GetGridPos(35));
+XGridOffset += 2;
+}
 	
 switch(Mode)
 {

@@ -485,6 +485,20 @@
             "value": "0",
             "varName": "IsDotCounting",
             "varType": 3
+        },
+        {
+            "id": "9977ae3f-19d8-45d7-8cd3-bca574d2de41",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "45",
+            "varName": "GhostEatenTimer",
+            "varType": 0
         }
     ],
     "solid": false,

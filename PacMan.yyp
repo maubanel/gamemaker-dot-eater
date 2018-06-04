@@ -153,6 +153,25 @@
             }
         },
         {
+            "Key": "0f9a67df-9ada-4d89-b997-f072d0c7f99f",
+            "Value": {
+                "id": "6937c039-4231-4aac-9e32-110760f96dbd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sPacLives\/sPacLives.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1bf402f6-2d27-443d-867d-c2c39a13a60b",
             "Value": {
                 "id": "3d7631bf-46a2-4971-ae7f-e913e3187794",

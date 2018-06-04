@@ -3,3 +3,4 @@ if (Mode == GameMode.FRIGHTFLASH)
 {
 	ModeTimer();
 }
+

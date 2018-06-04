@@ -1,4 +1,4 @@
-if (Horizontal) y = GetCenterGridPos(GridY);
+/*if (Horizontal) y = GetCenterGridPos(GridY);
 	else x = GetCenterGridPos(GridX);
 		
 	//NextDirection = direction;
@@ -27,7 +27,8 @@ CheckFourDirections(TargetX, TargetY);
 
 	
 NextDirection = SetNextDirection();
-direction = NextDirection;
+//direction = NextDirection;
 	//speed = 0;
 	//GhostSpeed = 0;
 
+*/

@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-IsInGame = GameMode == GameModes.CHASE || GameMode == GameModes.SCATTER;
+oGameManager.IsInGame = oGameManager.GameMode == GameModes.CHASE || oGameManager.GameMode == GameModes.SCATTER;
 
 if (IsInGame)
 {
@@ -19,6 +19,8 @@ else
 switch (GameMode)
 {
 	case GameModes.GAMESTART:
+	Level = 1;
+	NextLevel();
 	if (not audio_is_playing(aIntro))
 	{
 		audio_play_sound(aIntro,1, false);	
@@ -72,6 +74,7 @@ switch (GameMode)
 	{
 		alarm[0] = 60;	
 	}
+	if (GlobalDotCounter != 0) GlobalDotCounter = 0;
 
 	break;
 		
@@ -103,6 +106,10 @@ switch (GameMode)
 		case GameModes.NEXTLEVEL:
 			NextLevel();
 			GameMode = GameMode.READY;
+		break;
+		
+		case GameModes.YOULOSE:
+			if (!alarm[7]) alarm[7] = 90;
 		break;
 	default:
 	//Nothing

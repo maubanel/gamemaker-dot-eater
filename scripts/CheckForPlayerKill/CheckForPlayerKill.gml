@@ -33,10 +33,6 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 			}
 	
 			lives--;
-			if (lives <= 0)
-			{
-				oGameManager.GameMode = GameModes.YOULOSE;
-			}
 		}
 	
 	}

@@ -37,6 +37,10 @@ MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 );
 
+//Kill dots for when player loses and game restarts entirely
+if (instance_exists(oDot)) instance_destroy(oDot);
+if (instance_exists(oDotLarge)) instance_destroy(oDotLarge);
+
 ResetDots();
 ResetPacManToStart();
 
@@ -59,6 +63,15 @@ FrightTimer = 0;
 LastGameMode = -1;
 GhostScore = 200;
 
+if (Level == 1) GameMode = GameModes.GAMESTART;
+else GameMode = GameMode.READY;
+
+oGhostParent.IsDotCounting = false;
+oPinky.IsDotCounting = true;
+
+oGhostParent.IsSafeZone = true;
+oBlinky.IsSafeZone = false;
+
 with (oGhostParent)
 {
 	GridX = 0;
@@ -72,37 +85,53 @@ with (oGhostParent)
 	NextDirectionDown = false;
 	NextDirectionLeft = false;
 	NextDirectionRight = false;
-	Mode = GhostMode.READY;
+	GhostMode = GhostModes.SCATTER;
 	PreviousMode = 0;
 	StartingGameMode = 0;
 	IsInGame = false;
 	IsFrightened = false;
-	IsSafeZone = true;
-	if (object_index == oBlinky) IsSafeZone = false;
 	IsEyeballs = false;
 	LocalDotCounter = 0;
-	IsDotCounting = false
-	if (object_index == oPinky) IsDotCounting = true;
 	sprite_index = OriginalSprite;
 	
 }
 
 switch(Level)
 {
+	case 1:
+	GhostFlashNumber = 5;
+	FrightLength = 6;
+	ChaseMode3Length = 79;
+	ScatterMode4Length = 84;
+	ChaseTimer = 0;
+	PacNormalSpeed = .8 * oGameManager.Speed;
+	PacNormalDotSpeed = .71 * oGameManager.Speed;
+	GhostNormSpeed = .75 * oGameManager.Speed;
+	GhostTunnelSpeed = .4 * oGameManager.Speed;
+	PacFrightSpeed = .9 * oGameManager.Speed;
+	PacFrightDotSpeed = .79 * oGameManager.Speed;
+	GhostFrightSpeed = .50 * oGameManager.Speed;
+	oInk.NumLocalDots = 30;
+	oInk.NumGlobalDots = 17;
+	oClyde.NumLocalDots = 60;
+	oClyde.NumGlobalDots = 32;
+	oPinky.NumLocalDots = 0;
+	oPinky.NumGlobalDots = 7;
+	break;
+	
 	case 2:
 	GhostFlashNumber = 5;
 	FrightLength = 5;
 	ChaseMode3Length = 59 + 1033;
-	ScatterMode4Length = 1/60;
-	Mode = GameMode.READY;
+	ScatterMode4Length = ChaseMode3Length + 1/60;
 	ChaseTimer = 0;
-	PacNormalSpeed = .9;
-	PacNormalDotSpeed = .79;
-	GhostNormSpeed = .85;
-	GhostTunnelSpeed = .45;
-	PacFrightSpeed = .95;
-	PacFrightDotSpeed = .83;
-	GhostFrightSpeed = .55;
+	PacNormalSpeed = .9 * oGameManager.Speed;
+	PacNormalDotSpeed = .79 * oGameManager.Speed;
+	GhostNormSpeed = .85 * oGameManager.Speed;
+	GhostTunnelSpeed = .45 * oGameManager.Speed;
+	PacFrightSpeed = .95 * oGameManager.Speed;
+	PacFrightDotSpeed = .83 * oGameManager.Speed;
+	GhostFrightSpeed = .55 * oGameManager.Speed;
 	oInk.NumLocalDots = 0;
 	oClyde.NumGlobalDots = 50;
 	
@@ -126,13 +155,13 @@ switch(Level)
 	ChaseMode2Length = 50;
 	ScatterMode3Length = 55;
 	ChaseMode3Length = 1092;
-	ScatterMode4Length = 1/60;
-	PacNormalSpeed = 1;
-	PacNormalDotSpeed = .87;
-	PacNormalDotSpeed = .95;
-	GhostTunnelSpeed = .5;
-	PacFrightSpeed = 1.05;
-	PacFrightDotSpeed = .87;
+	ScatterMode4Length = ChaseMode3Length + 1/60;
+	PacNormalSpeed = 1 * oGameManager.Speed;
+	PacNormalDotSpeed = .87 * oGameManager.Speed;
+	PacNormalDotSpeed = .95 * oGameManager.Speed;
+	GhostTunnelSpeed = .5 * oGameManager.Speed;
+	PacFrightSpeed = 1.05 * oGameManager.Speed;
+	PacFrightDotSpeed = .87 * oGameManager.Speed;
 	GhostFrightSpeed = .6;
 	
 	break;
@@ -209,11 +238,7 @@ switch(Level)
 	break;
 	
 	case 21:
-	PacNormalSpeed = .9;
-	PacNormalDotSpeed = .79;
+	PacNormalSpeed = .9 * oGameManager.Speed;
+	PacNormalDotSpeed = .79 * oGameManager.Speed;
 	break;
-
-
-	
-	
 }

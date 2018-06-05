@@ -50,11 +50,9 @@ MakeCollisionArray (
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 );
 
-//Put dots in level
-ResetDots();
 
 
-lives = 4;
+lives = 1;
 
 enum GameModes {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, 
 				PLAYERDEAD, FRIGHT, FRIGHTFLASH, GHOSTEATEN, 

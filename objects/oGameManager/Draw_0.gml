@@ -49,14 +49,21 @@ switch(GameMode)
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
 	draw_text(oPacMan.x - 20, oPacMan.y - 16, GhostScore);
-		
+	
+	break;
+	
+	
+	case GameModes.YOULOSE:
+	draw_set_color(c_red);
+	draw_set_font(fPlayerReady);
+	draw_text (283, 630, "You         Lose!");
 	break;
 }
 
 
 with (oGhostParent)
 {
-	if (IsInGame && oGameManager.DrawDebug && !IsFrightened)
+	if (oGameManager.IsInGame && oGameManager.DrawDebug && !IsFrightened)
 	{
 		draw_set_color(c_green);
 		draw_line(x, y, TargetX, TargetY);
@@ -103,6 +110,7 @@ if (DrawDebug)
 	draw_text(420, 15, "Glob Dot Counter: " + string(oGameManager.GlobalDotCounter));
 	draw_text(420, 40, "Clyde Mode: " + ClydeModeText);	
 	draw_text(420, 65, "Pinky Mode: " + PinkyModeText);
+	draw_text(680, 15, "Level: " + string(Level));
 	draw_text(680, 40, "Blinky Mode: " + BlinkyModeText);
 	draw_text(680, 65, "Inky Mode: " + InkyModeText);
 

@@ -25,6 +25,7 @@ switch (oGameManager.GameMode)
 	case GameModes.PLAYERREADY:
 	case GameModes.PLAYERDEATHANIM:
 	case GameModes.NEXTLEVELFLASH:
+	case GameModes.YOULOSE:
 	
 	image_alpha = 0;
 	speed = 0;

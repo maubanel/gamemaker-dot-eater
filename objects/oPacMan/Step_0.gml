@@ -70,13 +70,24 @@ switch(oGameManager.GameMode)
 		//Trigger sprite change
 	if (image_index + image_speed > image_number )
 	{
-		oGameManager.GameMode = GameModes.PLAYERREADY;
-		ResetPacManToStart();
-			
+		if (lives > 0)
+		{
+			oGameManager.GameMode = GameModes.PLAYERREADY;
+			ResetPacManToStart();
+			show_debug_message("Lives1: " + string(lives));
+		}
+		else
+		{
+			oGameManager.GameMode = GameModes.YOULOSE;	
+			oPacMan.x = 0;
+			oPacMan.y = 0;
+			oPacMan.alpha = 0;
+		}
 	}
 	break;
 	
 	case GameModes.GHOSTEATEN:
+	case GameModes.YOULOSE:
 	
 		image_alpha = 0;
 		speed = 0;

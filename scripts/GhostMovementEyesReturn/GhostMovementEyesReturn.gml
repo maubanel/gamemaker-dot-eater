@@ -9,7 +9,7 @@ if (GridX != LastGridX or GridY != LastGridY)
 		|| (GridY == 14 && GridX >= 14 && GridX <= 18 && direction == 180) )
 	{
 		speed = 0;
-		Mode = GhostModes.EYESRETURNABOVEHOME;
+		GhostMode = GhostModes.EYESRETURNABOVEHOME;
 	}
 		
 	else 

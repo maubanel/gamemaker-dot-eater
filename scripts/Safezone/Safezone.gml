@@ -26,13 +26,19 @@ switch (GhostMode)
 	mp_linear_step(GetGridPos(14), GetCenterGridPos(14), GhostSpeed, false);
 	if (x ==GetGridPos(14) && y == GetCenterGridPos(14))
 	{
+		speed = 0;
+		direction = choose (0, 180);
+		NextDirection = direction; 
 		if (!IsFrightened)
 		{
 			GhostMode = GhostModes.FIRSTTURN;
 			ResetGhosts();
 		}
 		
-		else GhostMode = PickGhostScatterOrChase();
+		else 
+		{
+			GhostMode = PickGhostScatterOrChase();
+		}
 		/*else 
 		{
 

@@ -6,7 +6,7 @@ if (ChaseTimer < ScatterMode1Length)
 else if (ChaseTimer >= ScatterMode1Length
 	and ChaseTimer < ChaseMode1Length)
 {
-		oGameManager.GameMode = GameModes.CHASE;
+		return GameModes.CHASE;
 }
 
 else if (ChaseTimer >= ChaseMode1Length
@@ -46,6 +46,6 @@ else if (ChaseTimer >= ScatterMode4Length)
 
 else
 {
-	return GameMode.CHASE;
+	return GameModes.CHASE;
 }
 	

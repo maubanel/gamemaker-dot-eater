@@ -2,7 +2,6 @@
 
 IsInGame = GameMode == GameModes.CHASE || GameMode == GameModes.SCATTER;
 
-
 if (IsInGame)
 {
 	if (not audio_is_playing(aSiren1))
@@ -57,7 +56,7 @@ switch (GameMode)
 		
 		if (FrightTimer > FrightLength)
 		{
-			Mode = GameModes.FRIGHTFLASH;
+			GameMode = GameModes.FRIGHTFLASH;
 			//Reset timer
 			FrightTimer = 0;
 			//15 is the image speed of the ghosts Fright flash animation
@@ -72,7 +71,6 @@ switch (GameMode)
 	if (!alarm[0]) 
 	{
 		alarm[0] = 60;	
-		show_debug_message("AlarmSet");
 	}
 
 	break;

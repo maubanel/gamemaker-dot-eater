@@ -562,7 +562,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "Speed * 3",
+            "value": "Speed * 2.5",
             "varName": "GhostEyeReturnSpeed",
             "varType": 0
         },

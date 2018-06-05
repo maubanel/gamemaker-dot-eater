@@ -210,6 +210,25 @@
             }
         },
         {
+            "Key": "1e42b7ee-51cd-4dd7-92fd-56fc188f3d83",
+            "Value": {
+                "id": "f3629da7-8da9-46c7-bb66-b7b8257fb3f2",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/ResetGhostsIfInFrightened\/ResetGhostsIfInFrightened.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f2fcdb2-5b20-4820-8a33-f904942ab830",
             "Value": {
                 "id": "6a61f149-d87e-46f7-a260-817b55df2a31",
@@ -2287,6 +2306,7 @@
         "9e64c8a1-3a88-415d-a187-df17534b2f33",
         "b09b5686-49a5-4175-9c52-9582e043f116",
         "7bc50e5b-02d6-4e84-a55c-0968616b0cc2",
+        "1e42b7ee-51cd-4dd7-92fd-56fc188f3d83",
         "f4064235-4e8b-4e23-a6df-95a858db9af1",
         "e5093ff3-5e2b-4cb5-9384-47bb7963613c",
         "e0eef1c1-888a-4735-9e26-66df335d062f",

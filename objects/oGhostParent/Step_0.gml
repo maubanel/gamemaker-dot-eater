@@ -57,6 +57,7 @@ switch (oGameManager.GameMode)
 	if (IsInGame)
 	{
 		ScatterChase();
+		
 	}	
 	
 	else if (IsEyeballs && !IsSafeZone)
@@ -74,10 +75,10 @@ switch (oGameManager.GameMode)
 	
 	case GameModes.FRIGHT:
 	case GameModes.FRIGHTFLASH:
-	if (IsFrightened && !IsSafeZone)
+	if (IsInGame && IsFrightened)
 	{
 		move_wrap(true, false, oGameManager.GridSize);
-
+		
 		//UpdateGridGhost();
 		
 		SetGhostSpeed();
@@ -86,10 +87,10 @@ switch (oGameManager.GameMode)
 		
 		//Get direction
 		GhostUpdateHorVer();
+		
 	}
 	else if (IsInGame)
 	{
-
 		ScatterChase();
 	}	
 	

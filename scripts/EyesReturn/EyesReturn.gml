@@ -1,4 +1,4 @@
-switch(GhostModes)
+switch(GhostMode)
 {
 	case GhostModes.EYESRETURN:
 	move_wrap(true, false, oGameManager.GridSize);
@@ -16,7 +16,7 @@ switch(GhostModes)
 	
 	case GhostModes.EYESRETURNABOVEHOME:
 	mp_linear_step( GetGridPos(14), GetCenterGridPos(14), oGameManager.GhostEyeReturnSpeed, false);
-	if (x == GetGridPos(14) && y = GetCenterGridPos(14)) Mode = GhostMode.EYESRETURNINTOHOME;
+	if (x == GetGridPos(14) && y = GetCenterGridPos(14)) GhostMode = GhostModes.EYESRETURNINTOHOME;
 	break;
 	
 	case GhostModes.EYESRETURNINTOHOME:

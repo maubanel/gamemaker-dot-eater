@@ -9,7 +9,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 {
 	if (oGameManager.DrawDebug)
 	{
-		show_debug_message("Player Collides with Ghost.");	
+		//show_debug_message("Player Collides with Ghost.");	
 	}
 	
 	//Kills player if in game state
@@ -24,6 +24,8 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 			
 			//Start timer for global timing for ghosts leaving home
 			oGameManager.IsGlobalDotCounting = true;
+			
+			ResetGhostsIfInFrightened();
 	
 			if (oGameManager.DrawDebug)
 			{
@@ -35,7 +37,6 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 			{
 				oGameManager.GameMode = GameModes.YOULOSE;
 			}
-			show_debug_message("Lives: " + string(lives));
 		}
 	
 	}
@@ -43,7 +44,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 	//Kills ghost if it is in frightened state (not global but local IsFrightened variable)
 	if (IsFrightened)
 	{
-		if (PreviousMode != GhostModes.EYESRETURN || sprite_index != sGhostEyes)
+		if (sprite_index != sGhostEyes)
 		{
 			
 			if (oGameManager.DrawDebug)
@@ -53,6 +54,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 	
 			sprite_index = sGhostEyes;
 			PreviousMode = GhostModes.EYESRETURN;
+			GhostMode = GhostModes.EYESRETURN;
 			//Since this happens in ghost the switch of going to PlayerDead does 
 
 			oGameManager.GameMode = GameModes.GHOSTEATEN;

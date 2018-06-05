@@ -20,7 +20,8 @@ if (oGameManager.LastGameMode == GameModes.PREGAME)
 }
 
 	
-else if (oGameManager.GameMode == GameModes.FRIGHT)
+else if (oGameManager.GameMode == GameModes.FRIGHT 
+		&& oGameManager.LastGameMode != GameModes.GHOSTEATEN)
 {
 		
 	//Switch to FRIGHT mode if in game
@@ -50,9 +51,12 @@ else if (oGameManager.GameMode == GameModes.FRIGHTFLASH)
 	if (IsFrightened)
 	{
 		//Don't switch if in eyeball mode
-		if (!IsEyeballs) sprite_index = sGhostFrightFlash;
-		//If not in safezone then switch modes otherwise leave alone
-		if (!IsSafeZone) Mode = GhostMode.FRIGHTFLASH;
+		if (!IsEyeballs) 
+		{	sprite_index = sGhostFrightFlash;
+			image_speed = 1;
+			show_debug_message(string(object_index) + ": Goes to fright flash");
+		}
+
 	}
 }
 
@@ -67,7 +71,7 @@ else if (oGameManager.GameMode == GameModes.GHOSTEATEN)
 	//Make sure mode that you are saving is before GHOSTEATEN
 	if (oGameManager.GameMode != GameModes.GHOSTEATEN)
 	{
-		PreviousMode = Mode;
+		PreviousMode = GhostMode;
 		oGameManager.GameMode  = GameModes.GHOSTEATEN;
 	}
 }

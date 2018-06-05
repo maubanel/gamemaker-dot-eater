@@ -305,20 +305,6 @@
             "varType": 0
         },
         {
-            "id": "3f4afebf-941e-408e-b0d6-a7af615e81d1",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "PreviousMode",
-            "varType": 0
-        },
-        {
             "id": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

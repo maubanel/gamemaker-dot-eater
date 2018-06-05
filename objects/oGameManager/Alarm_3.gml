@@ -18,14 +18,11 @@ with (oPacMan)
 
 with (oGhostParent)
 {
-	if (PreviousMode == GhostModes.EYESRETURN )
+	if (GhostMode == GhostModes.EYESRETURN )
 	{
 		image_alpha = 1;
 		sprite_index = sGhostEyes;
 	}
-	Mode = PreviousMode;
-	
-	PreviousMode = -1;
 	
 	if (GhostMode == GhostModes.SAFEZONE) vspeed += oGameManager.GhostTunnelSpeed;
 }

@@ -52,7 +52,7 @@ MakeCollisionArray (
 
 
 
-lives = 1;
+lives = 5;
 
 enum GameModes {GAMESTART, PLAYERREADY, PREGAME, SCATTER, CHASE, 
 				PLAYERDEAD, FRIGHT, FRIGHTFLASH, GHOSTEATEN, 

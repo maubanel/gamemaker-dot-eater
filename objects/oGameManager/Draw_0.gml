@@ -63,7 +63,9 @@ switch(GameMode)
 
 with (oGhostParent)
 {
-	if (oGameManager.IsInGame && oGameManager.DrawDebug && !IsFrightened)
+	if ((IsInGame || oGameManager.GameMode = GameModes.FRIGHT 
+		|| oGameManager.GameMode = GameModes.FRIGHTFLASH )
+		&& oGameManager.DrawDebug && !IsFrightened && !IsSafeZone)
 	{
 		draw_set_color(c_green);
 		draw_line(x, y, TargetX, TargetY);

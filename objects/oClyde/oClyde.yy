@@ -57,14 +57,6 @@
             "value": "60"
         },
         {
-            "id": "066a508e-a9e7-4147-bc2b-db8ff6aace93",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
-            "propertyId": "3f4afebf-941e-408e-b0d6-a7af615e81d1",
-            "value": "GameModes.PLAYERREADY"
-        },
-        {
             "id": "685d9257-c277-4221-af4d-8d8705163292",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",

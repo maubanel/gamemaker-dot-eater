@@ -85,8 +85,7 @@ with (oGhostParent)
 	NextDirectionDown = false;
 	NextDirectionLeft = false;
 	NextDirectionRight = false;
-	GhostMode = GhostModes.SCATTER;
-	PreviousMode = 0;
+	GhostMode = -1;
 	StartingGameMode = 0;
 	IsInGame = false;
 	IsFrightened = false;

@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-oGameManager.IsInGame = oGameManager.GameMode == GameModes.CHASE || oGameManager.GameMode == GameModes.SCATTER;
+IsInGame = GameMode == GameModes.CHASE || oGameManager.GameMode == GameModes.SCATTER;
 
 if (IsInGame)
 {
@@ -105,7 +105,7 @@ switch (GameMode)
 		}
 		case GameModes.NEXTLEVEL:
 			NextLevel();
-			GameMode = GameMode.READY;
+			GameMode = GameModes.READY;
 		break;
 		
 		case GameModes.YOULOSE:

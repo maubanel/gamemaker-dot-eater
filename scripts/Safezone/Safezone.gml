@@ -37,7 +37,7 @@ switch (GhostMode)
 		
 		else 
 		{
-			GhostMode = PickGhostScatterOrChase();
+			GhostMode = -1;
 		}
 		/*else 
 		{

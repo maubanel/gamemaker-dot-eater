@@ -5,13 +5,17 @@ switch(GhostMode)
 	TargetX = GetCenterGridPos(9);
 	TargetY = GetCenterGridPos(15);
 	break;
+}
+
+switch (oGameManager.GameMode)
+{
 	
-	case GhostModes.SCATTER:
+	case GameModes.SCATTER:
 	TargetX = ScatterTargetX;
 	TargetY = ScatterTargetY;
 	break;
 
-	case GhostModes.CHASE:
+	case GameModes.CHASE:
 	//Blinky's targets PacMan's current grid position
 	if (object_index == oBlinky)
 	{

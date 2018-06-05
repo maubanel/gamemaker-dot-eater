@@ -27,7 +27,6 @@ switch(GhostMode)
 		GhostMode = GhostModes.SAFEZONE;
 		speed = 0;
 		vspeed = oGameManager.GhostTunnelSpeed;
-		PreviousMode = -1;
 	}
 	break;
 	

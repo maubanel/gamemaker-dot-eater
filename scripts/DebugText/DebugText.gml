@@ -69,48 +69,43 @@ if (IsGame)
 else
 {
 	switch (Ghost)
-			{
-				case GhostModes.CHASE:
-				Text = "Chase";
-				break;
+		{
 			
-				case GhostModes.SCATTER:
-				Text = "Scatter";
-				break;
+			case GhostModes.EYESRETURN:
+			Text = "Eyes Return";
+			break;
 			
-				case GhostModes.EYESRETURN:
-				Text = "Eyes Return";
-				break;
-			
-				case GhostModes.FIRSTTURN:
-				Text = "First Turn";
-				break;
+			case GhostModes.FIRSTTURN:
+			Text = "First Turn";
+			break;
 
 			
-				case GhostModes.GOTOHOMEYCENTER:
-				Text = "Leaving Home Center Vertically";
-				break;
+			case GhostModes.GOTOHOMEYCENTER:
+			Text = "Leaving Home Center Vertically";
+			break;
 				
-				case GhostModes.GOTOHOMECENTER:
-				Text = "Leaving Home Center";
-				break;
+			case GhostModes.GOTOHOMECENTER:
+			Text = "Leaving Home Center";
+			break;
 				
-				case GhostModes.LEAVEHOME:
-				Text = "Leaving Home Box";
-				break;
+			case GhostModes.LEAVEHOME:
+			Text = "Leaving Home Box";
+			break;
 			
-				case GhostModes.EYESRETURNABOVEHOME:
-				Text = "Eyes to Above home";
-				break;
+			case GhostModes.EYESRETURNABOVEHOME:
+			Text = "Eyes to Above home";
+			break;
 				
-				case GhostModes.EYESRETURNINTOHOME:
-				Text = "Eyes Into home";
-				break;
+			case GhostModes.EYESRETURNINTOHOME:
+			Text = "Eyes Into home";
+			break;
 			
-				case GhostModes.SAFEZONE:
-				Text = "Safe Zone";
-				break;
+			case GhostModes.SAFEZONE:
+			Text = "Safe Zone";
+			break;
 		
-			}
-	return Text;
+		}
+		if (Ghost == -1) Text = "Master Game Mode";
+		
+return Text;
 }

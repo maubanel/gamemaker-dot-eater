@@ -9,7 +9,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 {
 	if (oGameManager.DrawDebug)
 	{
-		//show_debug_message("Player Collides with Ghost.");	
+		show_debug_message("Player Collides with Ghost.");	
 	}
 	
 	//Kills player if in game state
@@ -49,7 +49,6 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 			}
 	
 			sprite_index = sGhostEyes;
-			PreviousMode = GhostModes.EYESRETURN;
 			GhostMode = GhostModes.EYESRETURN;
 			//Since this happens in ghost the switch of going to PlayerDead does 
 

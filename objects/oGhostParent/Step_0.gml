@@ -1,7 +1,6 @@
 
 //Every ghost shares first target for first turn
-IsInGame = (GhostMode == GhostModes.SCATTER || GhostMode == GhostModes.CHASE 
-				|| GhostMode == GhostModes.FIRSTTURN);
+IsInGame = (oGameManager.GameMode == GameModes.SCATTER || oGameManager.GameMode == GameModes.CHASE);
 
 IsEyeballs = (GhostMode == GhostModes.EYESRETURN || GhostMode == GhostModes.EYESRETURNABOVEHOME
 			 || GhostMode == GhostModes.EYESRETURNINTOHOME);
@@ -55,10 +54,9 @@ switch (oGameManager.GameMode)
 	case GameModes.SCATTER:
 	case GameModes.CHASE:
 	
-	if (IsInGame)
+	if (IsInGame && !IsSafeZone && !IsEyeballs)
 	{
 		ScatterChase();
-		
 	}	
 	
 	else if (IsEyeballs && !IsSafeZone)
@@ -76,11 +74,13 @@ switch (oGameManager.GameMode)
 	
 	case GameModes.FRIGHT:
 	case GameModes.FRIGHTFLASH:
-	if (IsInGame && IsFrightened)
+	if (IsFrightened && !IsEyeballs && !IsSafeZone)
 	{
 		move_wrap(true, false, oGameManager.GridSize);
 		
 		//UpdateGridGhost();
+		
+		show_debug_message("Pathfinding fright ghosts random");
 		
 		SetGhostSpeed();
 		//Pick ran
@@ -90,10 +90,11 @@ switch (oGameManager.GameMode)
 		GhostUpdateHorVer();
 		
 	}
-	else if (IsInGame)
+	
+	else if (!IsFrightened && !IsEyeballs && !IsSafeZone)
 	{
 		ScatterChase();
-	}	
+	}
 	
 	else if (IsEyeballs && !IsSafeZone)
 	{
@@ -109,7 +110,7 @@ switch (oGameManager.GameMode)
 		
 		
 	case GameModes.GHOSTEATEN:
-	if (PreviousMode == GhostModes.EYESRETURN)
+	if (GhostMode == GhostModes.EYESRETURN)
 	{
 		image_alpha = 0; 
 	}

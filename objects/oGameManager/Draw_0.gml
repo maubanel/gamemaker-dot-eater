@@ -18,9 +18,9 @@ draw_sprite(sPacLives,0,GetCenterGridPos(2 + XGridOffset), GetGridPos(35));
 XGridOffset += 2;
 }
 	
-switch(Mode)
+switch(GameMode)
 {
-	case GameMode.PLAYERREADY:
+	case GameModes.PLAYERREADY:
 	
 	lblue = make_colour_rgb(116, 166, 247);
 
@@ -38,14 +38,14 @@ switch(Mode)
 
 	break;
 	
-	case GameMode.READY:
+	case GameModes.READY:
 	draw_set_font(fPlayerReady);
 	draw_set_halign(fPlayerReady);
 	draw_set_color(c_yellow);
 	draw_text(390, 630, "Ready");
 	break;
 	
-	case GameMode.GHOSTEATEN:
+	case GameModes.GHOSTEATEN:
 	draw_set_color(lblue);
 	draw_set_font(fGhostEatenScore);
 	draw_text(oPacMan.x - 20, oPacMan.y - 16, GhostScore);
@@ -64,9 +64,7 @@ with (oGhostParent)
 	}
 }
 
-//enum GameMode {CHASE, SCATTER, PLAYERDEAD, PREGAME, PLAYERREADY, 
-//FRIGHT, EYESRETURN, GHOSTEATEN, RETURNTOSAFEZONE, SAFEZONE,
-//	LEAVINGSAFEZONE}
+
 if (DrawDebug)
 {
 	draw_set_alpha(.75);
@@ -77,19 +75,19 @@ if (DrawDebug)
 	draw_set_font(fGhostEatenScore);
 	draw_set_font(fDebug);
 	GameModeText = "";
-	GameModeText = DebugText(true, "GameModeText", Mode);
+	GameModeText = DebugText(true, "GameModeText", GameMode);
 
 	var BlinkyModeText = "Not in game";
-	if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.Mode);
+	if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.GhostMode);
 
 	var PinkyModeText = "Not in game";
-	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.Mode);
+	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.GhostMode);
 	
 	var InkyModeText = "Not in game";
-	if (instance_exists(oInk)) InkyModeText = DebugText(false, "InkyModeText", oInk.Mode);
+	if (instance_exists(oInk)) InkyModeText = DebugText(false, "InkyModeText", oInk.GhostMode);
 	
 	var ClydeModeText = "Not in game";
-	if (instance_exists(oClyde)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.Mode);
+	if (instance_exists(oClyde)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.GhostMode);
 	
 	var LocalDot="No Timers";
 	if (oPinky.IsDotCounting) LocalDot = string(oPinky.LocalDotCounter);

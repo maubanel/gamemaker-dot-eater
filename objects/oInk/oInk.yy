@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
-            "value": "GhostMode.PLAYERREADY"
+            "value": "-1"
         },
         {
             "id": "47b6ddc5-69b6-4290-b36b-4fa56c2821b9",
@@ -54,7 +54,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
-            "value": "GhostMode.SAFEZONE"
+            "value": "GhostModes.SAFEZONE"
         },
         {
             "id": "b50776cc-1035-41a1-9755-868d8061a22f",

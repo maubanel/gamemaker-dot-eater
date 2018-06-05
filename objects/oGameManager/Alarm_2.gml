@@ -1,6 +1,8 @@
 /// @description Start Game
 
-Mode = GameMode.SCATTER;
+GameMode = GameModes.SCATTER;
+
+SetFourGhostsHome();
 
 //Make player and ghosts move
 oPacMan.image_speed = 1;

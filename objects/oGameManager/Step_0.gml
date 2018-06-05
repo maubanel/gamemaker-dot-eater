@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-IsInGame = Mode == GameMode.CHASE || Mode == GameMode.SCATTER;
+IsInGame = GameMode == GameModes.CHASE || GameMode == GameModes.SCATTER;
 
 
 if (IsInGame)
@@ -17,20 +17,20 @@ else
 		audio_stop_sound(aSiren1);	
 	}
 }
-switch (Mode)
+switch (GameMode)
 {
-	case GameMode.GAMESTART:
+	case GameModes.GAMESTART:
 	if (not audio_is_playing(aIntro))
 	{
 		audio_play_sound(aIntro,1, false);	
 	}
 	oDotLarge.image_speed = 0;
 	oDotLarge.image_index = 0;
-	Mode = GameMode.PLAYERREADY;
+	GameMode = GameModes.PLAYERREADY;
 	break;
 	
-	case GameMode.PLAYERREADY:
-	case GameMode.READY:
+	case GameModes.PLAYERREADY:
+	case GameModes.READY:
 		if (!alarm[1])
 		{
 			alarm[1] = 80;
@@ -42,22 +42,22 @@ switch (Mode)
 		}
 		break;
 	
-	case GameMode.SCATTER:
-	case GameMode.CHASE:
+	case GameModes.SCATTER:
+	case GameModes.CHASE:
 		//Updaet timer and switch to seconds
 		ChaseTimer += delta_time/1000000;
 
-		ModeTimer();
+		GameMode = ModeTimer();
 	
 		break;
 		
-	case GameMode.FRIGHT:
+	case GameModes.FRIGHT:
 		//Updaet timer and switch to seconds
 		FrightTimer += delta_time/1000000;
 		
 		if (FrightTimer > FrightLength)
 		{
-			Mode = GameMode.FRIGHTFLASH;
+			Mode = GameModes.FRIGHTFLASH;
 			//Reset timer
 			FrightTimer = 0;
 			//15 is the image speed of the ghosts Fright flash animation
@@ -68,13 +68,17 @@ switch (Mode)
 		
 	break;
 	
-	case GameMode.PLAYERDEAD:
-		if (!alarm[0])
+	case GameModes.PLAYERDEAD:
+	if (!alarm[0]) 
+	{
 		alarm[0] = 60;	
-		break;
+		show_debug_message("AlarmSet");
+	}
+
+	break;
 		
 		
-	case GameMode.GHOSTEATEN:
+	case GameModes.GHOSTEATEN:
 		
 		if (!alarm[3])
 		{
@@ -86,21 +90,21 @@ switch (Mode)
 		alarm[4] = -1;
 		break;
 		
-		case GameMode.NEXTLEVELPAUSE:
+		case GameModes.NEXTLEVELPAUSE:
 		if (!alarm[5])
 		{
 			alarm[5] = 60;
 		}
 		break;
 		
-		case GameMode.NEXTLEVELFLASH:
+		case GameModes.NEXTLEVELFLASH:
 		if (!alarm[6])
 		{
 			alarm[6] = 60;
 		}
-		case GameMode.NEXTLEVEL:
+		case GameModes.NEXTLEVEL:
 			NextLevel();
-			Mode = GameMode.READY;
+			GameMode = GameMode.READY;
 		break;
 	default:
 	//Nothing

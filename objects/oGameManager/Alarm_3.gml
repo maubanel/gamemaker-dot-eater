@@ -1,7 +1,7 @@
 /// @description Going from GHOSTEATEN back to GAME
 
 
-Mode = GameMode.FRIGHT;
+GameMode = GameModes.FRIGHT;
 
 //Starts alarm again for switching out of flashing
 alarm[4] = Alarm4Pause;
@@ -15,7 +15,7 @@ with (oPacMan)
 
 with (oGhostParent)
 {
-	if (PreviousMode == GhostMode.EYESRETURN )
+	if (PreviousMode == GhostModes.EYESRETURN )
 	{
 		image_alpha = 1;
 		sprite_index = sGhostEyes;
@@ -24,7 +24,7 @@ with (oGhostParent)
 	
 	PreviousMode = -1;
 	
-	if (Mode == GhostMode.SAFEZONE) vspeed += oGameManager.GhostTunnelSpeed;
+	if (GhostMode == GhostModes.SAFEZONE) vspeed += oGameManager.GhostTunnelSpeed;
 }
 
 //Every time a dot is eaten up the ghost score

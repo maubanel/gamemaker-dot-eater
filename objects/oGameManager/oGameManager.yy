@@ -324,8 +324,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "GameMode.GAMESTART",
-            "varName": "Mode",
+            "value": "GameModes.GAMESTART",
+            "varName": "GameMode",
             "varType": 0
         },
         {
@@ -450,7 +450,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "GameMode.PLAYERDEAD",
+            "value": "GameModes.PLAYERDEAD",
             "varName": "LastGameMode",
             "varType": 0
         },

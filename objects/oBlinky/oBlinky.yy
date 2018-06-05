@@ -46,7 +46,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
-            "value": "GhostMode.SCATTER"
+            "value": "oGameManager.GameModes.SCATTER"
         },
         {
             "id": "a941d37b-fdb6-40b4-aea6-76fb5e6b9f62",
@@ -54,7 +54,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
-            "value": "GhostMode.PLAYERREADY"
+            "value": "-1"
         },
         {
             "id": "c55e89bb-c53d-456d-937f-87d23d93357b",

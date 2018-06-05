@@ -216,8 +216,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "oGameManager.Mode",
-            "varName": "Mode",
+            "value": "-1",
+            "varName": "GhostMode",
             "varType": 0
         },
         {

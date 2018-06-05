@@ -4,16 +4,16 @@
 // different then get center grid type and xy */
 UpdateGridPosition();
 	
-switch(oGameManager.Mode)
+switch(oGameManager.GameMode)
 {
-	case GameMode.PLAYERREADY:
-	case GameMode.NEXTLEVELFLASH:
-	case GameMode.NEXTLEVEL:
-	case GameMode.READY:
+	case GameModes.PLAYERREADY:
+	case GameModes.NEXTLEVELFLASH:
+	case GameModes.NEXTLEVEL:
+	case GameModes.READY:
 	image_alpha = 0;
 	break;
 	
-	case GameMode.PREGAME:
+	case GameModes.PREGAME:
 	ResetPacManToStart();
 	image_alpha = 1;
 	image_speed = 0;
@@ -23,10 +23,10 @@ switch(oGameManager.Mode)
 	
 	break;
 	
-	case GameMode.SCATTER:
-	case GameMode.CHASE:
-	case GameMode.FRIGHT:
-	case GameMode.FRIGHTFLASH:
+	case GameModes.SCATTER:
+	case GameModes.CHASE:
+	case GameModes.FRIGHT:
+	case GameModes.FRIGHTFLASH:
 	
 	//For tunnel in maze
 	move_wrap(true, false, oGameManager.GridSize);
@@ -55,38 +55,39 @@ switch(oGameManager.Mode)
 	
 	break;
 	
-	case GameMode.PLAYERDEAD:
+	case GameModes.PLAYERDEAD:
 		speed = 0;
 		
 	break;
 	
-	case GameMode.PLAYERDEATHANIM:
-	audio_play_sound(aDeath,1, false);	
+	case GameModes.PLAYERDEATHANIM:
 	
-	if (sprite_index != sPacManDeath) sprite_index = sPacManDeath;
+	if (sprite_index != sPacManDeath) 
+	{
+		sprite_index = sPacManDeath;
+		audio_play_sound(aDeath,1, false);	
+	}
 		//Trigger sprite change
 	if (image_index + image_speed > image_number )
 	{
-		oGameManager.Mode = GameMode.PLAYERREADY;
+		oGameManager.GameMode = GameModes.PLAYERREADY;
 		ResetPacManToStart();
 			
 	}
 	break;
 	
-	case GameMode.GHOSTEATEN:
+	case GameModes.GHOSTEATEN:
 	
 		image_alpha = 0;
 		speed = 0;
 		
 		break;
 		
-	case GameMode.NEXTLEVELPAUSE:
+	case GameModes.NEXTLEVELPAUSE:
 	image_index = 0;
 	speed = 0;
 	
 	break;
-
-
 }
 
 

@@ -27,8 +27,8 @@ if (speed == 0) //means ghost is in turn and needs to keep moving
 //If it hits target
 if (GetCenterGridPos(GridX) == TargetX && GetCenterGridPos(GridY) == TargetY)
 {
-	if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
-	else Mode = GhostMode.SCATTER;
+	if (oGameManager.GameMode == GameModes.CHASE) GhostMode = GhostModes.CHASE;
+	else GhostMode = GhostModes.SCATTER;
 }
 
 

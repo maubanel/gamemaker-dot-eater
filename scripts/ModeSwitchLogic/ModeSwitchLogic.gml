@@ -1,57 +1,26 @@
 //show_debug_message("LGM: " + string(oGameManager.LastGameMode)
 //		+ " - M: " + string(oGameManager.Mode))
 	
-if (oGameManager.LastGameMode == GameMode.PLAYERDEAD
-	&& oGameManager.Mode = GameMode.PLAYERDEATHANIM)
-{
-	Mode = GhostMode.PLAYERDEATHANIM;
-}
 
-else if (oGameManager.Mode == GameMode.NEXTLEVELPAUSE)
-{
-	Mode = GhostMode.NEXTLEVELPAUSE;	
-}
-
-else if (oGameManager.Mode == GameMode.READY)
-{
-	Mode = GhostMode.READY;	
-}
-
-
-else if (oGameManager.Mode == GameMode.NEXTLEVELFLASH)
-{
-	Mode = GhostMode.NEXTLEVELFLASH;	
-}
-		
-else if (oGameManager.LastGameMode == GameMode.PLAYERDEATHANIM)
-{
-	Mode = GhostMode.PLAYERREADY;
-}
-	
-else if (oGameManager.LastGameMode == GameMode.PLAYERREADY)
-{
-	Mode = GhostMode.PREGAME
-}
-	
-else if (oGameManager.LastGameMode == GameMode.PREGAME)
+if (oGameManager.LastGameMode == GameModes.PREGAME)
 {
 	if (object_index == oBlinky)
 	{
-		Mode = GhostMode.FIRSTTURN;
+		Mode = GhostModes.FIRSTTURN;
 		NextDirection = 180;
 		direction = 180;
 
 	}
 	else 
 	{
-		Mode = GhostMode.SAFEZONE;
+		Mode = GhostModes.SAFEZONE;
 		vspeed = -oGameManager.GhostTunnelSpeed;
 	}
 		
 }
 
 	
-else if (oGameManager.Mode == GameMode.FRIGHT)
+else if (oGameManager.GameMode == GameModes.FRIGHT)
 {
 		
 	//Switch to FRIGHT mode if in game
@@ -63,7 +32,6 @@ else if (oGameManager.Mode == GameMode.FRIGHT)
 		sprite_index = sGhostFright;
 		if ((IsInGame || IsFrightened) && !IsSafeZone)
 		{
-			Mode = GhostMode.FRIGHT;
 			ReverseDirection(); // - BUGGY
 		}
 		if (IsSafeZone)
@@ -73,7 +41,7 @@ else if (oGameManager.Mode == GameMode.FRIGHT)
 	}
 }
 
-else if (oGameManager.Mode == GameMode.FRIGHTFLASH)
+else if (oGameManager.GameMode == GameModes.FRIGHTFLASH)
 {
 		
 	//Switch to FRIGHT mode if in game
@@ -85,38 +53,34 @@ else if (oGameManager.Mode == GameMode.FRIGHTFLASH)
 		if (!IsEyeballs) sprite_index = sGhostFrightFlash;
 		//If not in safezone then switch modes otherwise leave alone
 		if (!IsSafeZone) Mode = GhostMode.FRIGHTFLASH;
-		show_debug_message("Should be flashing");
 	}
-	
 }
 
-else if (oGameManager.Mode == GameMode.GHOSTEATEN)
+else if (oGameManager.GameMode == GameModes.GHOSTEATEN)
 {
 	image_speed = 0;
-	if (PreviousMode == GhostMode.EYESRETURN)
+	if (PreviousMode == GhostModes.EYESRETURN)
 	{
 		image_alpha = 0; 
 		speed = 0;
 	}
 	//Make sure mode that you are saving is before GHOSTEATEN
-	if (Mode != GhostMode.GHOSTEATEN)
+	if (oGameManager.GameMode != GameModes.GHOSTEATEN)
 	{
 		PreviousMode = Mode;
-		Mode = GhostMode.GHOSTEATEN;
+		oGameManager.GameMode  = GameModes.GHOSTEATEN;
 	}
-	
-
 }
 
-else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
+else if (oGameManager.LastGameMode == GameModes.FRIGHTFLASH)
 {
 	if (!IsEyeballs)
 	{
 		if (!IsSafeZone)
 		{
-			if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
-			else if (oGameManager.Mode == GameMode.CHASE) Mode = GhostMode.CHASE;
-			else Mode = GhostMode.CHASE;
+			if (oGameManager.GameMode == GameModes.SCATTER) GhostMode =  GhostModes.SCATTER;
+			else if (oGameManager.GameMode == GameModes.CHASE) GhostMode = GhostModes.CHASE;
+			else GhostMode = GhostModes.CHASE;
 		}
 	}
 	//All sprites go back to normal
@@ -126,30 +90,28 @@ else if (oGameManager.LastGameMode == GameMode.FRIGHTFLASH)
 }
 
 
-	
-else if (Mode == GhostMode.SCATTER && oGameManager.Mode == GameMode.CHASE)
+else if (GhostMode == GhostModes.SCATTER && oGameManager.GameMode == GameModes.CHASE)
 {
 	if (!IsSafeZone && !IsEyeballs)
 	{
-		Mode = GhostMode.CHASE;	
+		GhostMode = GhostModes.CHASE;	
 		ReverseDirection();
 	}
 }
 	
-else if (Mode == GhostMode.CHASE && oGameManager.Mode == GameMode.SCATTER)
+else if (GhostMode == GhostModes.CHASE && oGameManager.GameMode == GameModes.SCATTER)
 {
 	if (!IsSafeZone && !IsEyeballs)
 	{
-		Mode = GhostMode.SCATTER;
+		GhostMode = GhostModes.SCATTER;
 		ReverseDirection();
 	}
 }
 
-else if (oGameManager.LastGameMode == GameMode.FRIGHT 
+else if (oGameManager.LastGameMode == GameModes.FRIGHT 
 		  && oGameManager.IsInGame)
 {
-	if (oGameManager.Mode == GameMode.SCATTER) Mode = GhostMode.SCATTER;
-	else Mode = GhostMode.CHASE;
+	GhostMode = PickGhostScatterOrChase();
 			  
 }
 	

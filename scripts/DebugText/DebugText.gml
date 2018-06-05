@@ -4,54 +4,63 @@ var Ghost = argument2;
 
 if (IsGame)
 {
-	switch (Mode)
+	switch (GameMode)
 		{
-			case GameMode.CHASE:
+	
+			case GameModes.CHASE:
 			Text = "Chase";
 			break;
 			
-			case GameMode.SCATTER:
+			case GameModes.SCATTER:
 			Text = "Scatter";
 			break;
 			
-			case GameMode.PLAYERDEAD:
+			case GameModes.PLAYERDEAD:
 			Text = "Player Dead";
 			break;
 			
-			case GameMode.PREGAME:
-			Text = "Game Start";
-			break;
-			
-			case GameMode.PLAYERREADY:
+			case GameModes.PLAYERREADY:
 			Text = "Player Ready";
 			break;	
 			
-			case GameMode.GHOSTEATEN:
+			case GameModes.GHOSTEATEN:
 			Text = "Ghost Eaten";
 			break;	
 			
-			case GameMode.FRIGHT:
+			case GameModes.FRIGHT:
 			Text = "Fright";
 			break;	
 			
-			case GameMode.FRIGHTFLASH:
+			case GameModes.FRIGHTFLASH:
 			Text = "Fright Flash";
 			break;	
 			
-			case GameMode.PLAYERDEATHANIM:
+			case GameModes.PLAYERDEATHANIM:
 			Text = "Player Death Animation";
 			break;	
 			
-			case GameMode.NEXTLEVELPAUSE:
+			case GameModes.NEXTLEVELPAUSE:
 			Text = "Next Lev Pause";
 			break;
 			
-			case GameMode.NEXTLEVELFLASH:
+			case GameModes.NEXTLEVELFLASH:
 			Text = "Next Lev Flash";
 			break;
 			
-			case GameMode.READY:
+			case GameModes.READY:
 			Text = "READY";
+			break;
+			
+			case GameModes.PREGAME:
+			Text = "PREGAME";
+			break;
+			
+			case GameModes.YOULOSE:
+			Text = "You Lose!";
+			break;
+			
+			case GameModes.NEXTLEVEL:
+			Texzt = "Next Level";
 			break;
 		}
 		return Text;
@@ -61,73 +70,47 @@ else
 {
 	switch (Ghost)
 			{
-				case GhostMode.CHASE:
+				case GhostModes.CHASE:
 				Text = "Chase";
 				break;
 			
-				case GhostMode.SCATTER:
+				case GhostModes.SCATTER:
 				Text = "Scatter";
 				break;
 			
-				case GhostMode.PLAYERDEAD:
-				Text = "Player Dead";
-				break;
-			
-				case GhostMode.PLAYERDEATHANIM:
-				Text = "Player Death Animation";
-				break;	
-			
-				case GhostMode.PREGAME:
-				Text = "Game Start";
-				break;
-			
-				case GhostMode.PLAYERREADY:
-				Text = "Player Ready";
-				break;	
-			
-				case GhostMode.EYESRETURN:
+				case GhostModes.EYESRETURN:
 				Text = "Eyes Return";
 				break;
 			
-				case GhostMode.FIRSTTURN:
+				case GhostModes.FIRSTTURN:
 				Text = "First Turn";
 				break;
+
 			
-				case GhostMode.GHOSTEATEN:
-				Text = "Ghost Eaten";
-				break;
-			
-				case GhostMode.GOTOHOMEYCENTER:
+				case GhostModes.GOTOHOMEYCENTER:
 				Text = "Leaving Home Center Vertically";
 				break;
 				
-				case GhostMode.GOTOHOMECENTER:
+				case GhostModes.GOTOHOMECENTER:
 				Text = "Leaving Home Center";
 				break;
 				
-				case GhostMode.LEAVEHOME:
+				case GhostModes.LEAVEHOME:
 				Text = "Leaving Home Box";
 				break;
 			
-				case GhostMode.EYESRETURNABOVEHOME:
+				case GhostModes.EYESRETURNABOVEHOME:
 				Text = "Eyes to Above home";
 				break;
 				
-				case GhostMode.EYESRETURNINTOHOME:
+				case GhostModes.EYESRETURNINTOHOME:
 				Text = "Eyes Into home";
 				break;
 			
-				case GhostMode.SAFEZONE:
+				case GhostModes.SAFEZONE:
 				Text = "Safe Zone";
 				break;
-			
-				case GhostMode.FRIGHT:
-				Text = "Fright";
-				break;
-			
-				case GhostMode.FRIGHTFLASH:
-				Text = "Fright Flash";
-				break;
+		
 			}
 	return Text;
 }

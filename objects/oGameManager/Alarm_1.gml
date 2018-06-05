@@ -1,5 +1,5 @@
 /// @description Switch To Game Start
-Mode = GameMode.PREGAME;
+GameMode = GameModes.PREGAME;
 
 //Go into SCATTER MODE to begin game
 alarm[2] = 60;

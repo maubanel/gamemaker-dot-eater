@@ -62,7 +62,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "3f4afebf-941e-408e-b0d6-a7af615e81d1",
-            "value": "GhostMode.PLAYERREADY"
+            "value": "GameModes.PLAYERREADY"
         },
         {
             "id": "685d9257-c277-4221-af4d-8d8705163292",
@@ -78,7 +78,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "71613d8a-0c8a-47a2-a226-ce272b354e9c",
-            "value": "GhostMode.PLAYERREADY"
+            "value": "-1"
         },
         {
             "id": "dd336af7-2ba0-44ff-ab05-a014205f66d9",
@@ -86,7 +86,7 @@
             "mvc": "1.0",
             "objectId": "69150333-efaa-41ef-97a2-223042347ae5",
             "propertyId": "546e7314-6303-4c3f-a2de-fcfc38d7dd55",
-            "value": "GhostMode.SAFEZONE"
+            "value": "GhostModes.SAFEZONE"
         },
         {
             "id": "8437daef-6b93-4b8b-809d-b63696bea631",

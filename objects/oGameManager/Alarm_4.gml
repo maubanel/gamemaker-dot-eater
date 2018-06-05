@@ -1,6 +1,6 @@
 /// @description Mode switch from FLIGHT FLASH
-if (Mode == GameMode.FRIGHTFLASH)
+if (GameMode == GameModes.FRIGHTFLASH)
 {
-	ModeTimer();
+	GameMode = ModeTimer();
 }
 

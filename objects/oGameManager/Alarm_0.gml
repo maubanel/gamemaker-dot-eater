@@ -1,6 +1,6 @@
 /// @description Player Dies
 
-Mode = GameMode.PLAYERDEATHANIM;
-
+GameMode = GameModes.PLAYERDEATHANIM;
+show_debug_message("AlarmTriggered");
 ChaseTimer = 0;
 

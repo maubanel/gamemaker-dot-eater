@@ -1,10 +1,10 @@
-if (oGameManager.Mode == GameMode.SCATTER)
+if (oGameManager.GameMode == GameModes.SCATTER)
 {
-	Mode = GhostMode.SCATTER;	
+	GhostMode = GhostModes.SCATTER;	
 }
 
-else if (oGameManager.Mode == GameMode.CHASE)
+else if (oGameManager.Mode == GameModes.CHASE)
 {
-	Mode = GhostMode.CHASE;	
+	Mode = GhostModes.CHASE;	
 }
 

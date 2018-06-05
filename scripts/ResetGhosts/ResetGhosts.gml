@@ -1,7 +1,7 @@
 
 direction = 180;
 
-Mode = GhostMode.FIRSTTURN;
+GhostMode = GhostModes.FIRSTTURN;
 
 //look ahead for ghost
 speed = GhostSpeed;

@@ -1,12 +1,12 @@
 //Blinky always leaves right away
 
-if (object_index == oBlinky) Mode = GhostMode.GOTOHOMEYCENTER;
+if (object_index == oBlinky) GhostMode = GhostModes.GOTOHOMEYCENTER;
 
 else if (!oGameManager.IsGlobalDotCounting)
 {
 	if (LocalDotCounter>=NumLocalDots)	
 	{
-		Mode = GhostMode.GOTOHOMEYCENTER;
+		GhostMode = GhostModes.GOTOHOMEYCENTER;
 		if (IsDotCounting)
 		{
 		
@@ -28,16 +28,18 @@ else
 	if (oGameManager.GlobalDotCounter >= NumGlobalDots 
 		&& (object_index == oPinky	|| object_index == oInk))
 	{
-		Mode = GhostMode.GOTOHOMEYCENTER;
+		GhostMode = GhostModes.GOTOHOMEYCENTER;
 	}
 	
 	if (oGameManager.GlobalDotCounter == NumGlobalDots 
 		&& object_index == oClyde)
 	{
-		Mode = GhostMode.GOTOHOMEYCENTER;
+		GhostMode = GhostModes.GOTOHOMEYCENTER;
 	}
 	
-	if (oClyde.Mode != GhostMode.SCATTER && object_index == oClyde)
+	if (object_index == oClyde && GhostMode != GhostModes.SAFEZONE
+	&& GhostMode != GhostModes.LEAVEHOME && GhostMode != GhostModes.GOTOHOMEYCENTER
+	&& GhostMode != GhostModes.GOTOHOMECENTER)
 	{
 		oGameManager.GlobalDotCounter = 0;
 		oGameManager.IsGlobalDotCounting = false;

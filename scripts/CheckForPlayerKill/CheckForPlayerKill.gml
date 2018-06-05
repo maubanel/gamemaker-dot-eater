@@ -13,23 +13,29 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 	}
 	
 	//Kills player if in game state
-	if (IsInGame)
+	if (IsInGame && sprite_index != sGhostEyes && !IsFrightened
+		&& oGameManager.GameMode != GameModes.PLAYERDEAD
+		&& oGameManager.GameMode !=GameModes.PLAYERDEATHANIM)
 	{
-		oGameManager.Mode = GameMode.PLAYERDEAD;
-		//not happen on this ghost.  We must force it:
-		oGhostParent.Mode = GhostMode.PLAYERDEAD;
-		//Start timer for global timing for ghosts leaving home
-		oGameManager.IsGlobalDotCounting = true;
-	
-		if (oGameManager.DrawDebug)
+		//Make sure pac man is not already dead
+		if (oGameManager.GameMode != GameModes.PLAYERDEAD)
 		{
-			show_debug_message("Ghost Kills Player.");	
-		}
+			oGameManager.GameMode = GameModes.PLAYERDEAD;
+			
+			//Start timer for global timing for ghosts leaving home
+			oGameManager.IsGlobalDotCounting = true;
 	
-		lives--;
-		if (lives <= 0)
-		{
-			oGameManager.Mode = GameMode.YOULOSE;
+			if (oGameManager.DrawDebug)
+			{
+				show_debug_message("Ghost Kills Player.");	
+			}
+	
+			lives--;
+			if (lives <= 0)
+			{
+				oGameManager.GameMode = GameModes.YOULOSE;
+			}
+			show_debug_message("Lives: " + string(lives));
 		}
 	
 	}
@@ -37,24 +43,26 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 	//Kills ghost if it is in frightened state (not global but local IsFrightened variable)
 	if (IsFrightened)
 	{
-			
-		if (oGameManager.DrawDebug)
+		if (PreviousMode != GhostModes.EYESRETURN || sprite_index != sGhostEyes)
 		{
-			show_debug_message("Player Eats Ghost.");	
-		}
+			
+			if (oGameManager.DrawDebug)
+			{
+				show_debug_message("Player Eats Ghost.");	
+			}
 	
-		sprite_index = sGhostEyes;
-		PreviousMode = GhostMode.EYESRETURN;
-		//Since this happens in ghost the switch of going to PlayerDead does 
+			sprite_index = sGhostEyes;
+			PreviousMode = GhostModes.EYESRETURN;
+			//Since this happens in ghost the switch of going to PlayerDead does 
 
-		oGameManager.Mode = GameMode.GHOSTEATEN;
+			oGameManager.GameMode = GameModes.GHOSTEATEN;
 		
-		if (!IsEyeballs) Mode = GhostMode.GHOSTEATEN;
 		
-		x = GetCenterGridPos(GridX);
-		y = GetCenterGridPos(GridY);
+			x = GetCenterGridPos(GridX);
+			y = GetCenterGridPos(GridY);
 		
-		IsFrightened = false;
+			IsFrightened = false;
+		}
 		
 	}
 }

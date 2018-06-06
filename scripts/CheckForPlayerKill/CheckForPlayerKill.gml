@@ -38,7 +38,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 	}
 	
 	//Kills ghost if it is in frightened state (not global but local IsFrightened variable)
-	if (IsFrightened)
+	if (IsFrightened && !IsSafeZone)
 	{
 		if (sprite_index != sGhostEyes)
 		{

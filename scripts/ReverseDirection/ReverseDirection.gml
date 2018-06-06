@@ -1,5 +1,5 @@
-if (Horizontal) y = GetCenterGridPos(GridY);
-	else x = GetCenterGridPos(GridX);
+GetCenterGridPos(GridY);
+GetCenterGridPos(GridX);
 		
 	//NextDirection = direction;
 	//Look at next tile ahead in 4 directions

@@ -105,6 +105,7 @@ switch (GameMode)
 		}
 		case GameModes.NEXTLEVEL:
 			Level++; // increment level
+			show_debug_message("Level: " + string(Level));
 			NextLevel();
 			GameMode = GameModes.READY;
 		break;

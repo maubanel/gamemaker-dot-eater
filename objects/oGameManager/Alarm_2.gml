@@ -10,6 +10,8 @@ oPacMan.speed = PacNormalSpeed;
 
 oGhostParent.image_speed = 1;
 
-oDotLarge.image_speed = 1;
-
+if (instance_exists(oDotLarge))
+{
+	oDotLarge.image_speed = 1;
+}
 

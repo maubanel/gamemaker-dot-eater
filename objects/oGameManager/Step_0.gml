@@ -103,9 +103,10 @@ switch (GameMode)
 		{
 			alarm[6] = 60;
 		}
+		break;
+		
 		case GameModes.NEXTLEVEL:
 			Level++; // increment level
-			show_debug_message("Level: " + string(Level));
 			NextLevel();
 			GameMode = GameModes.READY;
 		break;

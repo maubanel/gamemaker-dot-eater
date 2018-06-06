@@ -4,4 +4,8 @@ LastGameMode = GameMode;
 
 
 //Check for level end
-if (MasterLevelDotCounter >= 244) GameMode = GameModes.NEXTLEVELPAUSE;
+if (MasterLevelDotCounter >= 244)
+{
+	GameMode = GameModes.NEXTLEVELPAUSE;
+	MasterLevelDotCounter = 0;
+}

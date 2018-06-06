@@ -74,7 +74,6 @@ switch(oGameManager.GameMode)
 		{
 			oGameManager.GameMode = GameModes.PLAYERREADY;
 			ResetPacManToStart();
-			show_debug_message("Lives1: " + string(lives));
 		}
 		else
 		{

@@ -55,7 +55,7 @@ with (oBlinky)
 	ResetGhosts();	
 }
 
-MasterLevelDotCounter = 0;
+MasterLevelDotCounter = 0; 
 Alarm4Pause = 0;
 IsGlobalDotCounting = false;
 GlobalDotCounter = 0;
@@ -138,7 +138,7 @@ switch(Level)
 	
 	case 3:
 	FrightLength = 4;
-		oClyde.NumGlobalDots = 0;
+	oClyde.NumLocalDots = 0;
 	break;
 	
 	case 4:

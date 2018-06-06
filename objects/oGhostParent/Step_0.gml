@@ -122,5 +122,6 @@ switch (oGameManager.GameMode)
 	case GameModes.NEXTLEVELPAUSE:
 	image_index = 0;
 	speed = 0;
+	image_alpha = 1;
 	break;
 }

@@ -1,34 +1,34 @@
-if (ChaseTimer < ScatterMode1Length)
+if (oGameManager.ChaseTimer < oGameManager.ScatterMode1Length)
 {
 	return GameModes.SCATTER;
 }
 
-else if (ChaseTimer >= ScatterMode1Length
-	and ChaseTimer < ChaseMode1Length)
+else if (oGameManager.ChaseTimer >= oGameManager.ScatterMode1Length
+	and oGameManager.ChaseTimer < oGameManager.ChaseMode1Length)
 {
 		return GameModes.CHASE;
 }
 
-else if (ChaseTimer >= ChaseMode1Length
-		and ChaseTimer < ScatterMode2Length)
+else if (oGameManager.ChaseTimer >= oGameManager.ChaseMode1Length
+		and oGameManager.ChaseTimer < oGameManager.ScatterMode2Length)
 {
 		return GameModes.SCATTER;
 }
 
-else if (ChaseTimer >= ScatterMode2Length
-	and ChaseTimer < ChaseMode2Length)
+else if (oGameManager.ChaseTimer >= oGameManager.ScatterMode2Length
+	and oGameManager.ChaseTimer < oGameManager.ChaseMode2Length)
 {
 		return GameModes.CHASE;
 }
 
-else if (ChaseTimer >= ChaseMode2Length
-		and ChaseTimer < ScatterMode3Length)
+else if (oGameManager.ChaseTimer >= oGameManager.ChaseMode2Length
+		and oGameManager.ChaseTimer < oGameManager.ScatterMode3Length)
 {
 		oGameManager.GameMode = GameModes.SCATTER;
 }
 
-else if (ChaseTimer >= ScatterMode3Length
-	and ChaseTimer < ChaseMode3Length)
+else if (oGameManager.ChaseTimer >= oGameManager.ScatterMode3Length
+	and oGameManager.ChaseTimer < oGameManager.ChaseMode3Length)
 {
 		return GameModes.CHASE;
 }

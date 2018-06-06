@@ -27,7 +27,7 @@ else if (oGameManager.GameMode == GameModes.FRIGHT
 	//Switch to FRIGHT mode if in game
 	// Make ghosts reverse direction if in game
 	//switch IsFrightened switch to true for ghosts in safe zone
-	show_debug_message("Switching to FRIGHT");
+	//show_debug_message("Switching to FRIGHT");
 	if (!IsEyeballs)
 	{
 		IsFrightened = true;
@@ -56,7 +56,7 @@ else if (oGameManager.GameMode == GameModes.FRIGHTFLASH)
 		if (!IsEyeballs) 
 		{	sprite_index = sGhostFrightFlash;
 			image_speed = 1;
-			show_debug_message(string(object_index) + ": Goes to fright flash");
+			//show_debug_message(string(object_index) + ": Goes to fright flash");
 		}
 
 	}

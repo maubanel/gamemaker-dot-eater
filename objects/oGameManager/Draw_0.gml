@@ -84,19 +84,19 @@ if (DrawDebug)
 	draw_set_font(fGhostEatenScore);
 	draw_set_font(fDebug);
 	GameModeText = "";
-	GameModeText = DebugText(true, "GameModeText", GameMode);
+	GameModeText = DebugText(true, "GameModeText", GameMode, oGameManager.id);
 
 	var BlinkyModeText = "Not in game";
-	if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.GhostMode);
+	if (instance_exists(oBlinky)) BlinkyModeText = DebugText(false, "BlinkyModeText", oBlinky.GhostMode, oBlinky.id);
 
 	var PinkyModeText = "Not in game";
-	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.GhostMode);
+	if (instance_exists(oPinky)) PinkyModeText = DebugText(false, "PinkyModeText", oPinky.GhostMode, oPinky.id);
 	
 	var InkyModeText = "Not in game";
-	if (instance_exists(oInk)) InkyModeText = DebugText(false, "InkyModeText", oInk.GhostMode);
+	if (instance_exists(oInk)) InkyModeText = DebugText(false, "InkyModeText", oInk.GhostMode, oInk.id);
 	
 	var ClydeModeText = "Not in game";
-	if (instance_exists(oClyde)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.GhostMode);
+	if (instance_exists(oClyde)) ClydeModeText = DebugText(false, "ClydeModeText", oClyde.GhostMode, oClyde.id);
 	
 	var LocalDot="No Timers";
 	if (oPinky.IsDotCounting) LocalDot = string(oPinky.LocalDotCounter);

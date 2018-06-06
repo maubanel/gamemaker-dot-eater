@@ -64,7 +64,7 @@ LastGameMode = -1;
 GhostScore = 200;
 
 if (Level == 1) GameMode = GameModes.GAMESTART;
-else GameMode = GameMode.READY;
+else GameMode = GameModes.READY;
 
 oGhostParent.IsDotCounting = false;
 oPinky.IsDotCounting = true;

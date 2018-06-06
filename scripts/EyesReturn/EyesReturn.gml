@@ -1,6 +1,9 @@
 switch(GhostMode)
 {
 	case GhostModes.EYESRETURN:
+	
+	if (image_alpha = 0) image_alpha = 1;
+	
 	move_wrap(true, false, oGameManager.GridSize);
 	
 	//UpdateGridGhost();

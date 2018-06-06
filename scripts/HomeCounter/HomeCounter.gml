@@ -6,8 +6,7 @@ else if (!oGameManager.IsGlobalDotCounting)
 {
 	if (LocalDotCounter>=NumLocalDots)	
 	{
-		if (oInk) show_debug_message("Ink leave, LDC: " + string
-		(LocalDotCounter) + " - NLD: " + string(NumLocalDots)); 
+		
 		GhostMode = GhostModes.GOTOHOMEYCENTER;
 		if (IsDotCounting)
 		{

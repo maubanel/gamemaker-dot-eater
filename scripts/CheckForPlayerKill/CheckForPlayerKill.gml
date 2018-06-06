@@ -49,7 +49,7 @@ if (PacTempGridX == GhostTempGridX && PacTempGridY == GhostTempGridY)
 			}
 	
 			sprite_index = sGhostEyes;
-			GhostMode = GhostModes.EYESRETURN;
+			GhostMode = GhostModes.EYESFREEZE;
 			//Since this happens in ghost the switch of going to PlayerDead does 
 
 			oGameManager.GameMode = GameModes.GHOSTEATEN;

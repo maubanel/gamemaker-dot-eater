@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-IsInGame = GameMode == GameModes.CHASE || oGameManager.GameMode == GameModes.SCATTER;
+IsInGame = oGameManager.GameMode == GameModes.CHASE || oGameManager.GameMode == GameModes.SCATTER;
 
 if (IsInGame)
 {
@@ -104,6 +104,7 @@ switch (GameMode)
 			alarm[6] = 60;
 		}
 		case GameModes.NEXTLEVEL:
+			Level++; // increment level
 			NextLevel();
 			GameMode = GameModes.READY;
 		break;

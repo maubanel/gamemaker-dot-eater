@@ -1,4 +1,4 @@
-if (IsInGame && GhostMode != GhostModes.FIRSTTURN)
+if (GhostMode != GhostModes.FIRSTTURN)
 {
 	
 	move_wrap(true, false, oGameManager.GridSize);

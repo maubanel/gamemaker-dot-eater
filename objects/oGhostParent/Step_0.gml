@@ -3,7 +3,8 @@
 IsInGame = (oGameManager.GameMode == GameModes.SCATTER || oGameManager.GameMode == GameModes.CHASE);
 
 IsEyeballs = (GhostMode == GhostModes.EYESRETURN || GhostMode == GhostModes.EYESRETURNABOVEHOME
-			 || GhostMode == GhostModes.EYESRETURNINTOHOME);
+			 || GhostMode == GhostModes.EYESRETURNINTOHOME || 
+			 GhostMode == GhostModes.EYESFREEZE);
 			 
 
 IsSafeZone = (GhostMode == GhostModes.SAFEZONE || GhostMode == GhostModes.GOTOHOMEYCENTER  
@@ -80,7 +81,7 @@ switch (oGameManager.GameMode)
 		
 		//UpdateGridGhost();
 		
-		show_debug_message("Pathfinding fright ghosts random");
+	//	show_debug_message("Pathfinding fright ghosts random");
 		
 		SetGhostSpeed();
 		//Pick ran
@@ -110,7 +111,7 @@ switch (oGameManager.GameMode)
 		
 		
 	case GameModes.GHOSTEATEN:
-	if (GhostMode == GhostModes.EYESRETURN)
+	if (GhostMode == GhostModes.EYESFREEZE)
 	{
 		image_alpha = 0; 
 	}

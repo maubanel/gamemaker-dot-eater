@@ -1,6 +1,7 @@
 var IsGame = argument0;
 var Text = argument1;
 var Ghost = argument2;
+var ObjectId = argument3;
 
 if (IsGame)
 {
@@ -79,7 +80,6 @@ else
 			Text = "First Turn";
 			break;
 
-			
 			case GhostModes.GOTOHOMEYCENTER:
 			Text = "Leaving Home Center Vertically";
 			break;
@@ -105,7 +105,12 @@ else
 			break;
 		
 		}
-		if (Ghost == -1) Text = "Master Game Mode";
+		if (Ghost == -1 && !ObjectId.IsFrightened) Text = "Chs, FT and Sct";
+		else if (Ghost == -1 && ObjectId.IsFrightened && 
+				GameMode == GameModes.FRIGHT) Text = "Fright";
+		else if (Ghost == -1 && ObjectId.IsFrightened &&
+				GameMode ==GameModes.FRIGHTFLASH) Text = "Fright Flash";
+		
 		
 return Text;
 }
